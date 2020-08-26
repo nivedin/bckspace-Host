@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drop</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/dropPage.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+</head>
+
+<body>
+    <header class="moblileHeader">
+        <div class="bckspaceLogUser">
+            <div class="logUser">
+                <p>logged in as <b>ansh bhandari</b></p>
+            </div>
+            <div class="thebckName desktopBrandName">
+                <div class="headImgContainer">
+                    <img src="./ASSETS/Layer 3.png" alt="brandImg">
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="navBurger" onclick="openNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="thebckName mobileBrandName">
+                <div class="headImgContainer">
+                    <img src="./ASSETS/Layer 3.png" alt="brandImg">
+                </div>
+            </div>
+            <div class="searchIcon">
+                <button class="search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </nav>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="sideNavContainer">
+                <div class="userProfile">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="userIcon">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                        </div>
+                        <div class="col-8  align-self-center">
+                            <div class="userName">
+                                <p class="loggedIn">logged in as</p>
+                                <p class="loggedName">ansh bhandari</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <a href="#">drop
+                    <hr></a>
+                <a href="#">catalouge
+                    <hr></a>
+                <a href="#">grail
+                    <hr></a>
+                <a href="#">stash
+                    <hr></a>
+                <a href="#">customization
+                    <hr></a>
+                <a href="#">calendar
+                    <hr></a>
+                <a href="#">feature
+                    <hr></a>
+                <a href="#">legit check
+                    <hr></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="searchModal">
+        <h2 class="searchHeading">
+            Search....
+        </h2>
+        <div class="searchContainer">
+            <input type="search">
+            <button class="searchButton">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </div>
+
+
+    <main>
+        <div class="mainContent">
+            <div class="dropHeading">
+                <h4><strong>drop</strong></h4>
+            </div>
+            <div class="dropPara">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique perferendis illum placeat,
+                    veritatis alias totam consequuntur eveniet quod rerum optio?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quo commodi omnis magni fugit
+                    aliquam similique consectetur rerum at amet. Lorem ipsum dolor sit amet consectetur, adipisicing
+                    elit. Debitis, mollitia.</p>
+            </div>
+        </div>
+        <div class="chooseSneaker">
+            <div class="chooseHeading">
+                <h4><strong>choose a sneaker</strong> </h4>
+            </div>
+            <div class="searchMain">
+                <div class="searchBar">
+                    <input type="search" id="searchInput" placeholder="search for brand, color, etc.">
+                    <button class="searchButton">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- ///////////////////////////// -->
+            <div class="searchItems">
+                <div class="searchItemsContainer">
+                    <!-- //////item//////// -->
+                    <div class="searchItem" data-name="nikejordan">
+                        <div class="searchItemContainer row align-items-center justify-content-between">
+                            <div class="col-4 align-self-center">
+                                <div class="searchImg">
+                                    <img class="img-responsive" src="./ASSETS/Nike-Air-Max-90-Viotech-OG-Product.png"
+                                        alt="itemImage">
+                                </div>
+                            </div>
+                            <div class="col-8 align-self-center">
+                                <div class="itemDetail">
+                                    <p class="itemName">nike jordan</p>
+                                    <p class="itemPara">nike jordan 11 retro playoffs bred (2019)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <!-- ////////////// -->
+                    <!-- //////item//////// -->
+                    <div class="searchItem" data-name="nikeairmax">
+                        <div class="searchItemContainer row align-items-center justify-content-between">
+                            <div class="col-4 align-self-center">
+                                <div class="searchImg">
+                                    <img src="./ASSETS/Layer 6.png" alt="itemImage">
+                                </div>
+                            </div>
+                            <div class="col-8 align-self-center">
+                                <div class="itemDetail">
+                                    <p class="itemName">nike air max</p>
+                                    <p class="itemPara">nike air max 90 viotech mg</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <!-- ////////////// -->
+                    <!-- //////item//////// -->
+                    <div class="searchItem" data-name="nikeairmax">
+                        <div class="searchItemContainer row align-items-center justify-content-between">
+                            <div class="col-4 align-self-center">
+                                <div class="searchImg">
+                                    <img src="./ASSETS/Nike-Air-Max-270-React-Travis-Scott-1.png" alt="itemImage">
+                                </div>
+                            </div>
+                            <div class="col-8 align-self-center">
+                                <div class="itemDetail">
+                                    <p class="itemName">nike air max</p>
+                                    <p class="itemPara">nike air max 270 react ENG travis scott cactus trails</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <!-- ////////////// -->
+                    <!-- //////item//////// -->
+                    <div class="searchItem" data-name="nikeblazers">
+                        <div class="searchItemContainer row align-items-center justify-content-between">
+                            <div class="col-4 align-self-center">
+                                <div class="searchImg">
+                                    <img src="./ASSETS/img01.png" alt="itemImage">
+                                </div>
+                            </div>
+                            <div class="col-8 align-self-center">
+                                <div class="itemDetail">
+                                    <p class="itemName">nike blazers</p>
+                                    <p class="itemPara">nike blazers mid 77 vintage white black</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <!-- ////////////// -->
+                    <div class="cantFind">
+                        <p>can't find what yo're looking for ? &nbsp; <a href="#"> start from scratch</a></p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- ///////////////////////////// -->
+        </div>
+
+
+    </main>
+
+
+    <footer>
+        <div class="yoUpBtn">
+            <i class="fa fa-chevron-up"></i>
+        </div>
+        <div class="footerContainer">
+            <div class="footLinks">
+                <div class="mobileWrap">
+                    <a href="#">guide <span>|</span></a>
+                    <a href="#">copyright <span>|</span></a>
+                    <a href="#">terms and condition <span>|</span></a>
+                </div>
+                <div class="mobileWrap">
+                    <a href="#">privacy poilcy <span>|</span></a>
+                    <a href="#">contact us <span>|</span></a>
+                    <a href="#">sneaker request <span>|</span></a>
+                </div>
+                <div class="mobileWrap">
+
+                    <a href="#">press <span>|</span></a>
+                    <a href="#">help <span>|</span></a>
+                    <a href="#">product request </a>
+                </div>
+
+
+            </div>
+            <div class="footSocial">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+            </div>
+            <div class="footRights">
+                <p>&copy; 2020 thebckspace, inc. all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/v4-shims.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./JS/dropPage.js"></script>
+</body>
+
+</html>

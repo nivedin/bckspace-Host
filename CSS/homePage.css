@@ -1,0 +1,862 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+  --shadow: #e6e6e6;
+  --scrollbarBG: #5e5e5e;
+  --thumbBG: #000000;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  -webkit-box-shadow: 0 -100vh 0 100vh var(--shadow), 0 0 15px 5px black;
+          box-shadow: 0 -100vh 0 100vh var(--shadow), 0 0 15px 5px black;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.moblileHeader {
+  display: none;
+}
+
+.desktopHeader {
+  min-height: 15vh;
+  background: black;
+}
+
+.desktopHeader nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2% 4%;
+}
+
+.desktopHeader nav .leftLogo a {
+  text-decoration: none;
+}
+
+.desktopHeader nav .leftLogo svg {
+  font-size: 2rem;
+  color: white;
+}
+
+.desktopHeader nav .navLinks {
+  margin: 10px 0 0 100px;
+}
+
+.desktopHeader nav .navLinks ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+}
+
+.desktopHeader nav .navLinks ul li {
+  position: relative;
+  z-index: 1;
+  margin-right: 30px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.desktopHeader nav .navLinks ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.desktopHeader nav .navLinks ul .navHoverAnimation {
+  position: absolute;
+  height: 100%;
+  width: 8%;
+  top: 0;
+  left: -1.3%;
+  border-radius: 10px;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  border: none;
+  outline: none;
+  background: blue;
+  z-index: 0;
+}
+
+.desktopHeader nav .navLinks ul li:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.desktopHeader nav .navLinks ul li:nth-child(1):hover ~ .navHoverAnimation {
+  left: -1.3%;
+}
+
+.desktopHeader nav .navLinks ul li:nth-child(2):hover ~ .navHoverAnimation {
+  left: 8%;
+  width: 12%;
+}
+
+.desktopHeader nav .navLinks ul li:nth-child(3):hover ~ .navHoverAnimation {
+  left: 22%;
+  width: 7%;
+}
+
+.desktopHeader nav .navLinks ul li:nth-child(4):hover ~ .navHoverAnimation {
+  left: 30.3%;
+}
+
+.desktopHeader nav .navLinks ul li:nth-child(5):hover ~ .navHoverAnimation {
+  left: 40%;
+  width: 17%;
+}
+
+.desktopHeader nav .navLinks ul li:nth-child(6):hover ~ .navHoverAnimation {
+  left: 58%;
+  width: 13%;
+}
+
+.desktopHeader nav .navLinks ul li:nth-child(7):hover ~ .navHoverAnimation {
+  left: 72%;
+  width: 10%;
+}
+
+.desktopHeader nav .navLinks ul li:nth-child(8):hover ~ .navHoverAnimation {
+  left: 84%;
+  width: 13%;
+}
+
+.desktopHeader nav .rightIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 10%;
+}
+
+.desktopHeader nav .rightIcons .heartIcon a {
+  text-decoration: none;
+  color: white;
+}
+
+.desktopHeader nav .rightIcons .heartIcon a svg {
+  font-size: 1.2rem;
+}
+
+.desktopHeader nav .rightIcons .profileIcon a {
+  text-decoration: none;
+  color: white;
+}
+
+.desktopHeader nav .rightIcons .profileIcon a svg {
+  font-size: 1.2rem;
+}
+
+.desktopHeader nav .rightIcons .searchIcon button {
+  background: rgba(0, 0, 0, 0.144);
+  border: none;
+  outline: none;
+}
+
+.desktopHeader nav .rightIcons .searchIcon button svg {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.searchModal.openModal {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.searchModal {
+  position: fixed;
+  z-index: 5;
+  min-height: 120vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.searchModal .searchHeading {
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+}
+
+.searchModal .searchContainer {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  -webkit-box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #70707034, -6px -6px 16px inset #77777734;
+          box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #70707034, -6px -6px 16px inset #77777734;
+}
+
+.searchModal .searchContainer input {
+  background: transparent;
+  color: white;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 2%;
+  height: 50px;
+  width: 30rem;
+  border: none;
+  outline: none;
+}
+
+.searchModal .searchContainer input:focus-within {
+  border: none;
+}
+
+.searchModal .searchContainer button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 10px 0 20px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.searchModal .searchContainer button path {
+  fill: white;
+}
+
+.searchModal .searchContainer button:hover {
+  background: #252424;
+}
+
+main .mainContent {
+  position: relative;
+}
+
+main .mainContent .gliderItem {
+  max-height: 85vh;
+  background: black;
+  text-align: center;
+}
+
+main .mainContent .gliderItem .gliderContainer {
+  height: 100%;
+}
+
+main .mainContent .gliderItem .gliderContainer img {
+  -webkit-transform: translate(2%, 15%);
+          transform: translate(2%, 15%);
+  height: 90%;
+  width: 90%;
+}
+
+main .mainContent .glider-dots {
+  position: absolute;
+  top: 108%;
+  left: 45%;
+  outline: none;
+}
+
+main .mainContent .glider-dots button.active {
+  background: black;
+  outline: none;
+}
+
+main .mainContent .glider-dots button {
+  background: #dddddd;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+main .mainContent .glider-dots button:hover {
+  background: #9b9b9b;
+}
+
+main .mainContent .glider-next {
+  top: 38%;
+  right: 50px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  outline: none;
+}
+
+main .mainContent .glider-next svg {
+  font-size: 2.7rem;
+  color: #0202f3;
+}
+
+main .mainContent .glider-next:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+main .mainContent .glider-prev {
+  top: 38%;
+  left: 50px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  outline: none;
+}
+
+main .mainContent .glider-prev svg {
+  font-size: 2.7rem;
+  color: #0202f3;
+}
+
+main .mainContent .glider-prev:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+main .copDropBtns {
+  min-height: 20vh;
+  background: white;
+  padding: 3% 4%;
+}
+
+main .copDropBtns .copDropContainer {
+  margin: 0 auto;
+  width: 46%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .copDropBtns .copDropContainer button {
+  position: relative;
+  outline: none;
+  border: 1.6px solid #676767;
+  background: white;
+  color: #3d3d3d;
+  height: 45px;
+  width: 170px;
+  font-weight: 500;
+}
+
+main .copDropBtns .copDropContainer button span {
+  position: absolute;
+  z-index: 2;
+  top: 25%;
+  left: 30%;
+}
+
+main .copDropBtns .copDropContainer button::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  height: 0%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: black;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+main .copDropBtns .copDropContainer button:hover {
+  color: white;
+}
+
+main .copDropBtns .copDropContainer button:hover::after {
+  height: 100%;
+}
+
+main .popularBrand {
+  min-height: 30vh;
+  padding: 2% 8%;
+}
+
+main .popularBrand .popuparaBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 95%;
+}
+
+main .popularBrand .popuparaBtn .popuPara {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+main .popularBrand .popuparaBtn .popuBtn button {
+  position: relative;
+  outline: none;
+  border: 1.6px solid #ebebeb;
+  background: white;
+  color: black;
+  height: 35px;
+  width: 120px;
+  font-weight: 500;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+main .popularBrand .popuparaBtn .popuBtn button span {
+  position: absolute;
+  z-index: 2;
+  top: 16%;
+  left: 30%;
+}
+
+main .popularBrand .popuparaBtn .popuBtn button::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: 0;
+  background: black;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+main .popularBrand .popuparaBtn .popuBtn button:hover {
+  color: white;
+}
+
+main .popularBrand .popuparaBtn .popuBtn button:hover::after {
+  width: 100%;
+}
+
+main .popularBrand .brandsList {
+  padding: 40px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main .popularBrand .brandsList .brandCircle {
+  height: 145px;
+  width: 145px;
+  margin-right: 40px;
+  border-radius: 50%;
+  border: 1px solid #9b9b9b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .popularBrand .brandsList .brandCircle svg {
+  -webkit-transform: translate(2px, 3px);
+          transform: translate(2px, 3px);
+  height: 58%;
+  width: 58%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+main .popularBrand .brandsList .brandCircle:hover svg {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+main .popularBrand .brandsList .bgucci svg {
+  -webkit-transform: translate(-1px, -1px);
+          transform: translate(-1px, -1px);
+}
+
+main .popularBrand .brandsList .bBalan svg {
+  -webkit-transform: translate(-1px, -1px);
+          transform: translate(-1px, -1px);
+}
+
+main .popularBrand .brandsList .bSupreme svg {
+  -webkit-transform: translate(-1px, -1px);
+          transform: translate(-1px, -1px);
+}
+
+main .popularBrand .mobileDownButton {
+  display: none;
+}
+
+footer {
+  position: relative;
+  background: #1b1b1b;
+  min-height: 25vh;
+}
+
+footer .yoUpBtn {
+  cursor: pointer;
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background: #131111;
+  z-index: 3;
+  right: 70px;
+  top: -12%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: blue;
+  font-size: 2rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-box-shadow: 78px 96px 39px -72px rgba(0, 0, 0, 0.75);
+  box-shadow: 78px 96px 39px -72px rgba(0, 0, 0, 0.75);
+}
+
+footer .yoUpBtn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+footer .footerContainer {
+  text-align: center;
+  padding: 1% 3% 1% 3%;
+}
+
+footer .footerContainer .footLinks {
+  padding: 2% 5% 0 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer .footerContainer .footLinks .mobileWrap {
+  margin-bottom: 35px;
+}
+
+footer .footerContainer .footLinks a {
+  text-decoration: none;
+  color: #b8b8b8;
+  font-size: 0.9rem;
+}
+
+footer .footerContainer .footLinks a span {
+  margin: 0 10px;
+}
+
+footer .footerContainer .footSocial {
+  padding: 10px 0 0 0;
+}
+
+footer .footerContainer .footSocial a {
+  color: #e7e7e7;
+  margin-right: 10px;
+}
+
+footer .footerContainer .footSocial a svg {
+  font-size: 1.9rem;
+}
+
+footer .footerContainer .footRights {
+  padding: 20px 0 0 0;
+  font-weight: 500;
+  color: #4d4d4d;
+}
+
+@media screen and (max-height: 750px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .desktopHeader {
+    display: none;
+  }
+  .moblileHeader {
+    display: block;
+  }
+  header {
+    height: 20vh;
+    padding: 3% 4%;
+    background: #1b1b1b;
+    color: white;
+    /* The navigation menu links */
+    /* When you mouse over the navigation links, change their color */
+    /* Position and style the close button (top right corner) */
+  }
+  header .bckspaceLogUser .logUser {
+    text-align: right;
+    font-size: 0.8rem;
+  }
+  header .bckspaceLogUser .headImgContainer {
+    text-align: center;
+  }
+  header .bckspaceLogUser .headImgContainer svg {
+    height: 30px;
+  }
+  header nav {
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header nav .navBurger {
+    position: relative;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+  }
+  header nav .navBurger span:nth-child(1) {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 3px;
+    width: 32px;
+    background: white;
+    border-radius: 8px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  header nav .navBurger span:nth-child(2) {
+    content: "";
+    position: absolute;
+    top: 8px;
+    height: 3px;
+    width: 32px;
+    background: white;
+    border-radius: 8px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  header nav .navBurger span:nth-child(3) {
+    content: "";
+    position: absolute;
+    top: 16px;
+    height: 3px;
+    width: 32px;
+    background: white;
+    border-radius: 8px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  header nav .navBurger:hover span:nth-child(1),
+  header nav .navBurger:active span:nth-child(1) {
+    background: #0202f3;
+  }
+  header nav .navBurger:hover span:nth-child(2),
+  header nav .navBurger:active span:nth-child(2) {
+    width: 22px;
+  }
+  header nav .searchIcon {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%);
+    border-radius: 6px;
+  }
+  header nav .searchIcon input {
+    width: 0;
+    border: none;
+    background: transparent;
+    color: white;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    height: 100%;
+    padding: 2%;
+  }
+  header nav .searchIcon input::-webkit-input-placeholder {
+    outline: none;
+    border: none;
+  }
+  header nav .searchIcon input:-ms-input-placeholder {
+    outline: none;
+    border: none;
+  }
+  header nav .searchIcon input::-ms-input-placeholder {
+    outline: none;
+    border: none;
+  }
+  header nav .searchIcon input::placeholder {
+    outline: none;
+    border: none;
+  }
+  header nav .searchIcon input:focus {
+    outline: none;
+    border: none;
+  }
+  header nav .searchIcon button {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0);
+  }
+  header nav .searchIcon button svg {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    margin-top: 2px;
+    font-size: 1.33rem;
+    cursor: pointer;
+    color: white;
+  }
+  header nav .searchIcon:hover input,
+  header nav .searchIcon:focus-within input {
+    width: 250px;
+    margin-left: 10px;
+  }
+  header nav .searchIcon:hover,
+  header nav input:focus {
+    -webkit-box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #36363634, -6px -6px 16px inset #3d3d3d34;
+            box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #36363634, -6px -6px 16px inset #3d3d3d34;
+  }
+  header nav .searchIcon:hover svg,
+  header nav input:focus svg {
+    color: #0202f3;
+  }
+  header .sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 3;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+    scrollbar-width: none;
+  }
+  header .sidenav::-webkit-scrollbar {
+    display: none;
+  }
+  header .sideNavContainer {
+    padding: 0 8%;
+  }
+  header .sideNavContainer .userProfile .userIcon {
+    font-size: 8rem;
+  }
+  header .sideNavContainer .userProfile .userName {
+    margin: 15px 0 0 30px;
+  }
+  header .sideNavContainer .userProfile .userName p {
+    margin: 0;
+  }
+  header .sideNavContainer .userProfile .userName .loggedIn {
+    font-size: 0.86rem;
+    margin-bottom: 10px;
+  }
+  header .sideNavContainer .userProfile .userName .loggedName {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  header .sideNavContainer hr {
+    background: #383838;
+    border-radius: 8px;
+    height: 1px;
+  }
+  header .sidenav a {
+    padding: 4px 0 0 0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #e9e9e9;
+    display: block;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  header .sidenav a:hover {
+    color: blue;
+  }
+  header .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  main img {
+    height: 100%;
+    width: 100%;
+  }
+  footer .yoUpBtn {
+    display: none;
+  }
+}
+/*# sourceMappingURL=homePage.css.map */
