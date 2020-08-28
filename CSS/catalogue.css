@@ -1,0 +1,1226 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+  --shadow: #e6e6e6;
+  --scrollbarBG: #5e5e5e;
+  --thumbBG: #000000;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  -webkit-box-shadow: 0 -100vh 0 100vh var(--shadow), 0 0 15px 5px black;
+          box-shadow: 0 -100vh 0 100vh var(--shadow), 0 0 15px 5px black;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.bgImageContainer {
+  background: url("../ASSETS/home page banner.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+
+header {
+  min-height: 20vh;
+  padding: 3% 4%;
+  color: white;
+  /* The navigation menu links */
+  /* When you mouse over the navigation links, change their color */
+  /* Position and style the close button (top right corner) */
+}
+
+header .mobileBrandName {
+  display: none;
+}
+
+header .bckspaceLogUser .logUser {
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+header .bckspaceLogUser .headImgContainer {
+  margin: 0 auto;
+  height: 38px;
+  width: 230px;
+  text-align: center;
+}
+
+header .bckspaceLogUser .headImgContainer img {
+  height: 100%;
+  width: 100%;
+}
+
+header nav {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header nav .navBurger {
+  position: relative;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+}
+
+header nav .navBurger span:nth-child(1) {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 3px;
+  width: 32px;
+  background: white;
+  border-radius: 8px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+header nav .navBurger span:nth-child(2) {
+  content: "";
+  position: absolute;
+  top: 8px;
+  height: 3px;
+  width: 32px;
+  background: white;
+  border-radius: 8px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+header nav .navBurger span:nth-child(3) {
+  content: "";
+  position: absolute;
+  top: 16px;
+  height: 3px;
+  width: 32px;
+  background: white;
+  border-radius: 8px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+header nav .navBurger:hover span:nth-child(1),
+header nav .navBurger:active span:nth-child(1) {
+  background: #0202f3;
+}
+
+header nav .navBurger:hover span:nth-child(2),
+header nav .navBurger:active span:nth-child(2) {
+  width: 22px;
+}
+
+header nav .searchIcon {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
+  border-radius: 6px;
+}
+
+header nav .searchIcon button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0);
+}
+
+header nav .searchIcon button svg {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-top: 2px;
+  font-size: 1.33rem;
+  cursor: pointer;
+  color: white;
+}
+
+header .sidenav {
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 3;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  background-color: #111;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
+  scrollbar-width: none;
+}
+
+header .sidenav::-webkit-scrollbar {
+  display: none;
+}
+
+header .sideNavContainer {
+  padding: 0 8%;
+}
+
+header .sideNavContainer .userProfile .userIcon {
+  font-size: 8rem;
+}
+
+header .sideNavContainer .userProfile .userName {
+  margin: 15px 0 0 30px;
+}
+
+header .sideNavContainer .userProfile .userName p {
+  margin: 0;
+}
+
+header .sideNavContainer .userProfile .userName .loggedIn {
+  font-size: 0.86rem;
+  margin-bottom: 10px;
+}
+
+header .sideNavContainer .userProfile .userName .loggedName {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+header .sideNavContainer hr {
+  background: #383838;
+  border-radius: 8px;
+  height: 1px;
+}
+
+header .sidenav a {
+  padding: 4px 0 0 0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #e9e9e9;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .sidenav a:hover {
+  color: blue;
+}
+
+header .sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.searchModal.openModal {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.searchModal {
+  position: fixed;
+  z-index: 5;
+  min-height: 120vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.searchModal .searchHeading {
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+}
+
+.searchModal .searchContainer {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  -webkit-box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #70707034, -6px -6px 16px inset #77777734;
+          box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #70707034, -6px -6px 16px inset #77777734;
+}
+
+.searchModal .searchContainer input {
+  background: transparent;
+  color: white;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 2%;
+  height: 50px;
+  width: 30rem;
+  border: none;
+  outline: none;
+}
+
+.searchModal .searchContainer input:focus-within {
+  border: none;
+}
+
+.searchModal .searchContainer button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 10px 0 20px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.searchModal .searchContainer button path {
+  fill: white;
+}
+
+.searchModal .searchContainer button:hover {
+  background: #252424;
+}
+
+.bannerImg {
+  min-height: 80vh;
+  max-height: 80vh;
+}
+
+main {
+  min-height: 100vh;
+}
+
+main .mainContent {
+  padding: 4% 3%;
+}
+
+main .mainContent .filterHead .filterDropdowns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main .mainContent .filterHead .filterDropdowns ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .mainContent .filterHead .filterDropdowns ul li {
+  margin-left: 28px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #585858;
+}
+
+main .mainContent .filterHead .filterDropdowns ul li svg {
+  -webkit-transform: translate(3px, 1px);
+          transform: translate(3px, 1px);
+}
+
+main .mainContent .catalogueItems {
+  padding: 1% 1% 0 1%;
+}
+
+main .mainContent .catalogueItems .showMoreContent {
+  display: none;
+}
+
+@-webkit-keyframes showMoreAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showMoreAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main .mainContent .catalogueItems .itemsRow {
+  margin-bottom: 2px;
+}
+
+main .mainContent .catalogueItems .itemsRow .catalogueItem {
+  min-height: 15rem;
+  background: #f3f3f3;
+}
+
+main .mainContent .catalogueItems .itemsRow .catalogueItem .itemHeader {
+  padding: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .mainContent .catalogueItems .itemsRow .catalogueItem .itemHeader svg {
+  font-size: 0.9rem;
+  color: #707070;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+main .mainContent .catalogueItems .itemsRow .catalogueItem .itemHeader svg:nth-child(1) {
+  color: #b1b1b1;
+}
+
+main .mainContent .catalogueItems .itemsRow .catalogueItem .itemHeader svg:nth-child(1):hover {
+  color: #1a1616;
+  cursor: pointer;
+}
+
+main .mainContent .catalogueItems .itemsRow .catalogueItem .itemHeader svg:nth-child(2):hover {
+  color: black;
+  cursor: pointer;
+}
+
+main .mainContent .catalogueItems .itemsRow .catalogueItem .itemImage {
+  pointer-events: all;
+  height: 14rem;
+  width: 100%;
+}
+
+main .mainContent .catalogueItems .itemsRow .catalogueItem .itemImage img {
+  -webkit-transform: translate(13%, 22%);
+          transform: translate(13%, 22%);
+  height: 80%;
+  width: 80%;
+}
+
+main .mainContent .catalogueItems .itemsRow .catalogueItem .itemImage .currentGlider {
+  display: none;
+}
+
+main .mainContent .catalogueItems .itemsRow .catalogueItem .itemImage .carousel .carousel-item {
+  padding: 5%;
+  height: 13rem;
+}
+
+main .mainContent .catalogueItems .itemsRow .catalogueItem .itemImage .carousel .carousel-item img {
+  -webkit-transform: translate(13%, 22%);
+          transform: translate(13%, 22%);
+  height: 80%;
+  width: 80%;
+}
+
+main .mainContent .catalogueItems .itemsRow .catalogueItem .itemImage .carousel .carousel-next-icon {
+  color: #1623d4;
+  font-size: 2rem;
+}
+
+main .mainContent .catalogueItems .itemsRow .catalogueItem .itemImage .carousel .carousel-prev-icon {
+  color: #1623d4;
+  font-size: 2rem;
+}
+
+main .mainContent .catalogueItems .itemsRow .catalogueClickedActive {
+  min-height: 22rem;
+  background: white;
+}
+
+main .mainContent .catalogueItems .itemsRow .catalogueClickedActive .tempCardDiv {
+  display: none;
+  height: 7rem;
+  font-size: 0.85rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .mainContent .catalogueItems .itemsRow .catalogueClickedActive .tempCardDiv p {
+  margin: 8px 0;
+  font-weight: 500;
+  color: #727272;
+}
+
+main .mainContent .catalogueItems .itemsRow .catalogueClickedActive .tempCardDiv button {
+  position: relative;
+  margin: 0 auto 10px auto;
+  outline: none;
+  border: 1.6px solid #676767;
+  background: transparent;
+  color: #3d3d3d;
+  height: 38px;
+  width: 120px;
+  font-weight: 500;
+}
+
+main .mainContent .catalogueItems .itemsRow .catalogueClickedActive .tempCardDiv button span {
+  position: absolute;
+  z-index: 2;
+  top: 20%;
+  right: 0;
+  left: 0;
+}
+
+main .mainContent .catalogueItems .itemsRow .catalogueClickedActive .tempCardDiv button::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  height: 0%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #3b3939;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+main .mainContent .catalogueItems .itemsRow .catalogueClickedActive .tempCardDiv button:hover {
+  color: white;
+}
+
+main .mainContent .catalogueItems .itemsRow .catalogueClickedActive .tempCardDiv button:hover::after {
+  height: 100%;
+}
+
+main .mainContent .showMrButton {
+  margin-top: 4px;
+  text-align: center;
+  height: 5rem;
+  width: 100%;
+  background: #f3f3f3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .mainContent .showMrButton .showMoreBtn {
+  position: relative;
+  outline: none;
+  border: 1.6px solid #676767;
+  background: transparent;
+  color: #3d3d3d;
+  height: 45px;
+  width: 170px;
+  font-weight: 500;
+}
+
+main .mainContent .showMrButton .showMoreBtn span {
+  position: absolute;
+  z-index: 2;
+  top: 20%;
+  right: 0;
+  left: 0;
+}
+
+main .mainContent .showMrButton button::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  height: 0%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: black;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+main .mainContent .showMrButton button:hover {
+  color: white;
+}
+
+main .mainContent .showMrButton button:hover::after {
+  height: 100%;
+}
+
+footer {
+  position: relative;
+  background: #1b1b1b;
+  min-height: 25vh;
+}
+
+footer .yoUpBtn {
+  cursor: pointer;
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background: #131111;
+  z-index: 3;
+  right: 70px;
+  top: -12%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: blue;
+  font-size: 2rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-box-shadow: 78px 96px 39px -72px rgba(0, 0, 0, 0.75);
+  box-shadow: 78px 96px 39px -72px rgba(0, 0, 0, 0.75);
+}
+
+footer .yoUpBtn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+footer .footerContainer {
+  text-align: center;
+  padding: 1% 3% 1% 3%;
+}
+
+footer .footerContainer .footLinks {
+  padding: 2% 5% 0 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer .footerContainer .footLinks .mobileWrap {
+  margin-bottom: 35px;
+}
+
+footer .footerContainer .footLinks a {
+  text-decoration: none;
+  color: #b8b8b8;
+  font-size: 0.9rem;
+}
+
+footer .footerContainer .footLinks a span {
+  margin: 0 10px;
+}
+
+footer .footerContainer .footSocial {
+  padding: 10px 0 0 0;
+}
+
+footer .footerContainer .footSocial a {
+  color: #e7e7e7;
+  margin-right: 10px;
+}
+
+footer .footerContainer .footSocial a svg {
+  font-size: 1.9rem;
+}
+
+footer .footerContainer .footRights {
+  padding: 20px 0 0 0;
+  font-weight: 500;
+  color: #4d4d4d;
+}
+
+@media screen and (max-height: 750px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .moblileHeader {
+    display: block;
+  }
+  .moblileHeader .logUser {
+    display: none;
+  }
+  .moblileHeader .mobileBrandName {
+    display: block;
+  }
+  header {
+    min-height: 20vh;
+    padding: 3% 4%;
+    color: white;
+    /* The navigation menu links */
+    /* When you mouse over the navigation links, change their color */
+    /* Position and style the close button (top right corner) */
+  }
+  header .desktopBrandName {
+    display: none;
+  }
+  header .bckspaceLogUser .logUser {
+    text-align: right;
+    font-size: 0.8rem;
+  }
+  header nav {
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header nav .mobileBrandName .headImgContainer {
+    height: 38px;
+    width: 230px;
+    text-align: center;
+  }
+  header nav .mobileBrandName .headImgContainer img {
+    height: 100%;
+    width: 100%;
+  }
+  header nav .navBurger {
+    position: relative;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+  }
+  header nav .navBurger span:nth-child(1) {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 3px;
+    width: 32px;
+    background: white;
+    border-radius: 8px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  header nav .navBurger span:nth-child(2) {
+    content: "";
+    position: absolute;
+    top: 8px;
+    height: 3px;
+    width: 32px;
+    background: white;
+    border-radius: 8px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  header nav .navBurger span:nth-child(3) {
+    content: "";
+    position: absolute;
+    top: 16px;
+    height: 3px;
+    width: 32px;
+    background: white;
+    border-radius: 8px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  header nav .navBurger:hover span:nth-child(1),
+  header nav .navBurger:active span:nth-child(1) {
+    background: #0202f3;
+  }
+  header nav .navBurger:hover span:nth-child(2),
+  header nav .navBurger:active span:nth-child(2) {
+    width: 22px;
+  }
+  header nav .searchIcon {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    border-radius: 6px;
+  }
+  header nav .searchIcon button {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0);
+  }
+  header nav .searchIcon button svg {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    margin-top: 2px;
+    font-size: 1.33rem;
+    cursor: pointer;
+    color: white;
+  }
+  header .sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 3;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+    scrollbar-width: none;
+  }
+  header .sidenav::-webkit-scrollbar {
+    display: none;
+  }
+  header .sideNavContainer {
+    padding: 0 8%;
+  }
+  header .sideNavContainer .userProfile .userIcon {
+    font-size: 8rem;
+  }
+  header .sideNavContainer .userProfile .userName {
+    margin: 15px 0 0 30px;
+  }
+  header .sideNavContainer .userProfile .userName p {
+    margin: 0;
+  }
+  header .sideNavContainer .userProfile .userName .loggedIn {
+    font-size: 0.86rem;
+    margin-bottom: 10px;
+  }
+  header .sideNavContainer .userProfile .userName .loggedName {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  header .sideNavContainer hr {
+    background: #383838;
+    border-radius: 8px;
+    height: 1px;
+  }
+  header .sidenav a {
+    padding: 4px 0 0 0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #e9e9e9;
+    display: block;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  header .sidenav a:hover {
+    color: blue;
+  }
+  header .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .searchModal {
+    position: fixed;
+    z-index: 5;
+    min-height: 120vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .searchModal .searchHeading {
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+  .searchModal .searchContainer {
+    position: absolute;
+    top: 40%;
+    left: 18%;
+    -webkit-box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #70707034, -6px -6px 16px inset #77777734;
+            box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #70707034, -6px -6px 16px inset #77777734;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .searchModal .searchContainer input {
+    background: transparent;
+    color: white;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 2%;
+    height: 50px;
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+  .searchModal .searchContainer input:focus-within {
+    border: none;
+  }
+  .searchModal .searchContainer button {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 0 10px 0 20px;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  .searchModal .searchContainer button path {
+    fill: white;
+  }
+  .searchModal .searchContainer button:hover {
+    background: #252424;
+  }
+  .bannerImg {
+    min-height: 80vh;
+    max-height: 80vh;
+  }
+  main {
+    min-height: 100vh;
+  }
+  main .mainContent {
+    padding: 4% 3%;
+  }
+  main .mainContent .filterHead .filterDropdowns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .mainContent .filterHead .filterDropdowns ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    list-style: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  main .mainContent .filterHead .filterDropdowns ul li {
+    margin-left: 0;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #585858;
+  }
+  main .mainContent .filterHead .filterDropdowns ul li svg {
+    -webkit-transform: translate(3px, 1px);
+            transform: translate(3px, 1px);
+  }
+  main .mainContent .catalogueItems {
+    padding: 1% 1% 0 1%;
+  }
+  main .mainContent .catalogueItems .showMoreContent {
+    display: none;
+  }
+  @-webkit-keyframes showMoreAnim {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes showMoreAnim {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  main .mainContent .catalogueItems .itemsRow {
+    margin-bottom: 2px;
+    padding: 0 2%;
+  }
+  main .mainContent .catalogueItems .itemsRow .catalogueItem {
+    margin-bottom: 3px;
+    min-height: 15rem;
+    background: #f3f3f3;
+  }
+  main .mainContent .catalogueItems .itemsRow .catalogueItem .itemHeader {
+    padding: 3%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .mainContent .catalogueItems .itemsRow .catalogueItem .itemHeader svg {
+    font-size: 0.9rem;
+    color: #707070;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  main .mainContent .catalogueItems .itemsRow .catalogueItem .itemHeader svg:nth-child(1) {
+    color: #b1b1b1;
+  }
+  main .mainContent .catalogueItems .itemsRow .catalogueItem .itemHeader svg:nth-child(1):hover {
+    color: #1a1616;
+    cursor: pointer;
+  }
+  main .mainContent .catalogueItems .itemsRow .catalogueItem .itemHeader svg:nth-child(2):hover {
+    color: black;
+    cursor: pointer;
+  }
+  main .mainContent .catalogueItems .itemsRow .catalogueItem .itemImage {
+    pointer-events: all;
+    height: 13rem;
+    width: 75%;
+    margin: 0 auto;
+  }
+  main .mainContent .catalogueItems .itemsRow .catalogueItem .itemImage img {
+    -webkit-transform: translate(13%, 22%);
+            transform: translate(13%, 22%);
+    height: 80%;
+    width: 80%;
+  }
+  main .mainContent .catalogueItems .itemsRow .catalogueItem .itemImage .currentGlider {
+    display: none;
+  }
+  main .mainContent .catalogueItems .itemsRow .catalogueItem .itemImage .carousel .carousel-item {
+    padding: 5%;
+    height: 13rem;
+  }
+  main .mainContent .catalogueItems .itemsRow .catalogueItem .itemImage .carousel .carousel-item img {
+    -webkit-transform: translate(13%, 22%);
+            transform: translate(13%, 22%);
+    height: 80%;
+    width: 80%;
+  }
+  main .mainContent .catalogueItems .itemsRow .catalogueItem .itemImage .carousel .carousel-next-icon {
+    color: #1623d4;
+    font-size: 2rem;
+  }
+  main .mainContent .catalogueItems .itemsRow .catalogueItem .itemImage .carousel .carousel-prev-icon {
+    color: #1623d4;
+    font-size: 2rem;
+  }
+  main .mainContent .catalogueItems .itemsRow .catalogueClickedActive {
+    min-height: 22rem;
+    background: white;
+  }
+  main .mainContent .catalogueItems .itemsRow .catalogueClickedActive .tempCardDiv {
+    display: none;
+    height: 7rem;
+    font-size: 0.85rem;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main .mainContent .catalogueItems .itemsRow .catalogueClickedActive .tempCardDiv p {
+    margin: 8px 0;
+    font-weight: 500;
+    color: #727272;
+  }
+  main .mainContent .catalogueItems .itemsRow .catalogueClickedActive .tempCardDiv button {
+    position: relative;
+    margin: 0 auto 10px auto;
+    outline: none;
+    border: 1.6px solid #676767;
+    background: transparent;
+    color: #3d3d3d;
+    height: 38px;
+    width: 120px;
+    font-weight: 500;
+  }
+  main .mainContent .catalogueItems .itemsRow .catalogueClickedActive .tempCardDiv button span {
+    position: absolute;
+    z-index: 2;
+    top: 20%;
+    right: 0;
+    left: 0;
+  }
+  main .mainContent .catalogueItems .itemsRow .catalogueClickedActive .tempCardDiv button::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    height: 0%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #3b3939;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  main .mainContent .catalogueItems .itemsRow .catalogueClickedActive .tempCardDiv button:hover {
+    color: white;
+  }
+  main .mainContent .catalogueItems .itemsRow .catalogueClickedActive .tempCardDiv button:hover::after {
+    height: 100%;
+  }
+  main .mainContent .showMrButton {
+    margin-top: 4px;
+    text-align: center;
+    height: 5rem;
+    width: 100%;
+    background: #f3f3f3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .mainContent .showMrButton .showMoreBtn {
+    position: relative;
+    outline: none;
+    border: 1.6px solid #676767;
+    background: transparent;
+    color: #3d3d3d;
+    height: 45px;
+    width: 170px;
+    font-weight: 500;
+  }
+  main .mainContent .showMrButton .showMoreBtn span {
+    position: absolute;
+    z-index: 2;
+    top: 20%;
+    right: 0;
+    left: 0;
+  }
+  main .mainContent .showMrButton button::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    height: 0%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  main .mainContent .showMrButton button:hover {
+    color: white;
+  }
+  main .mainContent .showMrButton button:hover::after {
+    height: 100%;
+  }
+  footer .yoUpBtn {
+    display: none;
+  }
+}
+/*# sourceMappingURL=catalogue.css.map */
