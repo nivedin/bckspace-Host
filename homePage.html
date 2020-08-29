@@ -71,16 +71,29 @@
     </header>
 
     <header class="moblileHeader">
-
+        <div class="bckspaceLogUser">
+            <div class="logUser">
+                <p>logged in as <b>ansh bhandari</b></p>
+            </div>
+            <div class="thebckName desktopBrandName">
+                <div class="headImgContainer">
+                    <img src="./ASSETS/Layer 8.png" alt="brandImg">
+                </div>
+            </div>
+        </div>
         <nav>
             <div class="navBurger" onclick="openNav()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
+            <div class="thebckName mobileBrandName">
+                <div class="headImgContainer">
+                    <img src="./ASSETS/Layer 8.png" alt="brandImg">
+                </div>
+            </div>
             <div class="searchIcon">
-                <input type="text" placeholder="Search">
-                <button>
+                <button class="search">
                     <i class="fas fa-search"></i>
                 </button>
             </div>
@@ -90,12 +103,12 @@
             <div class="sideNavContainer">
                 <div class="userProfile">
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-12 col-md-4">
                             <div class="userIcon">
                                 <i class="fas fa-user-circle"></i>
                             </div>
                         </div>
-                        <div class="col-8  align-self-center">
+                        <div class="col-12 col-md-8  align-self-center">
                             <div class="userName">
                                 <p class="loggedIn">logged in as</p>
                                 <p class="loggedName">ansh bhandari</p>
@@ -143,7 +156,7 @@
                 <button aria-label="Previous" class="glider-prev">
                     <i class="fa fa-chevron-left"></i>
                 </button>
-                <div class="glider">
+                <div class="glider1">
                     <div class="gliderItem">
                         <div class="gliderContainer">
                             <img src="./ASSETS/Clip.svg" alt="imgLand">
@@ -188,76 +201,282 @@
             </div>
             <div class="brandsList">
                 <div class="brandCircle bNike" data-aos="fade-down" data-aos-duration="1200">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="168"
-                        height="168" viewBox="0 0 168 168">
-                        <image id="nike_PNG11" width="168" height="168"
-                            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAAYCAYAAABDX1s+AAACOklEQVRYhd3YS4iNcRjH8c8wJaMkJJfMQkgs5BJFUlgoU4iyMLGzEGVjIUqxUsqCjSxMbikLtxpiISIRuaREro1YuCSXclmM/vofHceY855z3vdc5lfP5vSe5/J9n/f/PO/bXzItxld8SXh9I2kG5mF4qK85QeLbMQntfQjCQrRFCK9wG4/wvtgfV6IbE6uTZ2YahdXoxGe8xmEsKiXg2AjjcmPV/lsDsQA7cTfWEewjtmFwOU6fRyclUayhwlmwCadi63fnWWd8TMrW8ejsG1rqFMA4rMVBPCkAkOuGXRhfaaD2PKe30sk9FQ2NB+HumFchgJzdwXoMSiPosALnJ2sIIKwEc7EFF/CpFwjBTmNJ2klcLAhyJu0ARRTG+zocQ1cRAN0R0j5MzSKZcOgUBnyWRaA8jcQK7MX9BAByFnaGzbGjM1Movqfgs1MM2BLH4Q5ciYd2UgjBLmFVlhByausliccV+p6eNw7flggg2E90YE565RbX9SJJ3cSUhL7yx+HTMgDkrCt2Ums1QTTFgC8TXh/2k/N4GOd8mAQjMAEzMQvTKswpwN+PI/hRoa+ytLGCu5imnaiXrbijhhA+YA8m1wGHPzpXAxAP4kE7pE4Y/KWzVQQR4C+ro9r/UXMVlq+waxzCgTp7N/qv5mfUDQH01vhxpuF0L0UQV7EG/RoRRE6t8SNyuRC+42hcy/uMwnJ1rUQI4e14A8b0FQhNPfy2FMvjxjkaA+LG+A4v4si8ER+NNzXIOTvhF3SQgbPZiWjgAAAAAElFTkSuQmCC" />
-                    </svg>
+                    <div class="brandLogoContainer">
+                        <img src="./ASSETS/nike_PNG11.png" alt="brandLogo"></div>
                 </div>
                 <div class="brandCircle bgucci" data-aos="fade-down" data-aos-duration="1400">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="78"
-                        height="13" viewBox="0 0 78 13">
-                        <image id="unnamed" width="78" height="13"
-                            xlink:href="data:img/png;base64,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" />
-                    </svg>
+                    <div class="brandLogoContainer"><img src="./ASSETS/unnamed.png" alt="brandLogo"></div>
+
                 </div>
                 <div class="brandCircle bBalan" data-aos="fade-down" data-aos-duration="1600">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="85"
-                        height="8" viewBox="0 0 85 8">
-                        <image id="Layer_1_copy_4" data-name="Layer 1 copy 4" width="85" height="8"
-                            xlink:href="data:img/png;base64,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" />
-                    </svg>
+                    <div class="brandLogoContainer"><img src="./ASSETS/Layer 1 copy 4.png" alt="brandLogo"></div>
+
                 </div>
                 <div class="brandCircle bSupreme" data-aos="fade-down" data-aos-duration="1800">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="85"
-                        height="29" viewBox="0 0 85 29">
-                        <image width="85" height="29"
-                            xlink:href="data:img/png;base64,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" />
-                    </svg>
+                    <div class="brandLogoContainer"><img src="./ASSETS/Layer 7.png" alt="brandLogo"></div>
+
                 </div>
-                <div class="brandCircle bgucci smallScreenNo" data-aos="fade-down" data-aos-duration="2000">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="78"
-                        height="13" viewBox="0 0 78 13">
-                        <image id="unnamed" width="78" height="13"
-                            xlink:href="data:img/png;base64,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" />
-                    </svg>
+                <div class="brandCircle offWhite smallScreenNo" data-aos="fade-down" data-aos-duration="2000">
+                    <div class="brandLogoContainer"><img src="./ASSETS/Off-White-Logo.png" alt="brandLogo"></div>
+
                 </div>
-                <div class="brandCircle bNike smallScreenNo" data-aos="fade-down" data-aos-duration="2200">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="168"
-                        height="168" viewBox="0 0 168 168">
-                        <image id="nike_PNG11" width="168" height="168"
-                            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAAYCAYAAABDX1s+AAACOklEQVRYhd3YS4iNcRjH8c8wJaMkJJfMQkgs5BJFUlgoU4iyMLGzEGVjIUqxUsqCjSxMbikLtxpiISIRuaREro1YuCSXclmM/vofHceY855z3vdc5lfP5vSe5/J9n/f/PO/bXzItxld8SXh9I2kG5mF4qK85QeLbMQntfQjCQrRFCK9wG4/wvtgfV6IbE6uTZ2YahdXoxGe8xmEsKiXg2AjjcmPV/lsDsQA7cTfWEewjtmFwOU6fRyclUayhwlmwCadi63fnWWd8TMrW8ejsG1rqFMA4rMVBPCkAkOuGXRhfaaD2PKe30sk9FQ2NB+HumFchgJzdwXoMSiPosALnJ2sIIKwEc7EFF/CpFwjBTmNJ2klcLAhyJu0ARRTG+zocQ1cRAN0R0j5MzSKZcOgUBnyWRaA8jcQK7MX9BAByFnaGzbGjM1Movqfgs1MM2BLH4Q5ciYd2UgjBLmFVlhByausliccV+p6eNw7flggg2E90YE565RbX9SJJ3cSUhL7yx+HTMgDkrCt2Ums1QTTFgC8TXh/2k/N4GOd8mAQjMAEzMQvTKswpwN+PI/hRoa+ytLGCu5imnaiXrbijhhA+YA8m1wGHPzpXAxAP4kE7pE4Y/KWzVQQR4C+ro9r/UXMVlq+waxzCgTp7N/qv5mfUDQH01vhxpuF0L0UQV7EG/RoRRE6t8SNyuRC+42hcy/uMwnJ1rUQI4e14A8b0FQhNPfy2FMvjxjkaA+LG+A4v4si8ER+NNzXIOTvhF3SQgbPZiWjgAAAAAElFTkSuQmCC" />
-                    </svg>
+                <div class="brandCircle adidas smallScreenNo" data-aos="fade-down" data-aos-duration="2200">
+                    <div class="brandLogoContainer"><img src="./ASSETS/Layer 1 copy 2.png" alt="brandLogo"></div>
+
                 </div>
             </div>
             <div class="mobileDownButton">
-
                 <button><span>see all</span></button>
-
             </div>
         </div>
-
-
-
     </main>
 
+    <div class="nikeShoeBanner">
+        <div class="imgContainer">
 
+        </div>
+    </div>
 
-    <footer>
+    <div class="top20fire">
+        <div class="top20Container">
+            <div class="topParaBtn">
+                <p class="top20">top 20 fire</p>
+                <button class="seeAll"><span>see all</span></button>
+            </div>
+            <div class="top20Carousel">
+                <div class="glider-contain">
+                    <div class="glider2">
+                        <div>
+                            <div class="carouselCard">
+                                <div class="cardBody">
+                                    <div class="addLikeIco">
+                                        <i class="plusIco fas fa-plus-circle"></i>
+                                        <i class="heartIco far fa-heart"></i>
+                                    </div>
+                                    <div class="cardImage">
+                                        <img src="./ASSETS/Nike-Air-Max-90-Viotech-OG-Product.png" alt="shoeImg">
+                                    </div>
+                                </div>
+                                <div class="itemName">
+                                    <p>air max 90 'viotech'</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="carouselCard">
+                                <div class="cardBody">
+                                    <div class="addLikeIco">
+                                        <i class="plusIco fas fa-plus-circle"></i>
+                                        <i class="heartIco far fa-heart"></i>
+                                    </div>
+                                    <div class="cardImage">
+                                        <img src="./ASSETS/Layer 3.png" alt="shoeImg">
+                                    </div>
+                                </div>
+                                <div class="itemName">
+                                    <p>air jordan 11 retro gs bred 2019</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="carouselCard">
+                                <div class="cardBody">
+                                    <div class="addLikeIco">
+                                        <i class="plusIco fas fa-plus-circle"></i>
+                                        <i class="heartIco far fa-heart"></i>
+                                    </div>
+                                    <div class="cardImage">
+                                        <img src="./ASSETS/450305_00.png.png" alt="shoeImg" style="height: 80%;">
+                                    </div>
+                                </div>
+                                <div class="itemName">
+                                    <p>balenciaga track trainer white orange</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="carouselCard">
+                                <div class="cardBody">
+                                    <div class="addLikeIco">
+                                        <i class="plusIco fas fa-plus-circle"></i>
+                                        <i class="heartIco far fa-heart"></i>
+                                    </div>
+                                    <div class="cardImage">
+                                        <img src="./ASSETS/Nike-Air-Max-90-Viotech-OG-Product.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="itemName">
+                                    <p>disney x gucci rhyton 'mickey mouse'</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="carouselCard">
+                                <div class="cardBody">
+                                    <div class="addLikeIco">
+                                        <i class="plusIco fas fa-plus-circle"></i>
+                                        <i class="heartIco far fa-heart"></i>
+                                    </div>
+                                    <div class="cardImage">
+                                        <img src="./ASSETS/Layer 3.png" alt="shoeImg">
+                                    </div>
+                                </div>
+                                <div class="itemName">
+                                    <p>disney x gucci rhyton 'mickey mouse'</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button aria-label="Previous" class="glider-prev gliderPrev"><i
+                            class="fa fa-chevron-left"></i></button>
+                    <button aria-label="Next" class="glider-next gliderNext"><i
+                            class="fa fa-chevron-right"></i></button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ourRecomendation">
+        <div class="recomContainer">
+            <div class="topParaBtn">
+                <p class="recom">our recommendations</p>
+                <button class="seeAll"><span>see all</span></button>
+            </div>
+            <div class="recomCarousel">
+                <div class="glider-contain">
+                    <div class="glider3">
+                        <div>
+                            <div class="carouselCard">
+                                <div class="cardBody">
+                                    <div class="addLikeIco">
+                                        <i class="plusIco fas fa-plus-circle"></i>
+                                        <i class="heartIco far fa-heart"></i>
+                                    </div>
+                                    <div class="cardImage">
+                                        <img src="./ASSETS/Nike-Air-Max-90-Viotech-OG-Product.png" alt="shoeImg">
+                                    </div>
+                                </div>
+                                <div class="itemName">
+                                    <p>air max 90 'viotech'</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="carouselCard">
+                                <div class="cardBody">
+                                    <div class="addLikeIco">
+                                        <i class="plusIco fas fa-plus-circle"></i>
+                                        <i class="heartIco far fa-heart"></i>
+                                    </div>
+                                    <div class="cardImage">
+                                        <img src="./ASSETS/Layer 3.png" alt="shoeImg">
+                                    </div>
+                                </div>
+                                <div class="itemName">
+                                    <p>air jordan 11 retro gs bred 2019</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="carouselCard">
+                                <div class="cardBody">
+                                    <div class="addLikeIco">
+                                        <i class="plusIco fas fa-plus-circle"></i>
+                                        <i class="heartIco far fa-heart"></i>
+                                    </div>
+                                    <div class="cardImage">
+                                        <img src="./ASSETS/450305_00.png.png" alt="shoeImg" style="height: 80%;">
+                                    </div>
+                                </div>
+                                <div class="itemName">
+                                    <p>balenciaga track trainer white orange</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="carouselCard">
+                                <div class="cardBody">
+                                    <div class="addLikeIco">
+                                        <i class="plusIco fas fa-plus-circle"></i>
+                                        <i class="heartIco far fa-heart"></i>
+                                    </div>
+                                    <div class="cardImage">
+                                        <img src="./ASSETS/Nike-Air-Max-90-Viotech-OG-Product.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="itemName">
+                                    <p>disney x gucci rhyton 'mickey mouse'</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="carouselCard">
+                                <div class="cardBody">
+                                    <div class="addLikeIco">
+                                        <i class="plusIco fas fa-plus-circle"></i>
+                                        <i class="heartIco far fa-heart"></i>
+                                    </div>
+                                    <div class="cardImage">
+                                        <img src="./ASSETS/Layer 3.png" alt="shoeImg">
+                                    </div>
+                                </div>
+                                <div class="itemName">
+                                    <p>disney x gucci rhyton 'mickey mouse'</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button aria-label="Previous" class="glider-prev glider3Prev"><i
+                            class="fa fa-chevron-left"></i></button>
+                    <button aria-label="Next" class="glider-next glider3Next"><i
+                            class="fa fa-chevron-right"></i></button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="instagramGallery">
+        <div class="headGallery">
+            <div class="instPara">instagram gallery</div>
+            <div class="instId"><a href="https://instagram.com">@thebckspace</a> </div>
+        </div>
         <div class="yoUpBtn">
+
             <i class="fa fa-chevron-up"></i>
         </div>
+        <div class="galleryContainer">
+            <div class="gallImg" data-aos="fade-down" data-aos-duration="1000">
+                <img src="./ASSETS/Rectangle 8.png" alt="instaImg">
+            </div>
+            <div class="gallImg" data-aos="fade-down" data-aos-duration="1500">
+                <img src="./ASSETS/Rectangle 8 copy.png" alt="instaImg">
+            </div>
+            <div class="gallImg" data-aos="fade-down" data-aos-duration="2000">
+                <img src="./ASSETS/Rectangle 8 copy 2.png" alt="instaImg">
+            </div>
+            <div class="gallImg" style="margin-right: 0;" data-aos="fade-down" data-aos-duration="2500">
+                <img src="./ASSETS/Rectangle 8 copy 3.png" alt="instaImg">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
         <div class="footerContainer">
             <div class="footLinks">
                 <div class="mobileWrap">
                     <a href="#">guide <span>|</span></a>
                     <a href="#">copyright <span>|</span></a>
-                    <a href="#">terms and condition <span>|</span></a>
+                    <a href="#">terms and condition <span class="noMobile">|</span></a>
                 </div>
                 <div class="mobileWrap">
                     <a href="#">privacy poilcy <span>|</span></a>
                     <a href="#">contact us <span>|</span></a>
-                    <a href="#">sneaker request <span>|</span></a>
+                    <a href="#">sneaker request <span class="noMobile">|</span></a>
                 </div>
                 <div class="mobileWrap">
 

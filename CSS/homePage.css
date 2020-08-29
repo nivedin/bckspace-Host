@@ -34,12 +34,315 @@ body {
 }
 
 .moblileHeader {
+  height: 20vh;
+  padding: 3% 4%;
+  background: #000000;
+  color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-animation: headerAnim 0.5s ease forwards;
+          animation: headerAnim 0.5s ease forwards;
+  /* The navigation menu links */
+  /* When you mouse over the navigation links, change their color */
+  /* Position and style the close button (top right corner) */
+}
+
+.moblileHeader .mobileBrandName {
   display: none;
+}
+
+.moblileHeader .bckspaceLogUser .logUser {
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+.moblileHeader .bckspaceLogUser .headImgContainer {
+  margin: 0 auto;
+  height: 38px;
+  width: 230px;
+  text-align: center;
+}
+
+.moblileHeader .bckspaceLogUser .headImgContainer img {
+  height: 100%;
+  width: 100%;
+}
+
+.moblileHeader nav {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.moblileHeader nav .navBurger {
+  position: relative;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+}
+
+.moblileHeader nav .navBurger span:nth-child(1) {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 3px;
+  width: 32px;
+  background: white;
+  border-radius: 8px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.moblileHeader nav .navBurger span:nth-child(2) {
+  content: "";
+  position: absolute;
+  top: 8px;
+  height: 3px;
+  width: 32px;
+  background: white;
+  border-radius: 8px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.moblileHeader nav .navBurger span:nth-child(3) {
+  content: "";
+  position: absolute;
+  top: 16px;
+  height: 3px;
+  width: 32px;
+  background: white;
+  border-radius: 8px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.moblileHeader nav .navBurger:hover span:nth-child(1),
+.moblileHeader nav .navBurger:active span:nth-child(1) {
+  background: #0202f3;
+}
+
+.moblileHeader nav .navBurger:hover span:nth-child(2),
+.moblileHeader nav .navBurger:active span:nth-child(2) {
+  width: 22px;
+}
+
+.moblileHeader nav .searchIcon {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
+  border-radius: 6px;
+}
+
+.moblileHeader nav .searchIcon input {
+  width: 0;
+  border: none;
+  background: transparent;
+  color: white;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  height: 100%;
+  padding: 2%;
+}
+
+.moblileHeader nav .searchIcon input::-webkit-input-placeholder {
+  outline: none;
+  border: none;
+}
+
+.moblileHeader nav .searchIcon input:-ms-input-placeholder {
+  outline: none;
+  border: none;
+}
+
+.moblileHeader nav .searchIcon input::-ms-input-placeholder {
+  outline: none;
+  border: none;
+}
+
+.moblileHeader nav .searchIcon input::placeholder {
+  outline: none;
+  border: none;
+}
+
+.moblileHeader nav .searchIcon input:focus {
+  outline: none;
+  border: none;
+}
+
+.moblileHeader nav .searchIcon button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0);
+}
+
+.moblileHeader nav .searchIcon button svg {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-top: 2px;
+  font-size: 1.33rem;
+  cursor: pointer;
+  color: white;
+}
+
+.moblileHeader nav .searchIcon:hover input,
+.moblileHeader nav .searchIcon:focus-within input {
+  width: 250px;
+  margin-left: 10px;
+}
+
+.moblileHeader nav .searchIcon:hover,
+.moblileHeader nav input:focus {
+  -webkit-box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #36363634, -6px -6px 16px inset #3d3d3d34;
+          box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #36363634, -6px -6px 16px inset #3d3d3d34;
+}
+
+.moblileHeader nav .searchIcon:hover svg,
+.moblileHeader nav input:focus svg {
+  color: #0202f3;
+}
+
+.moblileHeader .sidenav {
+  height: 100vh;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 9;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  background-color: #111;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
+  scrollbar-width: none;
+}
+
+.moblileHeader .sidenav::-webkit-scrollbar {
+  display: none;
+}
+
+.moblileHeader .sideNavContainer {
+  padding: 0 8%;
+}
+
+.moblileHeader .sideNavContainer .userProfile .userIcon {
+  font-size: 8rem;
+}
+
+.moblileHeader .sideNavContainer .userProfile .userName {
+  margin: 15px 0 0 30px;
+}
+
+.moblileHeader .sideNavContainer .userProfile .userName p {
+  margin: 0;
+}
+
+.moblileHeader .sideNavContainer .userProfile .userName .loggedIn {
+  font-size: 0.86rem;
+  margin-bottom: 10px;
+}
+
+.moblileHeader .sideNavContainer .userProfile .userName .loggedName {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.moblileHeader .sideNavContainer hr {
+  background: #383838;
+  border-radius: 8px;
+  height: 1px;
+}
+
+.moblileHeader .sidenav a {
+  padding: 4px 0 0 0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #e9e9e9;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.moblileHeader .sidenav a:hover {
+  color: blue;
+}
+
+.moblileHeader .sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@-webkit-keyframes headerAnim {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes headerAnim {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 .desktopHeader {
   min-height: 15vh;
   background: black;
+  display: none;
+  position: fixed;
+  z-index: 6;
+  width: 100%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-animation: headerAnim 0.5s ease forwards;
+          animation: headerAnim 0.5s ease forwards;
 }
 
 .desktopHeader nav {
@@ -224,7 +527,7 @@ body {
 .searchModal .searchContainer {
   position: absolute;
   top: 40%;
-  left: 30%;
+  left: 25%;
   -webkit-box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #70707034, -6px -6px 16px inset #77777734;
           box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #70707034, -6px -6px 16px inset #77777734;
 }
@@ -264,12 +567,16 @@ body {
   background: #252424;
 }
 
+main {
+  margin-top: 20vh;
+}
+
 main .mainContent {
   position: relative;
 }
 
 main .mainContent .gliderItem {
-  max-height: 85vh;
+  max-height: 80vh;
   background: black;
   text-align: center;
 }
@@ -376,7 +683,8 @@ main .copDropBtns .copDropContainer button span {
   position: absolute;
   z-index: 2;
   top: 25%;
-  left: 30%;
+  left: 0;
+  right: 0;
 }
 
 main .copDropBtns .copDropContainer button::after {
@@ -465,7 +773,7 @@ main .popularBrand .popuparaBtn .popuBtn button:hover::after {
 }
 
 main .popularBrand .brandsList {
-  padding: 40px 10px;
+  padding: 40px 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -491,37 +799,489 @@ main .popularBrand .brandsList .brandCircle {
           align-items: center;
 }
 
-main .popularBrand .brandsList .brandCircle svg {
-  -webkit-transform: translate(2px, 3px);
-          transform: translate(2px, 3px);
-  height: 58%;
-  width: 58%;
+main .popularBrand .brandsList .brandCircle .brandLogoContainer {
+  margin: 0 auto;
+  height: 50px;
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .popularBrand .brandsList .brandCircle img {
+  height: 80%;
+  width: 80%;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-main .popularBrand .brandsList .brandCircle:hover svg {
+main .popularBrand .brandsList .bNike .brandLogoContainer {
+  height: 45px;
+  width: 110px;
+}
+
+main .popularBrand .brandsList .bgucci .brandLogoContainer {
+  height: 20px;
+  width: 100px;
+}
+
+main .popularBrand .brandsList .bBalan .brandLogoContainer {
+  height: 20px;
+  width: 110px;
+}
+
+main .popularBrand .brandsList .offWhite .brandLogoContainer {
+  height: 30px;
+  width: 90px;
+}
+
+main .popularBrand .brandsList .adidas .brandLogoContainer {
+  height: 55px;
+  width: 90px;
+}
+
+main .popularBrand .brandsList .brandCircle:hover img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-main .popularBrand .brandsList .bgucci svg {
-  -webkit-transform: translate(-1px, -1px);
-          transform: translate(-1px, -1px);
-}
-
-main .popularBrand .brandsList .bBalan svg {
-  -webkit-transform: translate(-1px, -1px);
-          transform: translate(-1px, -1px);
-}
-
-main .popularBrand .brandsList .bSupreme svg {
-  -webkit-transform: translate(-1px, -1px);
-          transform: translate(-1px, -1px);
-}
-
 main .popularBrand .mobileDownButton {
   display: none;
+}
+
+.nikeShoeBanner {
+  min-height: 100vh;
+}
+
+.nikeShoeBanner .imgContainer {
+  height: 100vh;
+  width: 100%;
+  background: url("../ASSETS/Rectangle 3.png");
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.top20fire {
+  min-height: 100%;
+}
+
+.top20fire .top20Container {
+  padding: 5% 4%;
+}
+
+.top20fire .top20Container .topParaBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5%;
+}
+
+.top20fire .top20Container .topParaBtn .top20 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.top20fire .top20Container .topParaBtn .seeAll {
+  position: relative;
+  outline: none;
+  border: 1.6px solid #858585;
+  background: white;
+  color: black;
+  height: 35px;
+  width: 120px;
+  font-weight: 500;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.top20fire .top20Container .topParaBtn .seeAll span {
+  position: absolute;
+  z-index: 2;
+  top: 16%;
+  left: 30%;
+}
+
+.top20fire .top20Container .topParaBtn button::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: 0;
+  background: black;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.top20fire .top20Container .topParaBtn button:hover {
+  color: white;
+}
+
+.top20fire .top20Container .topParaBtn button:hover::after {
+  width: 100%;
+}
+
+.top20fire .top20Container .top20Carousel {
+  margin-top: 20px;
+}
+
+.top20fire .top20Container .top20Carousel .glider-contain {
+  width: 100%;
+  height: 100%;
+  padding: 0 5%;
+}
+
+.top20fire .top20Container .top20Carousel .glider {
+  height: auto;
+}
+
+.top20fire .top20Container .top20Carousel .glider .carouselCard {
+  height: auto;
+  margin-right: 3px;
+}
+
+.top20fire .top20Container .top20Carousel .glider .carouselCard .cardBody {
+  background: #ebebeb;
+}
+
+.top20fire .top20Container .top20Carousel .glider .carouselCard .cardBody .addLikeIco {
+  padding: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top20fire .top20Container .top20Carousel .glider .carouselCard .cardBody .addLikeIco svg {
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  cursor: pointer;
+  color: #636363;
+}
+
+.top20fire .top20Container .top20Carousel .glider .carouselCard .cardBody .addLikeIco .plusIco:hover {
+  color: #32d432;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.top20fire .top20Container .top20Carousel .glider .carouselCard .cardBody .addLikeIco .heartIco:hover {
+  color: #c21f48;
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+.top20fire .top20Container .top20Carousel .glider .carouselCard .cardBody .cardImage {
+  height: 9rem;
+  width: 13rem;
+  margin: 10% auto 0 auto;
+}
+
+.top20fire .top20Container .top20Carousel .glider .carouselCard .cardBody .cardImage img {
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.top20fire .top20Container .top20Carousel .glider .carouselCard .cardBody .cardImage:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.top20fire .top20Container .top20Carousel .glider .carouselCard .itemName {
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 15px 0;
+}
+
+.top20fire .top20Container .top20Carousel .glider-prev {
+  top: 35%;
+  outline: none;
+}
+
+.top20fire .top20Container .top20Carousel .glider-prev svg {
+  color: blue;
+}
+
+.top20fire .top20Container .top20Carousel .glider-next {
+  top: 35%;
+  outline: none;
+}
+
+.top20fire .top20Container .top20Carousel .glider-next svg {
+  color: blue;
+}
+
+.ourRecomendation .recomContainer {
+  padding: 5% 4%;
+}
+
+.ourRecomendation .recomContainer .topParaBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5%;
+}
+
+.ourRecomendation .recomContainer .topParaBtn .recom {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.ourRecomendation .recomContainer .topParaBtn .seeAll {
+  position: relative;
+  outline: none;
+  border: 1.6px solid #909090;
+  background: white;
+  color: #767676;
+  height: 35px;
+  width: 120px;
+  font-weight: 500;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.ourRecomendation .recomContainer .topParaBtn .seeAll span {
+  position: absolute;
+  z-index: 2;
+  top: 16%;
+  left: 30%;
+}
+
+.ourRecomendation .recomContainer .topParaBtn button::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: 0;
+  background: black;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.ourRecomendation .recomContainer .topParaBtn button:hover {
+  color: white;
+}
+
+.ourRecomendation .recomContainer .topParaBtn button:hover::after {
+  width: 100%;
+}
+
+.ourRecomendation .recomContainer .recomCarousel {
+  margin-top: 20px;
+}
+
+.ourRecomendation .recomContainer .recomCarousel .glider-contain {
+  width: 100%;
+  height: 100%;
+  padding: 0 5%;
+}
+
+.ourRecomendation .recomContainer .recomCarousel .glider {
+  height: auto;
+}
+
+.ourRecomendation .recomContainer .recomCarousel .glider .carouselCard {
+  height: auto;
+  margin-right: 3px;
+}
+
+.ourRecomendation .recomContainer .recomCarousel .glider .carouselCard .cardBody {
+  background: #ebebeb;
+}
+
+.ourRecomendation .recomContainer .recomCarousel .glider .carouselCard .cardBody .addLikeIco {
+  padding: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ourRecomendation .recomContainer .recomCarousel .glider .carouselCard .cardBody .addLikeIco svg {
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  cursor: pointer;
+  color: #636363;
+}
+
+.ourRecomendation .recomContainer .recomCarousel .glider .carouselCard .cardBody .addLikeIco .plusIco:hover {
+  color: #32d432;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.ourRecomendation .recomContainer .recomCarousel .glider .carouselCard .cardBody .addLikeIco .heartIco:hover {
+  color: #c21f48;
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+.ourRecomendation .recomContainer .recomCarousel .glider .carouselCard .cardBody .cardImage {
+  height: 9rem;
+  width: 13rem;
+  margin: 10% auto 0 auto;
+}
+
+.ourRecomendation .recomContainer .recomCarousel .glider .carouselCard .cardBody .cardImage img {
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.ourRecomendation .recomContainer .recomCarousel .glider .carouselCard .cardBody .cardImage:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.ourRecomendation .recomContainer .recomCarousel .glider .carouselCard .itemName {
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 15px 0;
+}
+
+.ourRecomendation .recomContainer .recomCarousel .glider-prev {
+  top: 35%;
+  outline: none;
+}
+
+.ourRecomendation .recomContainer .recomCarousel .glider-prev svg {
+  color: blue;
+}
+
+.ourRecomendation .recomContainer .recomCarousel .glider-next {
+  top: 35%;
+  outline: none;
+}
+
+.ourRecomendation .recomContainer .recomCarousel .glider-next svg {
+  color: blue;
+}
+
+.instagramGallery {
+  background: #b9b9b9;
+  min-height: 50vh;
+  position: relative;
+}
+
+.instagramGallery .yoUpBtn {
+  cursor: pointer;
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background: #131111;
+  z-index: 3;
+  right: 30px;
+  top: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: blue;
+  font-size: 2rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.instagramGallery .yoUpBtn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.instagramGallery .headGallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2% 6%;
+}
+
+.instagramGallery .headGallery .instPara {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.instagramGallery .headGallery .instId a {
+  color: #0301fd;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.instagramGallery .headGallery .instId a:hover {
+  color: #990799;
+}
+
+.instagramGallery .galleryContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.instagramGallery .galleryContainer .gallImg {
+  height: 330px;
+  width: 350px;
+  margin-right: 6px;
+}
+
+.instagramGallery .galleryContainer .gallImg img {
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.instagramGallery .galleryContainer .gallImg img:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
 }
 
 footer {
@@ -622,39 +1382,47 @@ footer .footerContainer .footRights {
 }
 
 @media screen and (max-width: 750px) {
-  .desktopHeader {
+  .moblileHeader {
+    height: 15vh;
+  }
+  .moblileHeader .logUser {
     display: none;
   }
-  .moblileHeader {
+  .moblileHeader .mobileBrandName {
     display: block;
   }
   header {
-    height: 20vh;
+    min-height: 15vh;
     padding: 3% 4%;
-    background: #1b1b1b;
     color: white;
     /* The navigation menu links */
     /* When you mouse over the navigation links, change their color */
     /* Position and style the close button (top right corner) */
   }
+  header .desktopBrandName {
+    display: none;
+  }
   header .bckspaceLogUser .logUser {
     text-align: right;
     font-size: 0.8rem;
   }
-  header .bckspaceLogUser .headImgContainer {
-    text-align: center;
-  }
-  header .bckspaceLogUser .headImgContainer svg {
-    height: 30px;
-  }
   header nav {
-    margin-top: 30px;
+    margin-top: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header nav .mobileBrandName {
+    display: none;
+  }
+  header nav .headImgContainer {
+    display: none;
   }
   header nav .navBurger {
     position: relative;
@@ -715,39 +1483,9 @@ footer .footerContainer .footRights {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-transform: translateY(-15%);
-            transform: translateY(-15%);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     border-radius: 6px;
-  }
-  header nav .searchIcon input {
-    width: 0;
-    border: none;
-    background: transparent;
-    color: white;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    height: 100%;
-    padding: 2%;
-  }
-  header nav .searchIcon input::-webkit-input-placeholder {
-    outline: none;
-    border: none;
-  }
-  header nav .searchIcon input:-ms-input-placeholder {
-    outline: none;
-    border: none;
-  }
-  header nav .searchIcon input::-ms-input-placeholder {
-    outline: none;
-    border: none;
-  }
-  header nav .searchIcon input::placeholder {
-    outline: none;
-    border: none;
-  }
-  header nav .searchIcon input:focus {
-    outline: none;
-    border: none;
   }
   header nav .searchIcon button {
     height: 40px;
@@ -766,20 +1504,6 @@ footer .footerContainer .footRights {
     font-size: 1.33rem;
     cursor: pointer;
     color: white;
-  }
-  header nav .searchIcon:hover input,
-  header nav .searchIcon:focus-within input {
-    width: 250px;
-    margin-left: 10px;
-  }
-  header nav .searchIcon:hover,
-  header nav input:focus {
-    -webkit-box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #36363634, -6px -6px 16px inset #3d3d3d34;
-            box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #36363634, -6px -6px 16px inset #3d3d3d34;
-  }
-  header nav .searchIcon:hover svg,
-  header nav input:focus svg {
-    color: #0202f3;
   }
   header .sidenav {
     height: 100%;
@@ -851,9 +1575,455 @@ footer .footerContainer .footRights {
     font-size: 36px;
     margin-left: 50px;
   }
-  main img {
+  .searchModal {
+    position: fixed;
+    z-index: 5;
+    min-height: 120vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .searchModal .searchHeading {
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+  .searchModal .searchContainer {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin: 0 8%;
+    -webkit-box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #70707034, -6px -6px 16px inset #77777734;
+            box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #70707034, -6px -6px 16px inset #77777734;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .searchModal .searchContainer input {
+    background: transparent;
+    color: white;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 2%;
+    height: 50px;
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+  .searchModal .searchContainer input:focus-within {
+    border: none;
+  }
+  .searchModal .searchContainer button {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 0 10px 0 20px;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  .searchModal .searchContainer button path {
+    fill: white;
+  }
+  .searchModal .searchContainer button:hover {
+    background: #252424;
+  }
+  main {
+    margin-top: 15vh;
+  }
+  main .mainContent {
+    position: relative;
+  }
+  main .mainContent .gliderItem {
+    max-height: 100vh;
+    background: black;
+    text-align: center;
+  }
+  main .mainContent .gliderItem .gliderContainer {
+    height: 100%;
+  }
+  main .mainContent .gliderItem .gliderContainer img {
+    -webkit-transform: translate(2%, 15%);
+            transform: translate(2%, 15%);
+    height: 90%;
+    width: 90%;
+  }
+  main .mainContent .glider-dots {
+    position: absolute;
+    top: 112%;
+    left: 0;
+    right: 0;
+    outline: none;
+  }
+  main .mainContent .glider-dots button.active {
+    background: black;
+    outline: none;
+  }
+  main .mainContent .glider-dots button {
+    background: #dddddd;
+    outline: none;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  main .mainContent .glider-dots button:hover {
+    background: #9b9b9b;
+  }
+  main .mainContent .glider-next {
+    top: 33%;
+    right: 30px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    outline: none;
+  }
+  main .mainContent .glider-next svg {
+    font-size: 2rem;
+    color: #0202f3;
+  }
+  main .mainContent .glider-next:hover {
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+  }
+  main .mainContent .glider-prev {
+    top: 33%;
+    left: 30px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    outline: none;
+  }
+  main .mainContent .glider-prev svg {
+    font-size: 2rem;
+    color: #0202f3;
+  }
+  main .mainContent .glider-prev:hover {
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+  }
+  main .copDropBtns {
+    min-height: 16vh;
+    background: white;
+    padding: 3% 8%;
+  }
+  main .copDropBtns .copDropContainer {
+    margin: 80px auto;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main .copDropBtns .copDropContainer button {
+    position: relative;
+    outline: none;
+    border: 1.6px solid #676767;
+    background: white;
+    color: #3d3d3d;
+    height: 45px;
+    width: 140px;
+    font-weight: 500;
+  }
+  main .copDropBtns .copDropContainer button span {
+    position: absolute;
+    z-index: 2;
+    top: 25%;
+    left: 0;
+    right: 0;
+  }
+  main .copDropBtns .copDropContainer button::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    height: 0%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  main .copDropBtns .copDropContainer button:hover {
+    color: white;
+  }
+  main .copDropBtns .copDropContainer button:hover::after {
+    height: 100%;
+  }
+  main .popularBrand {
+    min-height: 50vh;
+    padding: 2% 8%;
+  }
+  main .popularBrand .popuparaBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 95%;
+  }
+  main .popularBrand .popuparaBtn .popuPara {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  main .popularBrand .popuparaBtn .popuBtn {
+    display: none;
+  }
+  main .popularBrand .brandsList {
+    margin-top: 20px;
+    padding: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  main .popularBrand .brandsList .brandCircle {
+    height: 70px;
+    width: 70px;
+    margin-right: 20px;
+    border-radius: 50%;
+    border: 1px solid #9b9b9b;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .popularBrand .brandsList .brandCircle .brandLogoContainer {
+    margin: 0 auto;
+    height: 40px;
+    width: 90px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .popularBrand .brandsList .brandCircle img {
+    height: 80%;
+    width: 80%;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  main .popularBrand .brandsList .bNike .brandLogoContainer {
+    height: 25px;
+    width: 70px;
+  }
+  main .popularBrand .brandsList .bgucci .brandLogoContainer {
+    height: 18px;
+    width: 80px;
+  }
+  main .popularBrand .brandsList .bBalan .brandLogoContainer {
+    height: 15px;
+    width: 70px;
+  }
+  main .popularBrand .brandsList .bSupreme .brandLogoContainer {
+    height: 18px;
+    width: 70px;
+  }
+  main .popularBrand .brandsList .brandCircle:hover img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  main .popularBrand .brandsList .smallScreenNo {
+    display: none;
+  }
+  main .popularBrand .mobileDownButton {
+    display: block;
+    text-align: center;
+    margin: 40px 0;
+  }
+  main .popularBrand .mobileDownButton button {
+    position: relative;
+    outline: none;
+    border: 1.6px solid #ebebeb;
+    background: white;
+    color: black;
+    height: 35px;
+    width: 120px;
+    font-weight: 500;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  main .popularBrand .mobileDownButton button span {
+    position: absolute;
+    z-index: 2;
+    top: 16%;
+    left: 0;
+    right: 0;
+  }
+  main .popularBrand .mobileDownButton button::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: 0;
+    background: black;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  main .popularBrand .mobileDownButton button:hover {
+    color: white;
+  }
+  main .popularBrand .mobileDownButton button:hover::after {
+    width: 100%;
+  }
+  .nikeShoeBanner {
+    min-height: 65vh;
+  }
+  .nikeShoeBanner .imgContainer {
+    height: 60vh;
+    width: 100%;
+    background: url("../ASSETS/Rectangle 3.png");
+    background-size: 100vw 60vh;
+    background-repeat: no-repeat;
+    background-position-x: center;
+  }
+  .top20fire {
+    min-height: 60vh;
+  }
+  .top20fire .top20Container {
+    padding: 5% 8%;
+  }
+  .top20fire .top20Container .topParaBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 8%;
+  }
+  .top20fire .top20Container .topParaBtn .seeAll {
+    display: none;
+  }
+  .top20fire .top20Container .glider {
+    overflow-x: hidden;
+  }
+  .top20fire .top20Container .glider-prev svg {
+    font-size: 1.8rem;
+  }
+  .top20fire .top20Container .glider-next svg {
+    font-size: 1.8rem;
+  }
+  .ourRecomendation {
+    min-height: 70vh;
+    overflow-y: visible;
+  }
+  .ourRecomendation .recomContainer {
+    padding: 5% 8%;
+  }
+  .ourRecomendation .recomContainer .topParaBtn {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .ourRecomendation .recomContainer .topParaBtn .seeAll {
+    display: none;
+  }
+  .ourRecomendation .recomContainer .glider {
+    overflow-x: hidden;
+  }
+  .ourRecomendation .recomContainer .glider-prev svg {
+    font-size: 1.8rem;
+  }
+  .ourRecomendation .recomContainer .glider-next svg {
+    font-size: 1.8rem;
+  }
+  .instagramGallery {
+    background: #b9b9b9;
+    min-height: 60vh;
+  }
+  .instagramGallery .yoUpBtn {
+    display: none;
+  }
+  .instagramGallery .headGallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .instagramGallery .headGallery .instPara {
+    margin: 15px 0 10px 0;
+    font-weight: 500;
+  }
+  .instagramGallery .headGallery .instId {
+    margin: 15px 0;
+  }
+  .instagramGallery .headGallery .instId a {
+    font-size: 0.85rem;
+  }
+  .instagramGallery .galleryContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+  }
+  .instagramGallery .galleryContainer .gallImg {
+    height: 330px;
+    width: 350px;
+    margin-right: 4px;
+  }
+  .instagramGallery .galleryContainer .gallImg img {
     height: 100%;
     width: 100%;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .instagramGallery .galleryContainer .gallImg img:hover {
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+  }
+  .instagramGallery .galleryContainer .gallImg:nth-last-child(1) {
+    display: none;
+  }
+  .instagramGallery .galleryContainer .gallImg:nth-last-child(2) {
+    display: none;
+  }
+  footer {
+    position: relative;
+    background: #1b1b1b;
+    min-height: 25vh;
+    padding: 3% 2%;
+  }
+  footer .noMobile {
+    display: none;
   }
   footer .yoUpBtn {
     display: none;
