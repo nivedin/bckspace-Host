@@ -515,19 +515,35 @@ body {
   transition: all 0.5s ease;
 }
 
+.searchModal .searchMainContainer {
+  position: relative;
+  top: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 80vh;
+  width: 100%;
+}
+
 .searchModal .searchHeading {
   color: white;
   font-size: 3rem;
   font-weight: 600;
   text-align: center;
-  -webkit-transform: translateY(200px);
-          transform: translateY(200px);
 }
 
 .searchModal .searchContainer {
-  position: absolute;
-  top: 40%;
-  left: 25%;
+  margin-top: 5%;
   -webkit-box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #70707034, -6px -6px 16px inset #77777734;
           box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #70707034, -6px -6px 16px inset #77777734;
 }
@@ -1194,7 +1210,7 @@ main .popularBrand .mobileDownButton {
 
 .instagramGallery {
   background: #b9b9b9;
-  min-height: 50vh;
+  min-height: 100%;
   position: relative;
 }
 
@@ -1267,8 +1283,8 @@ main .popularBrand .mobileDownButton {
 }
 
 .instagramGallery .galleryContainer .gallImg {
-  height: 330px;
-  width: 350px;
+  height: auto;
+  width: auto;
   margin-right: 6px;
 }
 
@@ -1419,10 +1435,17 @@ footer .footerContainer .footRights {
             align-items: center;
   }
   header nav .mobileBrandName {
-    display: none;
+    display: block !important;
   }
   header nav .headImgContainer {
-    display: none;
+    margin: 0 auto;
+    height: 38px;
+    width: 150px;
+    text-align: center;
+  }
+  header nav .headImgContainer img {
+    height: 100%;
+    width: 100%;
   }
   header nav .navBurger {
     position: relative;
@@ -1588,61 +1611,11 @@ footer .footerContainer .footRights {
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
-  .searchModal .searchHeading {
-    color: white;
-    font-size: 3rem;
-    font-weight: 600;
-    text-align: center;
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
-  }
   .searchModal .searchContainer {
-    position: absolute;
-    top: 40%;
-    left: 0;
-    right: 0;
-    margin: 0 8%;
-    -webkit-box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #70707034, -6px -6px 16px inset #77777734;
-            box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #70707034, -6px -6px 16px inset #77777734;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .searchModal .searchContainer input {
-    background: transparent;
-    color: white;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: 2%;
-    height: 50px;
-    width: 100%;
-    border: none;
-    outline: none;
-  }
-  .searchModal .searchContainer input:focus-within {
-    border: none;
-  }
-  .searchModal .searchContainer button {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    margin: 0 10px 0 20px;
-    border: none;
-    outline: none;
-    background: transparent;
-  }
-  .searchModal .searchContainer button path {
-    fill: white;
-  }
-  .searchModal .searchContainer button:hover {
-    background: #252424;
+    width: 80%;
   }
   main {
     margin-top: 15vh;
@@ -1899,13 +1872,13 @@ footer .footerContainer .footRights {
     width: 100%;
   }
   .nikeShoeBanner {
-    min-height: 65vh;
+    min-height: 50vh;
   }
   .nikeShoeBanner .imgContainer {
-    height: 60vh;
+    height: 50vh;
     width: 100%;
     background: url("../ASSETS/Rectangle 3.png");
-    background-size: 100vw 60vh;
+    background-size: 100vw 50vh;
     background-repeat: no-repeat;
     background-position-x: center;
   }
@@ -1965,7 +1938,7 @@ footer .footerContainer .footRights {
   }
   .instagramGallery {
     background: #b9b9b9;
-    min-height: 60vh;
+    min-height: 100%;
   }
   .instagramGallery .yoUpBtn {
     display: none;
@@ -1996,8 +1969,8 @@ footer .footerContainer .footRights {
     overflow: hidden;
   }
   .instagramGallery .galleryContainer .gallImg {
-    height: 330px;
-    width: 350px;
+    height: auto;
+    width: auto;
     margin-right: 4px;
   }
   .instagramGallery .galleryContainer .gallImg img {
@@ -2019,14 +1992,55 @@ footer .footerContainer .footRights {
   footer {
     position: relative;
     background: #1b1b1b;
-    min-height: 25vh;
+    min-height: 35vh;
+  }
+  footer .yoUpBtn:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  footer .footerContainer {
+    text-align: center;
     padding: 3% 2%;
   }
-  footer .noMobile {
+  footer .footerContainer .footLinks {
+    padding: 2% 1% 0 1%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer .footerContainer .footLinks .noMobile {
     display: none;
   }
-  footer .yoUpBtn {
-    display: none;
+  footer .footerContainer .footLinks .mobileWrap {
+    margin-bottom: 35px;
+  }
+  footer .footerContainer .footLinks a {
+    text-decoration: none;
+    color: #b8b8b8;
+    font-size: 0.9rem;
+  }
+  footer .footerContainer .footLinks a span {
+    margin: 0 10px;
+  }
+  footer .footerContainer .footSocial {
+    padding: 10px 0 0 0;
+  }
+  footer .footerContainer .footSocial a {
+    color: #e7e7e7;
+    margin-right: 10px;
+  }
+  footer .footerContainer .footSocial a svg {
+    font-size: 1.9rem;
+  }
+  footer .footerContainer .footRights {
+    padding: 20px 0 0 0;
+    font-weight: 500;
+    color: #4d4d4d;
   }
 }
 /*# sourceMappingURL=homePage.css.map */

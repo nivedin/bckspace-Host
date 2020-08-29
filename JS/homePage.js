@@ -28,6 +28,9 @@ searchModal.addEventListener("click", (e) => {
     if (e.target.classList.contains("searchModal")) {
         searchModal.classList.remove("openModal");
     }
+    if (e.target.classList.contains("searchMainContainer")) {
+        searchModal.classList.remove("openModal");
+    }
 
 })
 

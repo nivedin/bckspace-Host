@@ -469,18 +469,29 @@ body {
     pointer-events: none;
     transition: all 0.5s ease;
 
+
+    .searchMainContainer {
+        position: relative;
+        top: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        width: 100%;
+
+    }
+
     .searchHeading {
         color: white;
         font-size: 3rem;
         font-weight: 600;
         text-align: center;
-        transform: translateY(200px);
+
     }
 
     .searchContainer {
-        position: absolute;
-        top: 40%;
-        left: 25%;
+        margin-top: 5%;
         box-shadow: 6px 6px 16px #00000034,
             6px 6px 16px inset #00000034,
             -6px -6px 16px #70707034,
@@ -1116,7 +1127,7 @@ main {
 
 .instagramGallery {
     background: rgb(185, 185, 185);
-    min-height: 50vh;
+    min-height: 100%;
     position: relative;
 
     .yoUpBtn {
@@ -1174,8 +1185,8 @@ main {
         overflow: hidden;
 
         .gallImg {
-            height: 330px;
-            width: 350px;
+            height: auto;
+            width: auto;
             margin-right: 6px;
 
             img {
@@ -1328,12 +1339,22 @@ footer {
 
 
             .mobileBrandName {
-                display: none;
+                display: block !important;
 
             }
 
             .headImgContainer {
-                display: none;
+                margin: 0 auto;
+                height: 38px;
+                width: 150px;
+
+                text-align: center;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+
+                }
             }
 
             .navBurger {
@@ -1518,65 +1539,10 @@ footer {
         pointer-events: none;
         transition: all 0.5s ease;
 
-        .searchHeading {
-            color: white;
-            font-size: 3rem;
-            font-weight: 600;
-            text-align: center;
-            transform: translateY(200px);
-        }
 
         .searchContainer {
-            position: absolute;
-            top: 40%;
-            left: 0;
-            right: 0;
-            margin: 0 8%;
-            box-shadow: 6px 6px 16px #00000034,
-                6px 6px 16px inset #00000034,
-                -6px -6px 16px #70707034,
-                -6px -6px 16px inset #77777734;
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            input {
-                background: transparent;
-                color: white;
-                border-radius: 8px;
-                font-size: 1.2rem;
-                font-weight: 500;
-                padding: 2%;
-                height: 50px;
-                width: 100%;
-                border: none;
-                outline: none;
-
-                &:focus-within {
-                    border: none;
-
-                }
-            }
-
-            button {
-                height: 40px;
-                width: 40px;
-                border-radius: 50%;
-                margin: 0 10px 0 20px;
-                border: none;
-                outline: none;
-                background: transparent;
-
-                path {
-                    fill: white;
-                }
-            }
-
-            button:hover {
-                background: rgb(37, 36, 36);
-
-            }
-
+            width: 80%;
         }
     }
 
@@ -1860,13 +1826,13 @@ footer {
     }
 
     .nikeShoeBanner {
-        min-height: 65vh;
+        min-height: 50vh;
 
         .imgContainer {
-            height: 60vh;
+            height: 50vh;
             width: 100%;
             background: url("../ASSETS/Rectangle\ 3.png");
-            background-size: 100vw 60vh;
+            background-size: 100vw 50vh;
             background-repeat: no-repeat;
             background-position-x: center;
         }
@@ -1946,7 +1912,7 @@ footer {
 
     .instagramGallery {
         background: rgb(185, 185, 185);
-        min-height: 60vh;
+        min-height: 100%;
 
         .yoUpBtn {
             display: none;
@@ -1982,8 +1948,8 @@ footer {
             overflow: hidden;
 
             .gallImg {
-                height: 330px;
-                width: 350px;
+                height: auto;
+                width: auto;
                 margin-right: 4px;
 
                 img {
@@ -2010,18 +1976,66 @@ footer {
         }
     }
 
+
     footer {
         position: relative;
         background: #1b1b1b;
-        min-height: 25vh;
-        padding: 3% 2%;
+        min-height: 35vh;
 
-        .noMobile {
-            display: none;
+        .yoUpBtn:hover {
+            transform: scale(1.1);
         }
 
-        .yoUpBtn {
-            display: none;
+
+        .footerContainer {
+            text-align: center;
+            padding: 3% 2%;
+
+            .footLinks {
+                padding: 2% 1% 0 1%;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                .noMobile {
+                    display: none;
+                }
+
+                .mobileWrap {
+                    margin-bottom: 35px;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: rgb(184, 184, 184);
+                    font-size: 0.9rem;
+
+                    span {
+                        margin: 0 10px;
+                    }
+                }
+            }
+
+            .footSocial {
+                padding: 10px 0 0 0;
+
+                a {
+                    color: rgb(231, 231, 231);
+                    margin-right: 10px;
+
+                    svg {
+                        font-size: 1.9rem;
+                    }
+                }
+
+            }
+
+            .footRights {
+                padding: 20px 0 0 0;
+                font-weight: 500;
+                color: rgb(77, 77, 77);
+            }
         }
     }
+
 }
