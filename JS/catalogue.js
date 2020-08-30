@@ -6,7 +6,6 @@ function openNav() {
     }
 
 }
-console.log(window.innerWidth);
 /* Set the width of the side navigation to 0 */
 
 
@@ -14,21 +13,27 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 
-let searchBtn = document.querySelector(".search");
+let searchBtns = document.querySelectorAll(".search");
 let searchModal = document.querySelector(".searchModal");
 
+searchBtns.forEach(searchBtn => {
+    searchBtn.addEventListener("click", () => {
+        searchModal.classList.add("openModal");
 
-searchBtn.addEventListener("click", () => {
-    searchModal.classList.add("openModal");
-
+    })
 })
+
 
 searchModal.addEventListener("click", (e) => {
     if (e.target.classList.contains("searchModal")) {
         searchModal.classList.remove("openModal");
     }
+    if (e.target.classList.contains("searchMainContainer")) {
+        searchModal.classList.remove("openModal");
+    }
 
 })
+
 
 
 let toTopBtn = document.querySelector(".yoUpBtn");
@@ -54,41 +59,55 @@ showMoreBtn.addEventListener("click", () => {
     showMoreBtn.style.display = "none";
 });
 
+//////////////////catalogue functions//////////////////
+let catalogueImages = document.querySelectorAll(".itemImage");
+let catalogueItems = document.querySelectorAll(".catalogueItem");
 
-let catalogueItemsClick = document.querySelectorAll(".itemImage");
-// let carouselItems = document.querySelector(".glider-contain");
+catalogueItems.forEach(catalogueItem => {
+    catalogueItem.addEventListener("click", function (e) {
 
-catalogueItemsClick.forEach(catalogueItemClick => {
-    catalogueItemClick.addEventListener("click", (e) => {
-        let clickedCatalougeImage = e.target;
-        let clickedCatalougeItemImage = e.target.parentElement;
-        let currentCarousel = clickedCatalougeItemImage.querySelector(".carousel");
-        let currentCatalogueItem = e.target.parentElement.parentElement;
-        let currentCatalogueName = currentCatalogueItem.getAttribute("data-name");
-        // console.log(currentCatalogueName);
-        // console.log(currentCatalogueItem);
-        if (clickedCatalougeItemImage.classList.contains("itemImage")) {
-            clickedCatalougeImage.style.display = "none";
-            currentCarousel.classList.remove("currentGlider");
-            currentCatalogueItem.classList.toggle("catalogueClickedActive");
-            if (currentCatalogueItem.classList.contains("catalogueClickedActive")) {
-                let newDiv = document.createElement("div");
-                let newDivButton = document.createElement("button");
-                newDivButton.innerHTML = "<span>view more</span>";
-                newDiv.className = "tempCardDiv";
-                newDiv.innerHTML = `<p>${currentCatalogueName}</p>`;
-                currentCatalogueItem.appendChild(newDiv);
-                newDiv.appendChild(newDivButton);
-
+        catalogueItems.forEach(currentCatalogueItem => {
+            if (currentCatalogueItem.classList.contains("catalogueItemActive")) {
+                currentCatalogueItem.querySelector(".currentGlider").style.display = "none";
+                currentCatalogueItem.querySelector(".itemImage img").style.display = "block";
+                currentCatalogueItem.querySelector(".catalogueClickedActive").style.display = "none";
             } else {
-                currentCatalogueItem.classList.remove("catalogueClickedActive");
-                currentCatalogueItem.removeChild(currentCatalogueItem.querySelector(".tempCardDiv"));
-
-
+                ""
             }
-        } else {
+            currentCatalogueItem.classList.remove("catalogueItemActive");
+        });
+        this.classList.add("catalogueItemActive");
 
-        }
-
+        let currentCatalogueName = this.getAttribute("data-name");
+        this.querySelector(".currentGlider").style.display = "block";
+        this.querySelector(".itemImage img").style.display = "none";
+        /////////add new div////////
+        this.querySelector(".catalogueClickedActive").style.display = "block";
+        this.querySelector(".tempCardDiv p").innerHTML = `${currentCatalogueName}`;
+        /////////add new div////////
     })
 })
+//////////////////catalogue functions//////////////////
+
+
+let mobileHeader = document.querySelector(".moblileHeader");
+let desktopHeader = document.querySelector(".desktopHeader");
+
+if (window.innerWidth > 700) {
+    window.addEventListener("scroll", (e) => {
+        let windowTop = window.scrollY;
+
+        if (windowTop >= 350) {
+
+            mobileHeader.style.display = "none";
+            desktopHeader.style.display = "block";
+
+        } else {
+            mobileHeader.style.display = "block";
+            desktopHeader.style.display = "none";
+        }
+    })
+} else {
+    mobileHeader.style.display = "block";
+    desktopHeader.style.display = "none";
+}
