@@ -42,7 +42,7 @@ body {
 }
 
 .moblileHeader {
-  height: 20vh;
+  min-height: 20vh;
   padding: 3% 4%;
   color: white;
   position: fixed;
@@ -510,7 +510,7 @@ body {
 
 .searchModal {
   position: fixed;
-  z-index: 5;
+  z-index: 7;
   min-height: 120vh;
   top: 0;
   left: 0;
@@ -994,6 +994,7 @@ footer .footerContainer .footRights {
 @media screen and (max-width: 750px) {
   .moblileHeader {
     height: 15vh;
+    background: rgba(0, 0, 0, 0.767);
   }
   .moblileHeader .logUser {
     display: none;
@@ -1006,10 +1007,6 @@ footer .footerContainer .footRights {
     width: 100vw;
   }
   header {
-    min-height: 15vh;
-    padding: 3% 4%;
-    color: white;
-    background: rgba(0, 0, 0, 0.671);
     /* The navigation menu links */
     /* When you mouse over the navigation links, change their color */
     /* Position and style the close button (top right corner) */
@@ -1477,8 +1474,57 @@ footer .footerContainer .footRights {
   main .mainContent .showMrButton button:hover::after {
     height: 100%;
   }
+  footer {
+    position: relative;
+    background: #1b1b1b;
+    min-height: 35vh;
+  }
   footer .yoUpBtn {
     display: none;
+  }
+  footer .footerContainer {
+    text-align: center;
+    padding: 3% 2%;
+  }
+  footer .footerContainer .footLinks {
+    padding: 2% 1% 0 1%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer .footerContainer .footLinks .noMobile {
+    display: none;
+  }
+  footer .footerContainer .footLinks .mobileWrap {
+    margin-bottom: 35px;
+  }
+  footer .footerContainer .footLinks a {
+    text-decoration: none;
+    color: #b8b8b8;
+    font-size: 0.9rem;
+  }
+  footer .footerContainer .footLinks a span {
+    margin: 0 10px;
+  }
+  footer .footerContainer .footSocial {
+    padding: 10px 0 0 0;
+  }
+  footer .footerContainer .footSocial a {
+    color: #e7e7e7;
+    margin-right: 10px;
+  }
+  footer .footerContainer .footSocial a svg {
+    font-size: 1.9rem;
+  }
+  footer .footerContainer .footRights {
+    padding: 20px 0 0 0;
+    font-weight: 500;
+    color: #4d4d4d;
   }
 }
 /*# sourceMappingURL=catalogue.css.map */

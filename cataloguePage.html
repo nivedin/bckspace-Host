@@ -13,124 +13,129 @@
 
 <body>
     <div class="bgImageContainer">
-        <header class="desktopHeader">
-            <nav>
-                <div class="leftLogo">
-                    <a href="#"><i class="fa fa-chevron-left"></i> <i class="fa fa-chevron-right"></i></a>
-                </div>
-                <div class="navLinks">
-                    <ul>
-                        <li>
-                            <a href="#">drop</a>
-                        </li>
-                        <li>
-                            <a href="#">catalouge</a>
-                        </li>
-                        <li>
-                            <a href="#">grail</a>
-                        </li>
-                        <li>
-                            <a href="#">stash</a>
-                        </li>
-                        <li>
-                            <a href="#">customization</a>
-                        </li>
-                        <li>
-                            <a href="#">calendar</a>
-                        </li>
-                        <li>
-                            <a href="#">feature</a>
-                        </li>
-                        <li>
-                            <a href="#">legit check</a>
-                        </li>
-                        <div class="navHoverAnimation"></div>
-                    </ul>
-                </div>
-                <div class="rightIcons">
-                    <div class="heartIcon">
-                        <a href="#">
-                            <i class="far fa-heart"></i>
-                        </a>
+        <header>
+            <div class="desktopHeader">
+                <nav>
+                    <div class="leftLogo">
+                        <a href="#"><i class="fa fa-chevron-left"></i> <i class="fa fa-chevron-right"></i></a>
                     </div>
-                    <div class="profileIcon">
-                        <a href="#">
-                            <i class="fas fa-user-circle"></i>
-                        </a>
+                    <div class="navLinks">
+                        <ul>
+                            <li>
+                                <a href="#">drop</a>
+                            </li>
+                            <li>
+                                <a href="#">catalouge</a>
+                            </li>
+                            <li>
+                                <a href="#">grail</a>
+                            </li>
+                            <li>
+                                <a href="#">stash</a>
+                            </li>
+                            <li>
+                                <a href="#">customization</a>
+                            </li>
+                            <li>
+                                <a href="#">calendar</a>
+                            </li>
+                            <li>
+                                <a href="#">feature</a>
+                            </li>
+                            <li>
+                                <a href="#">legit check</a>
+                            </li>
+                            <div class="navHoverAnimation"></div>
+                        </ul>
+                    </div>
+                    <div class="rightIcons">
+                        <div class="heartIcon">
+                            <a href="#">
+                                <i class="far fa-heart"></i>
+                            </a>
+                        </div>
+                        <div class="profileIcon">
+                            <a href="#">
+                                <i class="fas fa-user-circle"></i>
+                            </a>
+                        </div>
+                        <div class="searchIcon">
+
+                            <button class="search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+
+
+            <div class="moblileHeader">
+                <div class="bckspaceLogUser">
+                    <div class="logUser">
+                        <p>logged in as <b>ansh bhandari</b></p>
+                    </div>
+                    <div class="thebckName desktopBrandName">
+                        <div class="headImgContainer">
+                            <img src="./ASSETS/Layer 8.png" alt="brandImg">
+                        </div>
+                    </div>
+                </div>
+                <nav>
+                    <div class="navBurger" onclick="openNav()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="thebckName mobileBrandName">
+                        <div class="headImgContainer">
+                            <img src="./ASSETS/Layer 8.png" alt="brandImg">
+                        </div>
                     </div>
                     <div class="searchIcon">
-
                         <button class="search">
                             <i class="fas fa-search"></i>
                         </button>
                     </div>
-                </div>
-            </nav>
-        </header>
+                </nav>
 
-        <header class="moblileHeader">
-            <div class="bckspaceLogUser">
-                <div class="logUser">
-                    <p>logged in as <b>ansh bhandari</b></p>
-                </div>
-                <div class="thebckName desktopBrandName">
-                    <div class="headImgContainer">
-                        <img src="./ASSETS/Layer 8.png" alt="brandImg">
-                    </div>
-                </div>
-            </div>
-            <nav>
-                <div class="navBurger" onclick="openNav()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="thebckName mobileBrandName">
-                    <div class="headImgContainer">
-                        <img src="./ASSETS/Layer 8.png" alt="brandImg">
-                    </div>
-                </div>
-                <div class="searchIcon">
-                    <button class="search">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </nav>
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <div class="sideNavContainer">
-                    <div class="userProfile">
-                        <div class="row">
-                            <div class="col-12 col-md-4">
-                                <div class="userIcon">
-                                    <i class="fas fa-user-circle"></i>
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="sideNavContainer">
+                        <div class="userProfile">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <div class="userIcon">
+                                        <i class="fas fa-user-circle"></i>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-8  align-self-center">
+                                    <div class="userName">
+                                        <p class="loggedIn">logged in as</p>
+                                        <p class="loggedName">ansh bhandari</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-8  align-self-center">
-                                <div class="userName">
-                                    <p class="loggedIn">logged in as</p>
-                                    <p class="loggedName">ansh bhandari</p>
-                                </div>
-                            </div>
+                            <hr>
                         </div>
-                        <hr>
+                        <a href="#">drop
+                            <hr></a>
+                        <a href="#">catalouge
+                            <hr></a>
+                        <a href="#">grail
+                            <hr></a>
+                        <a href="#">stash
+                            <hr></a>
+                        <a href="#">customization
+                            <hr></a>
+                        <a href="#">calendar
+                            <hr></a>
+                        <a href="#">feature
+                            <hr></a>
+                        <a href="#">legit check
+                            <hr></a>
                     </div>
-                    <a href="#">drop
-                        <hr></a>
-                    <a href="#">catalouge
-                        <hr></a>
-                    <a href="#">grail
-                        <hr></a>
-                    <a href="#">stash
-                        <hr></a>
-                    <a href="#">customization
-                        <hr></a>
-                    <a href="#">calendar
-                        <hr></a>
-                    <a href="#">feature
-                        <hr></a>
-                    <a href="#">legit check
-                        <hr></a>
                 </div>
             </div>
         </header>
@@ -2286,12 +2291,12 @@
                 <div class="mobileWrap">
                     <a href="#">guide <span>|</span></a>
                     <a href="#">copyright <span>|</span></a>
-                    <a href="#">terms and condition <span>|</span></a>
+                    <a href="#">terms and condition <span class="noMobile">|</span></a>
                 </div>
                 <div class="mobileWrap">
                     <a href="#">privacy poilcy <span>|</span></a>
                     <a href="#">contact us <span>|</span></a>
-                    <a href="#">sneaker request <span>|</span></a>
+                    <a href="#">sneaker request <span class="noMobile">|</span></a>
                 </div>
                 <div class="mobileWrap">
 
@@ -2299,8 +2304,6 @@
                     <a href="#">help <span>|</span></a>
                     <a href="#">product request </a>
                 </div>
-
-
             </div>
             <div class="footSocial">
                 <a href="#"><i class="fab fa-instagram"></i></a>
@@ -2311,7 +2314,6 @@
             </div>
         </div>
     </footer>
-
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
