@@ -35,7 +35,7 @@ body {
 }
 
 .moblileHeader {
-    height: 20vh;
+    min-height: 20vh;
     padding: 3% 4%;
     background: #000000;
     color: white;
@@ -459,7 +459,7 @@ body {
 
 .searchModal {
     position: fixed;
-    z-index: 5;
+    z-index: 7;
     min-height: 120vh;
     top: 0;
     left: 0;
@@ -568,7 +568,8 @@ main {
         .glider-dots {
             position: absolute;
             top: 108%;
-            left: 45%;
+            left: 0;
+            right: 0;
             outline: none;
 
             button.active {
@@ -1192,7 +1193,7 @@ main {
             img {
                 height: 100%;
                 width: 100%;
-                transition: all 0.5s ease;
+                transition: all 0.25s ease;
             }
 
             img:hover {
@@ -1313,10 +1314,6 @@ footer {
     }
 
     header {
-        min-height: 15vh;
-        padding: 3% 4%;
-        color: white;
-
 
         .desktopBrandName {
             display: none;
