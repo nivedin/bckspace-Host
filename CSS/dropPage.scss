@@ -179,19 +179,8 @@ body {
 
         }
 
-        .searchIcon:hover input,
-        .searchIcon:focus-within input {
-            width: 250px;
-            margin-left: 10px;
-        }
 
-        .searchIcon:hover,
-        input:focus {
-            box-shadow: 6px 6px 16px #00000034,
-                6px 6px 16px inset #00000034,
-                -6px -6px 16px #36363634,
-                -6px -6px 16px inset #3d3d3d34;
-
+        .searchIcon:hover {
             svg {
                 color: #0202f3;
             }
@@ -802,7 +791,7 @@ footer {
 @media screen and (max-width: 750px) {
     .moblileHeader {
         display: block;
-        background: rgba(0, 0, 0, 0.301);
+
 
         .logUser {
             display: none;
@@ -838,7 +827,7 @@ footer {
             .mobileBrandName {
                 .headImgContainer {
                     height: 38px;
-                    width: 230px;
+                    width: 160px;
                     text-align: center;
 
                     img {

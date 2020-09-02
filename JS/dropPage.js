@@ -81,11 +81,11 @@ let mobileHeader = document.querySelector(".moblileHeader");
 let desktopHeader = document.querySelector(".desktopHeader");
 
 if (window.innerWidth > 700) {
+
     window.addEventListener("scroll", (e) => {
         let windowTop = window.scrollY;
 
-        if (windowTop >= 350) {
-
+        if (windowTop >= 200) {
             mobileHeader.style.display = "none";
             desktopHeader.style.display = "block";
 
@@ -97,4 +97,14 @@ if (window.innerWidth > 700) {
 } else {
     mobileHeader.style.display = "block";
     desktopHeader.style.display = "none";
+    window.addEventListener("scroll", (e) => {
+        let windowTop = window.scrollY;
+
+        if (windowTop >= 150) {
+            mobileHeader.style.background = "rgba(0, 0, 0, 0.301)";
+
+        } else {
+            mobileHeader.style.background = "";
+        }
+    })
 }

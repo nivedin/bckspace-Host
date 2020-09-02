@@ -209,20 +209,7 @@ body {
   color: white;
 }
 
-.moblileHeader nav .searchIcon:hover input,
-.moblileHeader nav .searchIcon:focus-within input {
-  width: 250px;
-  margin-left: 10px;
-}
-
-.moblileHeader nav .searchIcon:hover,
-.moblileHeader nav input:focus {
-  -webkit-box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #36363634, -6px -6px 16px inset #3d3d3d34;
-          box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #36363634, -6px -6px 16px inset #3d3d3d34;
-}
-
-.moblileHeader nav .searchIcon:hover svg,
-.moblileHeader nav input:focus svg {
+.moblileHeader nav .searchIcon:hover svg {
   color: #0202f3;
 }
 
@@ -854,7 +841,6 @@ footer .footerContainer .footRights {
 @media screen and (max-width: 750px) {
   .moblileHeader {
     display: block;
-    background: rgba(0, 0, 0, 0.301);
   }
   .moblileHeader .logUser {
     display: none;
@@ -888,7 +874,7 @@ footer .footerContainer .footRights {
   }
   header nav .mobileBrandName .headImgContainer {
     height: 38px;
-    width: 230px;
+    width: 160px;
     text-align: center;
   }
   header nav .mobileBrandName .headImgContainer img {
