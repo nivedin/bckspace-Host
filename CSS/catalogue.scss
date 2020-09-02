@@ -34,6 +34,20 @@ body {
 
 }
 
+.catalogueItemHoverBg {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    background: rgba(105, 105, 105, 0.541);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.555) 0%, rgba(0, 0, 0, 0.575) rgba(0, 0, 0, 0.849) 75%);
+    transition: all 0.3s ease;
+}
+
 .bgImageContainer {
     background: url("../ASSETS/home\ page\ banner.png");
     background-size: 100% 100%;
@@ -608,6 +622,7 @@ main {
                 .catalogueItem {
                     min-height: 15rem;
                     background: rgb(243, 243, 243);
+                    border-radius: 2px;
 
                     .itemHeader {
                         padding: 3%;
@@ -654,6 +669,7 @@ main {
 
                         .currentGlider {
                             display: none;
+                            transition: all 0.35s ease;
                         }
 
                         .carousel {
@@ -911,6 +927,10 @@ footer {
 }
 
 @media screen and (max-width: 750px) {
+    .catalogueItemHoverBg {
+        display: none;
+    }
+
     .moblileHeader {
         height: 15vh;
         background: rgba(0, 0, 0, 0.767);

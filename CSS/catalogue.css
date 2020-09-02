@@ -33,6 +33,22 @@ body {
   overflow-x: hidden;
 }
 
+.catalogueItemHoverBg {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  background: rgba(105, 105, 105, 0.541);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.555)), to(rgba(0, 0, 0, 0.575)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.555) 0%, rgba(0, 0, 0, 0.575) rgba(0, 0, 0, 0.849) 75%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 .bgImageContainer {
   background: url("../ASSETS/home page banner.png");
   background-size: 100% 100%;
@@ -669,6 +685,7 @@ main .mainContent .catalogueItems .itemsRow {
 main .mainContent .catalogueItems .itemsRow .catalogueItem {
   min-height: 15rem;
   background: #f3f3f3;
+  border-radius: 2px;
 }
 
 main .mainContent .catalogueItems .itemsRow .catalogueItem .itemHeader {
@@ -727,6 +744,8 @@ main .mainContent .catalogueItems .itemsRow .catalogueItem .itemImage img {
 
 main .mainContent .catalogueItems .itemsRow .catalogueItem .itemImage .currentGlider {
   display: none;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 }
 
 main .mainContent .catalogueItems .itemsRow .catalogueItem .itemImage .carousel .carousel-item {
@@ -992,6 +1011,9 @@ footer .footerContainer .footRights {
 }
 
 @media screen and (max-width: 750px) {
+  .catalogueItemHoverBg {
+    display: none;
+  }
   .moblileHeader {
     height: 15vh;
     background: rgba(0, 0, 0, 0.767);

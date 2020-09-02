@@ -62,22 +62,42 @@ showMoreBtn.addEventListener("click", () => {
 //////////////////catalogue functions//////////////////
 let catalogueImages = document.querySelectorAll(".itemImage");
 let catalogueItems = document.querySelectorAll(".catalogueItem");
+let catalogueItemHoverBg = document.querySelector(".catalogueItemHoverBg");
 
 catalogueItems.forEach(catalogueItem => {
-    catalogueItem.addEventListener("click", function (e) {
+    catalogueItem.addEventListener("mouseover", function (e) {
 
         catalogueItems.forEach(currentCatalogueItem => {
             if (currentCatalogueItem.classList.contains("catalogueItemActive")) {
                 currentCatalogueItem.querySelector(".currentGlider").style.display = "none";
                 currentCatalogueItem.querySelector(".itemImage img").style.display = "block";
                 currentCatalogueItem.querySelector(".catalogueClickedActive").style.display = "none";
+                document.body.addEventListener("mouseover", (e) => {
+                    if ((e.target).classList.contains("catalogueItemHoverBg")) {
+                        catalogueItemHoverBg.style.opacity = 0;
+                        catalogueItemHoverBg.style.pointerEvents = "none";
+                        currentCatalogueItem.querySelector(".currentGlider").style.display = "none";
+                        currentCatalogueItem.querySelector(".itemImage img").style.display = "block";
+                        currentCatalogueItem.querySelector(".catalogueClickedActive").style.display = "none";
+                        currentCatalogueItem.classList.remove("catalogueItemActive");
+                    } else {
+                        ""
+                    }
+
+                })
             } else {
                 ""
             }
             currentCatalogueItem.classList.remove("catalogueItemActive");
-        });
-        this.classList.add("catalogueItemActive");
 
+        });
+
+
+
+
+        this.classList.add("catalogueItemActive");
+        catalogueItemHoverBg.style.opacity = 1;
+        catalogueItemHoverBg.style.pointerEvents = "all";
         let currentCatalogueName = this.getAttribute("data-name");
         this.querySelector(".currentGlider").style.display = "block";
         this.querySelector(".itemImage img").style.display = "none";
