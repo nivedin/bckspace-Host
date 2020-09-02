@@ -78,6 +78,7 @@ if (window.innerWidth > 700) {
 
 let shoeSelectOption = document.querySelector(".custom-select");
 let selectSize = document.querySelector(".selectSize");
+let shoeCondition = document.querySelector(".shoeCondition");
 
 
 shoeSelectOption.addEventListener("click", () => {
@@ -96,6 +97,7 @@ shoeSelectOption.addEventListener("click", () => {
 
 let sizeClicked = document.querySelector(".sizeClicked");
 let sizeOptions = document.querySelectorAll(".sizeOption");
+let shoeSizeClickedBuy = document.querySelector(".shoeSizeClickedBuy");
 
 sizeOptions.forEach(sizeOption => {
     sizeOption.addEventListener("click", (e) => {
@@ -103,10 +105,47 @@ sizeOptions.forEach(sizeOption => {
         let clickedShoeSize = clickedShoeItem.querySelector(".usSize").innerText;
         let clickedShoePrice = clickedShoeItem.querySelector(".sizeMoney").innerText;
         console.log(clickedShoeSize, clickedShoePrice);
-
-
+        shoeSizeClickedBuy.classList.remove("noDisplay");
+        selectSize.classList.add("noDisplay");
+        shoeCondition.classList.add("noDisplay");
 
     })
 })
 
 ///shoe condition select////
+
+
+
+//////////palce & sell btn clicked/////////
+let placeBtn = document.querySelector(".placeAsk");
+let sellBtn = document.querySelector(".sellNow");
+
+let placeAskContainer = document.querySelector(".placeAskClicked");
+let sellNowBtnContainer = document.querySelector(".sellNowBtnClicked");
+
+placeBtn.addEventListener("click", () => {
+    placeAskContainer.classList.remove("noDisplay");
+    sellNowBtnContainer.classList.add("noDisplay");
+    placeBtn.classList.add("activeBtnClicked");
+    sellBtn.classList.remove("activeBtnClicked");
+});
+
+sellBtn.addEventListener("click", () => {
+    placeAskContainer.classList.add("noDisplay");
+    sellNowBtnContainer.classList.remove("noDisplay");
+    placeBtn.classList.remove("activeBtnClicked");
+    sellBtn.classList.add("activeBtnClicked");
+});
+
+//////////palce & sell btn clicked/////////
+
+
+/////////cancel btn clicked goBack////////
+let itemCancelBtn = document.querySelector(".cancelTrans");
+
+itemCancelBtn.addEventListener("click", () => {
+    shoeSizeClickedBuy.classList.add("noDisplay");
+    selectSize.classList.remove("noDisplay");
+    shoeCondition.classList.remove("noDisplay");
+})
+/////////cancel btn clicked goBack////////

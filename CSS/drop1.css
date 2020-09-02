@@ -722,6 +722,20 @@ main .mainContainer .shoeDetails .shoeSizeClickedBuy .colorSizeStyleCondition .s
   background: url("../ASSETS/pencil-alt-solid.svg") no-repeat right 0.8rem center/13px 23px;
 }
 
+main .mainContainer .shoeDetails .shoeSizeClickedBuy .anyBtnClickedContainer {
+  height: 42vh;
+}
+
+main .mainContainer .shoeDetails .shoeSizeClickedBuy .sellNowBtnClicked {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+main .mainContainer .shoeDetails .shoeSizeClickedBuy .placeAskClicked {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 main .mainContainer .shoeDetails .shoeSizeClickedBuy .placeSellNow {
   margin-top: 15px;
   width: 100%;
@@ -732,6 +746,8 @@ main .mainContainer .shoeDetails .shoeSizeClickedBuy .placeSellNow button {
   height: 50px;
   width: 13.6rem;
   font-weight: 500;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
   border: none;
   outline: none;
 }
@@ -742,8 +758,25 @@ main .mainContainer .shoeDetails .shoeSizeClickedBuy .placeSellNow .placeAsk {
   border-radius: 5px 0 0 5px;
 }
 
+main .mainContainer .shoeDetails .shoeSizeClickedBuy .placeSellNow .placeAsk:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  opacity: 0.9;
+}
+
 main .mainContainer .shoeDetails .shoeSizeClickedBuy .placeSellNow .sellNow {
   border-radius: 0 5px 5px 0;
+  border: 1px solid #d4d4d4;
+  background: #f8f8f8;
+}
+
+main .mainContainer .shoeDetails .shoeSizeClickedBuy .placeSellNow .sellNow:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  opacity: 0.9;
+}
+
+main .mainContainer .shoeDetails .shoeSizeClickedBuy .placeSellNow .activeBtnClicked {
   background: #2e4fe0;
   color: white;
 }
@@ -794,8 +827,36 @@ main .mainContainer .shoeDetails .shoeSizeClickedBuy .totalAmtTax .transactionFe
   color: #464646;
 }
 
-main .mainContainer .shoeDetails .shoeSizeClickedBuy .totalAmtTax .transBtns {
-  padding-top: 10%;
+main .mainContainer .shoeDetails .shoeSizeClickedBuy .enterAsk {
+  margin-top: 30px;
+}
+
+main .mainContainer .shoeDetails .shoeSizeClickedBuy .enterAsk .askAmtPara {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .mainContainer .shoeDetails .shoeSizeClickedBuy .enterAsk .askAmtPara input {
+  height: 46px;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
+  width: 9rem;
+  padding: 1% 2% 1% 7%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background: url("../ASSETS/rupee-sign-solid.svg") no-repeat left 0.8rem center/13px 23px;
+}
+
+main .mainContainer .shoeDetails .shoeSizeClickedBuy .enterAsk .askAmtPara .askPara {
+  margin: 22px 0 0 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #858585;
+}
+
+main .mainContainer .shoeDetails .shoeSizeClickedBuy .transBtns {
+  padding: 10% 12% 5% 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -807,25 +868,39 @@ main .mainContainer .shoeDetails .shoeSizeClickedBuy .totalAmtTax .transBtns {
           align-items: center;
 }
 
-main .mainContainer .shoeDetails .shoeSizeClickedBuy .totalAmtTax .transBtns button {
+main .mainContainer .shoeDetails .shoeSizeClickedBuy .transBtns button {
   height: 35px;
   width: 8rem;
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 2px;
   outline: none;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
-main .mainContainer .shoeDetails .shoeSizeClickedBuy .totalAmtTax .transBtns .cancelTrans {
+main .mainContainer .shoeDetails .shoeSizeClickedBuy .transBtns .cancelTrans {
   color: #555555;
   border: 2px solid #979797;
   background: #f8f8f8;
 }
 
-main .mainContainer .shoeDetails .shoeSizeClickedBuy .totalAmtTax .transBtns .proceedTrans {
+main .mainContainer .shoeDetails .shoeSizeClickedBuy .transBtns .cancelTrans:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+main .mainContainer .shoeDetails .shoeSizeClickedBuy .transBtns .proceedTrans {
   border: none;
   color: whitesmoke;
   background: #131111;
+}
+
+main .mainContainer .shoeDetails .shoeSizeClickedBuy .transBtns .proceedTrans:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  opacity: 0.9;
 }
 
 footer {
@@ -1158,7 +1233,7 @@ footer .footerContainer .footRights {
     text-align: center;
   }
   main .mainContainer .shoeDetails .shoeBrandName {
-    margin-bottom: 110px;
+    margin-bottom: 10px;
   }
   main .mainContainer .shoeDetails .shoeBrandName p {
     margin: 0;
@@ -1211,6 +1286,183 @@ footer .footerContainer .footRights {
     cursor: pointer;
     opacity: 0.9;
     border: 2px solid #0e0ed3;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy {
+    margin-top: 20px;
+    padding: 0 4% 0 9%;
+    text-align: center;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .colorSizeStyleCondition {
+    margin: 25px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #9e9e9e;
+    width: 60%;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .colorSizeStyleCondition .colorCondition {
+    text-align: left;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .colorSizeStyleCondition .styleSize {
+    margin-left: 0;
+    text-align: left;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .anyBtnClickedContainer {
+    height: 42vh;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .placeSellNow {
+    margin-top: 15px;
+    width: 100%;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .placeSellNow button {
+    margin: 0 !important;
+    height: 50px;
+    width: 13.6rem;
+    font-weight: 500;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    border: none;
+    outline: none;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .placeSellNow .placeAsk {
+    border: 1px solid #d4d4d4;
+    background: #f8f8f8;
+    border-radius: 5px 0 0 5px;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .placeSellNow .placeAsk:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    opacity: 0.9;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .placeSellNow .sellNow {
+    border-radius: 0 5px 5px 0;
+    border: 1px solid #d4d4d4;
+    background: #f8f8f8;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .placeSellNow .sellNow:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    opacity: 0.9;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .placeSellNow .activeBtnClicked {
+    background: #2e4fe0;
+    color: white;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .amtPara {
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .amtPara input {
+    height: 36px;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    width: 8rem;
+    padding: 1% 2% 1% 4%;
+    font-size: 1.4rem;
+    font-weight: 500;
+    background: #f8f8f8;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .amtPara .bidPara {
+    margin: 10px 0 0 4%;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #858585;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .totalAmtTax {
+    padding-right: 0;
+    padding-top: 5%;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .totalAmtTax .transactionFee {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #464646;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .enterAsk {
+    margin-top: 30px;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .enterAsk .askAmtPara {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .enterAsk .askAmtPara input {
+    height: 46px;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    width: 9rem;
+    padding: 1% 1% 1% 10%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background: url("../ASSETS/rupee-sign-solid.svg") no-repeat left 0.8rem center/13px 23px;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .enterAsk .askAmtPara .askPara {
+    margin: 12px 0 0 15px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #858585;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .transBtns {
+    padding: 50px 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .transBtns button {
+    height: 35px;
+    width: 8rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    outline: none;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .transBtns .cancelTrans {
+    color: #555555;
+    border: 2px solid #979797;
+    background: #f8f8f8;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .transBtns .cancelTrans:hover {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+    opacity: 0.9;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .transBtns .proceedTrans {
+    border: none;
+    color: whitesmoke;
+    background: #131111;
+  }
+  main .mainContainer .shoeDetails .shoeSizeClickedBuy .transBtns .proceedTrans:hover {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+    opacity: 0.9;
   }
   footer {
     position: relative;

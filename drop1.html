@@ -167,19 +167,8 @@
                             <p class="shoeModel">jordan air max 90 viotech mg</p>
                         </div>
                         <!-- /// -->
-                        <div class="sizeClicked noDisplay">
+                        <div class="sizeClicked ">
                             <div class="shoeCondition">
-                                <!-- <p class="condition">condition</p> -->
-                                <!-- <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="label "><span class="condition">condition</span></span>
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">ds</a>
-                                    <a class="dropdown-item" href="#">used</a>
-                                </div>
-                            </div> -->
                                 <p class="condition"><b>condition</b></p>
                                 <select class="custom-select">
                                     <option selected>condition</option>
@@ -278,7 +267,7 @@
                             </div>
                         </div>
                         <!-- ///// -->
-                        <div class="shoeSizeClickedBuy">
+                        <div class="shoeSizeClickedBuy noDisplay">
                             <div class="highestLowestBid">
                                 <p>Highest Bid: <span class="highGreen"> ₹ 7,000</span> | Lowest Ask: <span
                                         class="lowestBlue">₹ 6,000</span></p>
@@ -296,41 +285,52 @@
                                 </div>
                             </div>
                             <div class="placeSellNow btn-group" role="group">
-                                <button class="placeAsk">place ask</button>
-                                <button class="sellNow">sell now</button>
+                                <button class="placeAsk ">place ask</button>
+                                <button class="sellNow activeBtnClicked ">sell now</button>
                             </div>
-                            <div class="amtPara">
-                                <input type="text" class="bitAmt" value="₹ 7,000">
-                                <p class="bidPara">you are about to sell at the highest bid price</p>
+                            <div class="anyBtnClickedContainer">
+                                <div class="sellNowBtnClicked">
+                                    <div class="amtPara">
+                                        <input type="text" class="bitAmt" value="₹ 7,000">
+                                        <p class="bidPara">you are about to sell at the highest bid price</p>
+                                    </div>
+                                    <div class="totalAmtTax">
+                                        <div class="transactionFee">
+                                            <p class="transPara">transaction fee (9.5%)</p>
+                                            <p class="transAmt">₹ 150</p>
+                                        </div>
+                                        <div class="transactionFee">
+                                            <p class="transPara">payment proc. (3%)</p>
+                                            <p class="transAmt">₹ -100</p>
+                                        </div>
+                                        <div class="transactionFee">
+                                            <p class="transPara">estimated shipping</p>
+                                            <p class="transAmt">₹ 0</p>
+                                        </div>
+                                        <hr>
+                                        <div class="transactionFee">
+                                            <p class="transPara">total</p>
+                                            <p class="transAmt">₹ 7000</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="enterAsk placeAskClicked noDisplay">
+                                    <div class="askAmtPara">
+                                        <input type="text" class="bitAmt" placeholder="enter ask">
+                                        <p class="askPara">you must meet the minimum ask of ₹ 2000</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="totalAmtTax">
-                                <div class="transactionFee">
-                                    <p class="transPara">transaction fee (9.5%)</p>
-                                    <p class="transAmt">₹ 150</p>
-                                </div>
-                                <div class="transactionFee">
-                                    <p class="transPara">payment proc. (3%)</p>
-                                    <p class="transAmt">₹ -100</p>
-                                </div>
-                                <div class="transactionFee">
-                                    <p class="transPara">estimated shipping</p>
-                                    <p class="transAmt">₹ 0</p>
-                                </div>
-                                <hr>
-                                <div class="transactionFee">
-                                    <p class="transPara">total</p>
-                                    <p class="transAmt">₹ 7000</p>
-                                </div>
-                                <div class="transBtns">
-                                    <button class="cancelTrans"><span>cancel</span></button>
-                                    <button class="proceedTrans"><span>proceed</span></button>
-                                </div>
+                            <div class="transBtns">
+                                <button class="cancelTrans"><span>cancel</span></button>
+                                <button class="proceedTrans"><span>proceed</span></button>
                             </div>
+
+
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
     </main>
 

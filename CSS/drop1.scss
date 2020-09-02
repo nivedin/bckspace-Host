@@ -661,8 +661,6 @@ main {
                         color: black;
                     }
 
-                    .colorCondition {}
-
                     .styleSize {
                         margin-left: 68px;
 
@@ -681,6 +679,18 @@ main {
                     }
                 }
 
+                .anyBtnClickedContainer {
+                    height: 42vh;
+                }
+
+                .sellNowBtnClicked {
+                    transition: all 0.3s ease;
+                }
+
+                .placeAskClicked {
+                    transition: all 0.3s ease;
+                }
+
                 .placeSellNow {
                     margin-top: 15px;
                     width: 100%;
@@ -690,7 +700,7 @@ main {
                         height: 50px;
                         width: 13.6rem;
                         font-weight: 500;
-
+                        transition: all 0.3s linear;
                         border: none;
                         outline: none;
 
@@ -700,14 +710,30 @@ main {
                         border: 1px solid rgb(212, 212, 212);
                         background: rgb(248, 248, 248);
                         border-radius: 5px 0 0 5px;
+
+                        &:hover {
+                            transform: scale(1.05);
+                            opacity: 0.9;
+                        }
                     }
 
                     .sellNow {
                         border-radius: 0 5px 5px 0;
+                        border: 1px solid rgb(212, 212, 212);
+                        background: rgb(248, 248, 248);
+
+                        &:hover {
+                            transform: scale(1.05);
+                            opacity: 0.9;
+                        }
+                    }
+
+                    .activeBtnClicked {
                         background: rgb(46, 79, 224);
                         color: white;
                     }
                 }
+
 
                 .amtPara {
                     margin-top: 30px;
@@ -746,31 +772,69 @@ main {
                         color: rgb(70, 70, 70);
                     }
 
-                    .transBtns {
-                        padding-top: 10%;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
+                }
 
-                        button {
-                            height: 35px;
-                            width: 8rem;
+                .enterAsk {
+                    margin-top: 30px;
+
+                    .askAmtPara {
+                        display: flex;
+
+                        input {
+                            height: 46px;
+                            border: 1px solid rgb(212, 212, 212);
+                            border-radius: 5px;
+                            width: 9rem;
+                            padding: 1% 2% 1% 7%;
+                            font-size: 1.2rem;
+                            font-weight: 500;
+                            background: url("../ASSETS/rupee-sign-solid.svg") no-repeat left 0.8rem center/13px 23px;
+                        }
+
+                        .askPara {
+                            margin: 22px 0 0 15px;
                             font-size: 0.8rem;
                             font-weight: 500;
-                            letter-spacing: 2px;
-                            outline: none;
+                            color: rgb(133, 133, 133);
                         }
+                    }
+                }
 
-                        .cancelTrans {
-                            color: rgb(85, 85, 85);
-                            border: 2px solid rgb(151, 151, 151);
-                            background: rgb(248, 248, 248);
+                .transBtns {
+                    padding: 10% 12% 5% 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    button {
+                        height: 35px;
+                        width: 8rem;
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                        letter-spacing: 2px;
+                        outline: none;
+                        transition: all 0.3s linear;
+                    }
+
+                    .cancelTrans {
+                        color: rgb(85, 85, 85);
+                        border: 2px solid rgb(151, 151, 151);
+                        background: rgb(248, 248, 248);
+
+                        &:hover {
+                            transform: translateY(-2px);
+                            opacity: 0.9;
                         }
+                    }
 
-                        .proceedTrans {
-                            border: none;
-                            color: rgb(245, 245, 245);
-                            background: rgb(19, 17, 17);
+                    .proceedTrans {
+                        border: none;
+                        color: rgb(245, 245, 245);
+                        background: rgb(19, 17, 17);
+
+                        &:hover {
+                            transform: translateY(-2px);
+                            opacity: 0.9;
                         }
                     }
                 }
@@ -1135,7 +1199,7 @@ footer {
                 text-align: center;
 
                 .shoeBrandName {
-                    margin-bottom: 110px;
+                    margin-bottom: 10px;
 
                     p {
                         margin: 0;
@@ -1198,6 +1262,186 @@ footer {
                             }
                         }
 
+                    }
+                }
+
+
+                .shoeSizeClickedBuy {
+                    margin-top: 20px;
+                    padding: 0 4% 0 9%;
+                    text-align: center;
+
+                    .colorSizeStyleCondition {
+                        margin: 25px auto;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        font-size: 0.85rem;
+                        font-weight: 600;
+                        color: rgb(158, 158, 158);
+                        width: 60%;
+
+
+                        .colorCondition {
+                            text-align: left;
+                        }
+
+                        .styleSize {
+                            margin-left: 0;
+                            text-align: left;
+                        }
+                    }
+
+                    .anyBtnClickedContainer {
+                        height: 42vh;
+                    }
+
+                    .placeSellNow {
+                        margin-top: 15px;
+                        width: 100%;
+
+                        button {
+                            margin: 0 !important;
+                            height: 50px;
+                            width: 13.6rem;
+                            font-weight: 500;
+                            transition: all 0.3s linear;
+                            border: none;
+                            outline: none;
+
+                        }
+
+                        .placeAsk {
+                            border: 1px solid rgb(212, 212, 212);
+                            background: rgb(248, 248, 248);
+                            border-radius: 5px 0 0 5px;
+
+                            &:hover {
+                                transform: scale(1.05);
+                                opacity: 0.9;
+                            }
+                        }
+
+                        .sellNow {
+                            border-radius: 0 5px 5px 0;
+                            border: 1px solid rgb(212, 212, 212);
+                            background: rgb(248, 248, 248);
+
+                            &:hover {
+                                transform: scale(1.05);
+                                opacity: 0.9;
+                            }
+                        }
+
+                        .activeBtnClicked {
+                            background: rgb(46, 79, 224);
+                            color: white;
+                        }
+                    }
+
+
+                    .amtPara {
+                        margin-top: 30px;
+                        display: flex;
+
+                        input {
+                            height: 36px;
+                            border: 1px solid rgb(212, 212, 212);
+                            border-radius: 5px;
+                            width: 8rem;
+                            padding: 1% 2% 1% 4%;
+                            font-size: 1.4rem;
+                            font-weight: 500;
+                            background: rgb(248, 248, 248);
+                        }
+
+                        .bidPara {
+                            margin: 10px 0 0 4%;
+                            font-size: 0.7rem;
+                            font-weight: 500;
+                            color: rgb(133, 133, 133);
+                        }
+                    }
+
+                    .totalAmtTax {
+                        padding-right: 0;
+                        padding-top: 5%;
+
+                        .transactionFee {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-top: 15px;
+                            font-size: 0.9rem;
+                            font-weight: 600;
+                            color: rgb(70, 70, 70);
+                        }
+
+                    }
+
+                    .enterAsk {
+                        margin-top: 30px;
+
+                        .askAmtPara {
+                            display: flex;
+
+                            input {
+                                height: 46px;
+                                border: 1px solid rgb(212, 212, 212);
+                                border-radius: 5px;
+                                width: 9rem;
+                                padding: 1% 1% 1% 10%;
+                                font-size: 1.2rem;
+                                font-weight: 500;
+                                background: url("../ASSETS/rupee-sign-solid.svg") no-repeat left 0.8rem center/13px 23px;
+                            }
+
+                            .askPara {
+                                margin: 12px 0 0 15px;
+                                font-size: 0.7rem;
+                                font-weight: 500;
+                                color: rgb(133, 133, 133);
+                            }
+                        }
+                    }
+
+                    .transBtns {
+                        padding: 50px 5%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        button {
+                            height: 35px;
+                            width: 8rem;
+                            font-size: 0.8rem;
+                            font-weight: 500;
+                            letter-spacing: 2px;
+                            outline: none;
+                            transition: all 0.3s linear;
+                        }
+
+                        .cancelTrans {
+                            color: rgb(85, 85, 85);
+                            border: 2px solid rgb(151, 151, 151);
+                            background: rgb(248, 248, 248);
+
+                            &:hover {
+                                transform: translateY(-2px);
+                                opacity: 0.9;
+                            }
+                        }
+
+                        .proceedTrans {
+                            border: none;
+                            color: rgb(245, 245, 245);
+                            background: rgb(19, 17, 17);
+
+                            &:hover {
+                                transform: translateY(-2px);
+                                opacity: 0.9;
+                            }
+                        }
                     }
                 }
 
