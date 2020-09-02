@@ -903,6 +903,140 @@ main .mainContainer .shoeDetails .shoeSizeClickedBuy .transBtns .proceedTrans:ho
   opacity: 0.9;
 }
 
+.addMainImages {
+  width: 80%;
+  margin-top: 15%;
+}
+
+.addMainImages .addFirstImage .addImgBox {
+  margin: 0 auto;
+  height: 12rem;
+  width: 12rem;
+  border: 1px solid #969696;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 8rem;
+  color: #333333;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.addMainImages .addFirstImage .addImgBox:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+
+.addMainImages .addSecondryImages {
+  margin: 60px auto 0 auto;
+  width: 70%;
+}
+
+.addMainImages .addSecondryImages .addMore {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.addMainImages .addSecondryImages .addImageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.addMainImages .addSecondryImages .addImgBox {
+  height: 6rem;
+  width: 6rem;
+  border: 1px solid #969696;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4rem;
+  color: #333333;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.addMainImages .addSecondryImages .addImgBox:hover {
+  background: #e4e4e4;
+  cursor: pointer;
+}
+
+.sizeClicked .shoeConditions {
+  margin-top: 50px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+}
+
+.sizeClicked .shoeConditions .condition {
+  font-size: 0.85rem;
+}
+
+.sizeClicked .shoeConditions select {
+  width: 100px !important;
+}
+
+.additionalInformation {
+  margin-top: 30px;
+}
+
+.additionalInformation .addInfoPara {
+  font-size: 0.9rem;
+}
+
+.additionalInformation textarea {
+  resize: none;
+  padding: 3%;
+  font-size: 0.85rem;
+  width: 100%;
+  font-weight: 500;
+  color: #505050;
+  border: 2px solid #bdbdbd;
+}
+
+.additionalInformation .proceedBtn {
+  height: 35px;
+  width: 8rem;
+  border: none;
+  outline: none;
+  background: black;
+  color: white;
+  letter-spacing: 1.5px;
+  font-size: 0.8rem;
+  margin: 40px 75%;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.additionalInformation .proceedBtn:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  opacity: 0.9;
+}
+
 footer {
   position: relative;
   background: #1b1b1b;
@@ -1462,6 +1596,48 @@ footer .footerContainer .footRights {
   main .mainContainer .shoeDetails .shoeSizeClickedBuy .transBtns .proceedTrans:hover {
     -webkit-transform: translateY(-2px);
             transform: translateY(-2px);
+    opacity: 0.9;
+  }
+  .addMainImages {
+    width: 100%;
+    margin-top: 12%;
+  }
+  .addMainImages .addSecondryImages {
+    width: 90%;
+  }
+  .sizeClicked .shoeConditions {
+    margin: 50px auto 10px auto !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 90%;
+  }
+  .additionalInformation {
+    margin-top: 30px;
+    padding: 0 0 0 4%;
+  }
+  .additionalInformation .addInfoPara {
+    font-size: 0.9rem;
+  }
+  .additionalInformation .proceedBtn {
+    height: 35px;
+    width: 8rem;
+    border: none;
+    outline: none;
+    background: black;
+    color: white;
+    letter-spacing: 1.5px;
+    font-size: 0.8rem;
+    margin: 40px 62%;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+  .additionalInformation .proceedBtn:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
     opacity: 0.9;
   }
   footer {

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drop 1</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/drop1.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="desktopHeader">
+            <nav>
+                <div class="leftLogo">
+                    <a href="#"><i class="fa fa-chevron-left"></i> <i class="fa fa-chevron-right"></i></a>
+                </div>
+                <div class="navLinks">
+                    <ul>
+                        <li>
+                            <a href="#">drop</a>
+                        </li>
+                        <li>
+                            <a href="#">catalouge</a>
+                        </li>
+                        <li>
+                            <a href="#">grail</a>
+                        </li>
+                        <li>
+                            <a href="#">stash</a>
+                        </li>
+                        <li>
+                            <a href="#">customization</a>
+                        </li>
+                        <li>
+                            <a href="#">calendar</a>
+                        </li>
+                        <li>
+                            <a href="#">feature</a>
+                        </li>
+                        <li>
+                            <a href="#">legit check</a>
+                        </li>
+                        <div class="navHoverAnimation"></div>
+                    </ul>
+                </div>
+                <div class="rightIcons">
+                    <div class="heartIcon">
+                        <a href="#">
+                            <i class="far fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="profileIcon">
+                        <a href="#">
+                            <i class="fas fa-user-circle"></i>
+                        </a>
+                    </div>
+                    <div class="searchIcon">
+
+                        <button class="search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+
+        <div class="moblileHeader">
+            <div class="bckspaceLogUser">
+                <div class="logUser">
+                    <p>logged in as <b>ansh bhandari</b></p>
+                </div>
+                <div class="thebckName desktopBrandName">
+                    <div class="headImgContainer">
+                        <img src="./ASSETS/Layer 11.png" alt="brandImg">
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <div class="navBurger" onclick="openNav()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="thebckName mobileBrandName">
+                    <div class="headImgContainer">
+                        <img src="./ASSETS/Layer 11.png" alt="brandImg">
+                    </div>
+                </div>
+                <div class="searchIcon">
+                    <button class="search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="sideNavContainer">
+                    <div class="userProfile">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="userIcon">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-8  align-self-center">
+                                <div class="userName">
+                                    <p class="loggedIn">logged in as</p>
+                                    <p class="loggedName">ansh bhandari</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <a href="#">drop
+                        <hr></a>
+                    <a href="#">catalouge
+                        <hr></a>
+                    <a href="#">grail
+                        <hr></a>
+                    <a href="#">stash
+                        <hr></a>
+                    <a href="#">customization
+                        <hr></a>
+                    <a href="#">calendar
+                        <hr></a>
+                    <a href="#">feature
+                        <hr></a>
+                    <a href="#">legit check
+                        <hr></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="searchModal">
+        <div class="searchMainContainer">
+            <h2 class="searchHeading">
+                Search....
+            </h2>
+            <div class="searchContainer">
+                <input type="search">
+                <button class="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="mainContainer">
+            <div class="row">
+                <div class="col-12 col-md-7">
+                    <div class="addMainImages">
+                        <div class="addFirstImage">
+                            <div class="addImgBox">
+                                +
+                            </div>
+                        </div>
+                        <div class="addSecondryImages">
+                            <p class="addMore">add more</p>
+                            <div class="addImageContainer">
+                                <div class="addImgBox">
+                                    +
+                                </div>
+                                <div class="addImgBox">
+                                    +
+                                </div>
+                                <div class="addImgBox">
+                                    +
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 pl-0">
+                    <div class="shoeDetails">
+                        <div class="shoeBrandName">
+                            <p class="shoeName"><strong>nike air max</strong></p>
+                            <p class="shoeModel">jordan air max 90 viotech mg</p>
+                        </div>
+                        <!-- /// -->
+                        <div class="sizeClicked ">
+                            <div class="shoeCondition shoeConditions">
+                                <div class="conditionSelect">
+                                    <p class="condition"><b>condition</b></p>
+                                    <select class="custom-select">
+                                        <option selected>used</option>
+                                    </select>
+                                </div>
+                                <div class="boxSelect">
+                                    <p class="condition"><b>box</b></p>
+                                    <select class="custom-select">
+                                        <option selected>yes</option>
+                                        <option value="no">no</option>
+                                    </select>
+                                </div>
+                                <div class="tagSelect">
+                                    <p class="condition"><b>tag</b></p>
+                                    <select class="custom-select">
+                                        <option selected>yes</option>
+                                        <option value="no">no</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="selectSize">
+                                <p><b>select size</b></p>
+                                <div class="allSizeOptions">
+                                    <div class="sizeOption">
+                                        <p class="usSize"><b>us 3.5</b></p>
+                                        <p class="sizeMoney">₹ 7,000</p>
+                                    </div>
+                                    <div class="sizeOption">
+                                        <p class="usSize"><b>us 4</b></p>
+                                        <p class="sizeMoney">₹ 7,000</p>
+                                    </div>
+                                    <div class="sizeOption">
+                                        <p class="usSize"><b>us 4.5</b></p>
+                                        <p class="sizeMoney">₹ 6,500</p>
+                                    </div>
+                                    <div class="sizeOption">
+                                        <p class="usSize"><b>us 5</b></p>
+                                        <p class="sizeMoney">₹ 6,000</p>
+                                    </div>
+                                    <div class="sizeOption">
+                                        <p class="usSize"><b>us 5.5</b></p>
+                                        <p class="sizeMoney">₹ 6,700</p>
+                                    </div>
+                                    <div class="sizeOption">
+                                        <p class="usSize"><b>us 6</b></p>
+                                        <p class="sizeMoney">₹ 7,000</p>
+                                    </div>
+                                    <div class="sizeOption">
+                                        <p class="usSize"><b>us 6.5</b></p>
+                                        <p class="sizeMoney">₹ 7,000</p>
+                                    </div>
+                                    <div class="sizeOption">
+                                        <p class="usSize"><b>us 7</b></p>
+                                        <p class="sizeMoney">₹ 6,000</p>
+                                    </div>
+                                    <div class="sizeOption">
+                                        <p class="usSize"><b>us 7.5</b></p>
+                                        <p class="sizeMoney">₹ 6,000</p>
+                                    </div>
+                                    <div class="sizeOption">
+                                        <p class="usSize"><b>us 8</b></p>
+                                        <p class="sizeMoney">₹ 6,000</p>
+                                    </div>
+                                    <div class="sizeOption">
+                                        <p class="usSize"><b>us 9</b></p>
+                                        <p class="sizeMoney">₹ 7,000</p>
+                                    </div>
+                                    <div class="sizeOption">
+                                        <p class="usSize"><b>us 9.5</b></p>
+                                        <p class="sizeMoney">₹ 7,000</p>
+                                    </div>
+                                    <div class="sizeOption">
+                                        <p class="usSize"><b>us 10</b></p>
+                                        <p class="sizeMoney">₹ 7,000</p>
+                                    </div>
+                                    <div class="sizeOption">
+                                        <p class="usSize"><b>us 10.5</b></p>
+                                        <p class="sizeMoney">₹ 6,000</p>
+                                    </div>
+                                    <div class="sizeOption">
+                                        <p class="usSize"><b>us 11</b></p>
+                                        <p class="sizeMoney">₹ 6,000</p>
+                                    </div>
+                                    <div class="sizeOption">
+                                        <p class="usSize"><b>us 11.5</b></p>
+                                        <p class="sizeMoney">₹ 6,000</p>
+                                    </div>
+                                    <div class="sizeOption">
+                                        <p class="usSize"><b>us 12</b></p>
+                                        <p class="sizeMoney">₹ 6,000</p>
+                                    </div>
+                                    <div class="sizeOption">
+                                        <p class="usSize"><b>us 12.5</b></p>
+                                        <p class="sizeMoney">₹ 7,000</p>
+                                    </div>
+                                    <div class="sizeOption">
+                                        <p class="usSize"><b>us 13</b></p>
+                                        <p class="sizeMoney">₹ 7,000</p>
+                                    </div>
+                                    <div class="sizeOption">
+                                        <p class="usSize"><b>us 14</b></p>
+                                        <p class="sizeMoney">₹ 6,000</p>
+                                    </div>
+                                    <div class="sizeOption">
+                                        <p class="usSize"><b>us 15</b></p>
+                                        <p class="sizeMoney">₹ 6,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ///// -->
+                        <div class="additionalInformation">
+                            <p class="addInfoPara">
+                                <b>additional information</b>
+                            </p>
+                            <textarea cols="49" rows="4" noresize
+                                placeholder="specify any wear / tear / stains or tags or anything else that can or would affect the price of the item"></textarea>
+                            <button class="proceedBtn">proceed</button>
+                        </div>
+                    </div>
+                </div>
+
+    </main>
+
+
+    <footer>
+        <div class="yoUpBtn">
+            <i class="fa fa-chevron-up"></i>
+        </div>
+        <div class="footerContainer">
+            <div class="footLinks">
+                <div class="mobileWrap">
+                    <a href="#">guide <span>|</span></a>
+                    <a href="#">copyright <span>|</span></a>
+                    <a href="#">terms and condition <span class="noMobile">|</span></a>
+                </div>
+                <div class="mobileWrap">
+                    <a href="#">privacy poilcy <span>|</span></a>
+                    <a href="#">contact us <span>|</span></a>
+                    <a href="#">sneaker request <span class="noMobile">|</span></a>
+                </div>
+                <div class="mobileWrap">
+
+                    <a href="#">press <span>|</span></a>
+                    <a href="#">help <span>|</span></a>
+                    <a href="#">product request </a>
+                </div>
+            </div>
+            <div class="footSocial">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+            </div>
+            <div class="footRights">
+                <p>&copy; 2020 thebckspace, inc. all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/v4-shims.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./JS/drop1.js"></script>
+</body>
+
+</html>

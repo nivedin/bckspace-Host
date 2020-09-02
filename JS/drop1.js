@@ -88,6 +88,9 @@ shoeSelectOption.addEventListener("click", () => {
     if (shoeOptionCondition === "ds") {
         selectSize.classList.remove("noDisplay");
 
+    } else if (shoeOptionCondition === "used") {
+        window.location = "drop1Used.html";
+
     } else {
         selectSize.classList.add("noDisplay")
     }

@@ -845,6 +845,124 @@ main {
     }
 }
 
+////////////drop1Content///////////
+
+.addMainImages {
+    width: 80%;
+    margin-top: 15%;
+
+    .addFirstImage {
+
+        .addImgBox {
+            margin: 0 auto;
+            height: 12rem;
+            width: 12rem;
+            border: 1px solid rgb(150, 150, 150);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 8rem;
+            color: rgb(51, 51, 51);
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .addSecondryImages {
+        margin: 60px auto 0 auto;
+        width: 70%;
+
+        .addMore {
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+
+        .addImageContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .addImgBox {
+
+            height: 6rem;
+            width: 6rem;
+            border: 1px solid rgb(150, 150, 150);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4rem;
+            color: rgb(51, 51, 51);
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: rgb(228, 228, 228);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.sizeClicked {
+    .shoeConditions {
+        margin-top: 50px !important;
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+
+        .condition {
+            font-size: 0.85rem;
+        }
+
+        select {
+            width: 100px !important;
+        }
+    }
+}
+
+.additionalInformation {
+    margin-top: 30px;
+
+    .addInfoPara {
+        font-size: 0.9rem;
+    }
+
+    textarea {
+        resize: none;
+        padding: 3%;
+        font-size: 0.85rem;
+        width: 100%;
+        font-weight: 500;
+        color: rgb(80, 80, 80);
+        border: 2px solid rgb(189, 189, 189);
+    }
+
+    .proceedBtn {
+        height: 35px;
+        width: 8rem;
+        border: none;
+        outline: none;
+        background: black;
+        color: white;
+        letter-spacing: 1.5px;
+        font-size: 0.8rem;
+        margin: 40px 75%;
+        transition: all 0.3s linear;
+
+        &:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+    }
+}
+
+////////////drop1Content/////////// 
+
 //////////////////////
 footer {
     position: relative;
@@ -1450,6 +1568,56 @@ footer {
         }
 
     }
+
+
+    ////////////drop1Content///////////
+
+    .addMainImages {
+        width: 100%;
+        margin-top: 12%;
+
+        .addSecondryImages {
+            width: 90%;
+        }
+    }
+
+    .sizeClicked {
+        .shoeConditions {
+            margin: 50px auto 10px auto !important;
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+        }
+    }
+
+    .additionalInformation {
+        margin-top: 30px;
+        padding: 0 0 0 4%;
+
+        .addInfoPara {
+            font-size: 0.9rem;
+        }
+
+        .proceedBtn {
+            height: 35px;
+            width: 8rem;
+            border: none;
+            outline: none;
+            background: black;
+            color: white;
+            letter-spacing: 1.5px;
+            font-size: 0.8rem;
+            margin: 40px 62%;
+            transition: all 0.3s linear;
+
+            &:hover {
+                transform: scale(1.05);
+                opacity: 0.9;
+            }
+        }
+    }
+
+    ////////////drop1Content/////////// 
 
 
     footer {
