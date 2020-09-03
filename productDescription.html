@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Description</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/productDescription.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="desktopHeader">
+            <nav>
+                <div class="leftLogo">
+                    <a href="#"><i class="fa fa-chevron-left"></i> <i class="fa fa-chevron-right"></i></a>
+                </div>
+                <div class="navLinks">
+                    <ul>
+                        <li>
+                            <a href="#">drop</a>
+                        </li>
+                        <li>
+                            <a href="#">catalouge</a>
+                        </li>
+                        <li>
+                            <a href="#">grail</a>
+                        </li>
+                        <li>
+                            <a href="#">stash</a>
+                        </li>
+                        <li>
+                            <a href="#">customization</a>
+                        </li>
+                        <li>
+                            <a href="#">calendar</a>
+                        </li>
+                        <li>
+                            <a href="#">feature</a>
+                        </li>
+                        <li>
+                            <a href="#">legit check</a>
+                        </li>
+                        <div class="navHoverAnimation"></div>
+                    </ul>
+                </div>
+                <div class="rightIcons">
+                    <div class="heartIcon">
+                        <a href="#">
+                            <i class="far fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="profileIcon">
+                        <a href="#">
+                            <i class="fas fa-user-circle"></i>
+                        </a>
+                    </div>
+                    <div class="searchIcon">
+
+                        <button class="search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+
+        <div class="moblileHeader">
+            <div class="bckspaceLogUser">
+                <div class="logUser">
+                    <p>logged in as <b>ansh bhandari</b></p>
+                </div>
+                <div class="thebckName desktopBrandName">
+                    <div class="headImgContainer">
+                        <img src="./ASSETS/Layer 11.png" alt="brandImg">
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <div class="navBurger" onclick="openNav()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="thebckName mobileBrandName">
+                    <div class="headImgContainer">
+                        <img src="./ASSETS/Layer 11.png" alt="brandImg">
+                    </div>
+                </div>
+                <div class="searchIcon">
+                    <button class="search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="sideNavContainer">
+                    <div class="userProfile">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="userIcon">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-8  align-self-center">
+                                <div class="userName">
+                                    <p class="loggedIn">logged in as</p>
+                                    <p class="loggedName">ansh bhandari</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <a href="#">drop
+                        <hr></a>
+                    <a href="#">catalouge
+                        <hr></a>
+                    <a href="#">grail
+                        <hr></a>
+                    <a href="#">stash
+                        <hr></a>
+                    <a href="#">customization
+                        <hr></a>
+                    <a href="#">calendar
+                        <hr></a>
+                    <a href="#">feature
+                        <hr></a>
+                    <a href="#">legit check
+                        <hr></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="searchModal">
+        <div class="searchMainContainer">
+            <h2 class="searchHeading">
+                Search....
+            </h2>
+            <div class="searchContainer">
+                <input type="search">
+                <button class="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <main>
+        <div class="mainContent">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="mainImgContainer">
+                        <img src="./ASSETS/jordanShoe.png" alt="mainShoeImg">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="shoeDetailMain">
+                        <div class="shoeName">
+                            <p class="shoeBrand"><strong>Nike Jordan 11 Retro Playoffs Bred (2019)</strong></p>
+                        </div>
+                        <div class="conditionSizeTrade">
+                            <div class="conditionSelect">
+                                <select class="custom-select">
+                                    <option selected>condition</option>
+                                    <option value="ds">ds</option>
+                                    <option value="used">used</option>
+                                </select>
+                            </div>
+                            <div class="sizeSelect">
+                                <select class="custom-select">
+                                    <option selected>size</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                            </div>
+                            <div class="lastTradePrice">
+                                <p class="tradePara"><b>last traded price: ₹ 10526.77</b></p>
+                                <p class="tradeSize">size 14 | <a href="#">view all sales</a></p>
+                            </div>
+                        </div>
+                        <div class="copDropBtns">
+                            <div class="greenBtns">
+                                <button class="copNow"><span>cop now ₹ 21824.66</span><span class="smallParaBtn">lowest
+                                        bid
+                                        price</span></button>
+                                <p class="orPara">OR</p>
+                                <button class="bid">bid</button>
+                            </div>
+                            <div class="blueBtns">
+                                <button class="dropNow"><span>drop now ₹ 16330.34</span><span
+                                        class="smallParaBtn">highest bid
+                                        price</span></button>
+                                <p class="orPara">OR</p>
+                                <button class="ask">ask</button>
+                            </div>
+                        </div>
+                        <div class="styleColorPara">
+                            <p>style 378037-D61</p>
+                            <p>colorway black/white-versity red</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="youMayLike">
+            <h2 class="likeHeading">you may also like</h2>
+
+            <div class="shoeLikeContainer">
+                <div class="shoeCard">
+                    <div class="shoeBody">
+                        <div class="addLikeIco">
+                            <i class="plusIco fas fa-plus-circle"></i>
+                            <i class="heartIco far fa-heart"></i>
+                        </div>
+                        <div class="shoeImage">
+                            <img src="./ASSETS/adidas-Yeezy-700-V3-Azael-Product.png" alt="shoeImg">
+                        </div>
+                    </div>
+                    <div class="itemNameBtn">
+                        <p>air yeezy 700 v3 azeel</p>
+                        <button class="viewMore"><span>view more</span> </button>
+                    </div>
+                </div>
+                <div class="shoeCard">
+                    <div class="shoeBody">
+                        <div class="addLikeIco">
+                            <i class="plusIco fas fa-plus-circle"></i>
+                            <i class="heartIco far fa-heart"></i>
+                        </div>
+                        <div class="shoeImage">
+                            <img src="./ASSETS/Balenciaga-Triple-S-Green-Black-Product.png" alt="shoeImg">
+                        </div>
+                    </div>
+                    <div class="itemNameBtn">
+                        <p>balenciaga triple s green-black</p>
+                        <button class="viewMore"><span>view more</span> </button>
+                    </div>
+                </div>
+                <div class="shoeCard">
+                    <div class="shoeBody">
+                        <div class="addLikeIco">
+                            <i class="plusIco fas fa-plus-circle"></i>
+                            <i class="heartIco far fa-heart"></i>
+                        </div>
+                        <div class="shoeImage">
+                            <img src="./ASSETS/adidas-Yeezy-Boost-350-V2-Yeezreel-Product.png" alt="shoeImg">
+                        </div>
+                    </div>
+                    <div class="itemNameBtn">
+                        <p>adidas yeezy boost 350 v2 yeezreel</p>
+                        <button class="viewMore"><span>view more</span> </button>
+                    </div>
+                </div>
+                <div class="shoeCard">
+                    <div class="shoeBody">
+                        <div class="addLikeIco">
+                            <i class="plusIco fas fa-plus-circle"></i>
+                            <i class="heartIco far fa-heart"></i>
+                        </div>
+                        <div class="shoeImage">
+                            <img src="./ASSETS/Off-White-Odsy-1000-Green-FW19-Product.png" alt="shoeImg">
+                        </div>
+                    </div>
+                    <div class="itemNameBtn">
+                        <p>off white odsy 1000 green lw 19</p>
+                        <button class="viewMore"><span>view more</span> </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="yoUpBtn">
+            <i class="fa fa-chevron-up"></i>
+        </div>
+        <div class="footerContainer">
+            <div class="footLinks">
+                <div class="mobileWrap">
+                    <a href="#">guide <span>|</span></a>
+                    <a href="#">copyright <span>|</span></a>
+                    <a href="#">terms and condition <span class="noMobile">|</span></a>
+                </div>
+                <div class="mobileWrap">
+                    <a href="#">privacy poilcy <span>|</span></a>
+                    <a href="#">contact us <span>|</span></a>
+                    <a href="#">sneaker request <span class="noMobile">|</span></a>
+                </div>
+                <div class="mobileWrap">
+
+                    <a href="#">press <span>|</span></a>
+                    <a href="#">help <span>|</span></a>
+                    <a href="#">product request </a>
+                </div>
+            </div>
+            <div class="footSocial">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+            </div>
+            <div class="footRights">
+                <p>&copy; 2020 thebckspace, inc. all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/v4-shims.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./JS/productDescription.js"></script>
+</body>
+
+</html>
