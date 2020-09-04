@@ -717,6 +717,259 @@ main {
         }
     }
 
+    ///////////Sales Popup//////////
+    .popUpSalesClose {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .allSalesPopUp {
+
+        position: fixed;
+        z-index: 4;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.637);
+
+        .popUpContainer {
+            background: white;
+            height: 60vh;
+            width: 60vw;
+            transform: translate(30%, 50%);
+            padding: 0.5%;
+
+            .popUpSalesBox {
+                border: 1px solid black;
+                height: 100%;
+
+                .nameCloseHeader {
+                    position: relative;
+                    display: flex;
+                    height: 8vh;
+                    border-bottom: 1px solid black;
+                    align-items: center;
+                    font-size: 1.05rem;
+
+
+                    .popUpCloseBtn {
+                        position: absolute;
+                        right: 5%;
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                    }
+
+                    .closeIcon {
+
+                        transition: all 0.3s ease;
+
+                        svg {
+                            color: rgb(107, 107, 107);
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+                            color: rgb(158, 158, 158);
+                            opacity: 0.9;
+                        }
+                    }
+
+                    .shoeName {
+                        margin: 0 auto;
+
+                        color: rgb(58, 58, 58);
+                    }
+
+                    p {
+                        margin: 0;
+                    }
+                }
+
+                .popUpTable {
+
+
+                    .tableHeader {
+                        height: 7vh;
+                        background: rgb(214, 214, 214);
+                        display: flex;
+                        border-bottom: 1px solid black;
+                        border-left: 1px solid black;
+                        border-right: 1px solid black;
+
+                        .conditionHead {
+                            height: 100%;
+                            width: 20%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 0.9rem;
+
+                        }
+
+                        .sizeHead {
+                            height: 100%;
+                            width: 20%;
+                            font-size: 0.9rem;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-left: 1px solid black;
+                            border-right: 1px solid black;
+                        }
+
+                        .inputSubmitBtn {
+                            height: 100%;
+                            width: 60%;
+
+                            .headContainerBtn {
+                                height: 100%;
+                                width: 80%;
+                                margin: 0 auto;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                .inputBtn {
+                                    margin: 0 10%;
+                                    height: 62%;
+                                    width: 7.5rem;
+                                    background: transparent;
+                                    outline: none;
+                                    color: rgb(0, 0, 0);
+                                    font-size: 0.85rem;
+                                    border: 1px solid black;
+                                }
+
+                                .submitBtn {
+                                    margin: 0 0 0 16%;
+                                    height: 62%;
+                                    width: 6.2rem;
+                                    font-size: 0.85rem;
+                                    background: transparent;
+                                    outline: none;
+                                    font-weight: 500;
+                                    border: 1px solid black;
+                                }
+                            }
+                        }
+                    }
+
+                    ///////
+                    .tableBody {
+                        display: flex;
+                        height: 43vh;
+
+
+                        .conditionBody {
+                            width: 20%;
+                            height: 100%;
+                            text-align: center;
+
+                            .conditionTopCont {
+                                height: 80%;
+                                margin: 10% 0 0 0;
+                                border-right: 1px solid black;
+
+                                p {
+                                    margin: 30px 0 0 0;
+                                    font-size: 0.88rem;
+                                    font-weight: 500;
+                                }
+                            }
+
+                            .conditionFoot {
+                                font-size: 0.88rem;
+                                font-weight: 500;
+                            }
+                        }
+
+                        .sizeBody {
+                            width: 20.2%;
+                            height: 100%;
+                            text-align: center;
+                            border-right: 1px solid black;
+
+
+                            .sizeTopCont {
+                                height: 80%;
+                                margin: 10% 0 0 0;
+
+                                p {
+                                    margin: 30px 0 0 0;
+                                    font-size: 0.88rem;
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+
+                        .inputBidBody {
+                            width: 35%;
+                            height: 100%;
+                            display: flex;
+                            border-right: 1px solid black;
+
+                            .inputBitCol1 {
+                                width: 50%;
+                                height: 100%;
+                                text-align: center;
+
+                                .inputBitCol1TopCont {
+                                    margin: 10% 0 0 0;
+                                    height: 80%;
+                                    border-right: 1px solid black;
+
+                                    p {
+                                        margin: 30px 0 0 0;
+                                        font-size: 0.88rem;
+                                        font-weight: 500;
+                                    }
+                                }
+                            }
+
+                            .inputBitCol2 {
+                                width: 50%;
+                                height: 100%;
+                                text-align: center;
+
+                                .inputBitCol2TopCont {
+                                    margin: 10% 0 0 0;
+                                    height: 80%;
+
+                                    p {
+                                        margin: 30px 0 0 0;
+                                        font-size: 0.88rem;
+                                        font-weight: 500;
+                                    }
+                                }
+
+                                .inputBitCol2Foot {
+                                    font-size: 0.88rem;
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+
+                        .submitBody {
+                            width: 25%;
+                            height: 100%;
+                            text-align: center;
+
+                            .lastAvgTradedPrice {
+                                margin-top: 28px;
+                                font-size: 0.88rem;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ///////////Sales Popup//////////
+
     .youMayLike {
         min-height: 70vh;
         background: white;
@@ -729,13 +982,14 @@ main {
         }
 
         .shoeLikeContainer {
-            margin: 40px 0;
+            margin: 70px 0;
             display: flex;
             flex-wrap: wrap;
+            // flex: 1 0 11%;
 
             .shoeCard {
-                min-height: 15rem;
-                min-width: 19.5rem;
+                min-height: 10rem;
+                width: 24%;
                 margin-right: 3px;
                 margin-bottom: 40px;
 
@@ -770,9 +1024,8 @@ main {
 
                     .shoeImage {
                         height: 9rem;
-                        width: 13rem;
+                        width: 60%;
                         margin: 10% auto 0 auto;
-
 
                         img {
                             height: 100%;
@@ -1266,6 +1519,110 @@ footer {
             }
         }
 
+        ///////////Sales Popup//////////
+
+        .allSalesPopUp {
+            .popUpContainer {
+                height: 60vh;
+                width: 80vw;
+                transform: translate(12%, 35%);
+
+                .popUpSalesBox {
+                    .nameCloseHeader {
+                        font-size: 0.68rem;
+                        padding: 0 2%;
+                    }
+
+                    .popUpTable {
+                        .tableHeader {
+                            .conditionHead {
+                                padding: 0 0 0 1%;
+                                font-size: 0.6rem;
+                            }
+
+                            .sizeHead {
+                                font-size: 0.6rem;
+                                display: flex;
+                            }
+
+                            .inputSubmitBtn {
+                                .headContainerBtn {
+                                    .inputBtn {
+                                        min-width: 3.2rem;
+                                        font-size: 0.6rem;
+                                    }
+
+                                    .submitBtn {
+                                        height: 62%;
+                                        min-width: 3rem;
+                                        font-size: 0.6rem;
+                                    }
+                                }
+                            }
+                        }
+
+                        ///////
+                        .tableBody {
+                            .conditionBody {
+                                .conditionTopCont {
+                                    p {
+                                        font-size: 0.6rem;
+                                    }
+                                }
+
+                                .conditionFoot {
+                                    font-size: 0.6rem;
+                                }
+                            }
+
+                            .sizeBody {
+                                .sizeTopCont {
+                                    p {
+
+                                        font-size: 0.6rem;
+
+                                    }
+                                }
+                            }
+
+                            .inputBidBody {
+
+                                .inputBitCol1 {
+
+                                    .inputBitCol1TopCont {
+
+                                        p {
+                                            font-size: 0.6rem;
+                                        }
+                                    }
+                                }
+
+                                .inputBitCol2 {
+                                    .inputBitCol2TopCont {
+                                        p {
+                                            font-size: 0.6rem;
+                                        }
+                                    }
+
+                                    .inputBitCol2Foot {
+                                        font-size: 0.6rem;
+                                    }
+                                }
+                            }
+
+                            .submitBody {
+                                .lastAvgTradedPrice {
+                                    font-size: 0.6rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        ///////////Sales Popup//////////
+
         .youMayLike {
             min-height: 70vh;
             background: white;
@@ -1280,7 +1637,7 @@ footer {
 
                 .shoeCard {
                     min-height: 15rem;
-                    min-width: 19.5rem;
+                    width: 100%;
                     margin-bottom: 30px;
 
 
@@ -1288,6 +1645,17 @@ footer {
                         height: 80%;
                         background: #ebebeb;
 
+                        .shoeImage {
+                            height: 13rem;
+                            width: 60%;
+                            margin: 10% auto 0 auto;
+
+                            img {
+                                height: 100%;
+                                width: 100%;
+                                transition: all 0.5s ease;
+                            }
+                        }
                     }
 
                 }

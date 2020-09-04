@@ -34,17 +34,12 @@ searchModal.addEventListener("click", (e) => {
 
 })
 
-
-
 let toTopBtn = document.querySelector(".yoUpBtn");
 
 toTopBtn.addEventListener("click", () => {
-    var body = $("html, body");
-    body.stop().animate({
-        scrollTop: 0
-    }, 500, 'swing', function () {});
-})
-
+    document.documentElement.style.transition = "all 1s ease";
+    document.documentElement.scrollTop = 0;
+});
 
 
 let showMoreBtn = document.querySelector(".showMoreBtn");

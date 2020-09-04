@@ -7,7 +7,8 @@
     <title>Product Description</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/productDescription.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
@@ -185,7 +186,7 @@
                             </div>
                             <div class="lastTradePrice">
                                 <p class="tradePara"><b>last traded price: ₹ 10526.77</b></p>
-                                <p class="tradeSize">size 14 | <a href="#">view all sales</a></p>
+                                <p class="tradeSize">size 14 | <a href="#" class="popUpOpenLink">view all sales</a></p>
                             </div>
                         </div>
                         <div class="copDropBtns">
@@ -213,6 +214,83 @@
                 </div>
             </div>
         </div>
+
+        <!-- ///////Sales Popup/////// -->
+        <div class="allSalesPopUp popUpSalesClose">
+            <div class="popUpContainer">
+                <div class="popUpSalesBox">
+                    <div class="nameCloseHeader">
+                        <p class="shoeName"><b>Nike Jordan 11 Retro Playoffs Bred (2019) - 378037-061</b></p>
+                        <button class="popUpCloseBtn"><i class="closeIcon fas fa-times"></i></button>
+                    </div>
+                    <div class="popUpTable">
+                        <div class="tableHeader">
+                            <div class="conditionHead"><b>condition (ds)</b></div>
+                            <div class="sizeHead"><b>size (9)</b></div>
+                            <div class="inputSubmitBtn">
+                                <div class="headContainerBtn">
+                                    <button class="inputBtn">input bid</button>
+                                    <button class="submitBtn">submit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tableBody">
+                            <div class="conditionBody">
+                                <div class="conditionTopCont">
+                                    <p class="conditionCont">#</p>
+                                    <p class="conditionCont">5</p>
+                                    <p class="conditionCont">1</p>
+                                    <p class="conditionCont">2</p>
+                                    <p class="conditionCont">1</p>
+                                </div>
+                                <p class="conditionFoot">tbq</p>
+                            </div>
+                            <div class="sizeBody">
+                                <div class="sizeTopCont">
+                                    <p class="sizeCont">bids</p>
+                                    <p class="sizeCont">115</p>
+                                    <p class="sizeCont">110</p>
+                                    <p class="sizeCont">100</p>
+                                    <p class="sizeCont">80</p>
+                                </div>
+                                <p class="sizeFoot"></p>
+                            </div>
+                            <div class="inputBidBody">
+                                <div class="inputBitCol1">
+                                    <div class="inputBitCol1TopCont">
+                                        <p class="inputBitCol1Cont">asks</p>
+                                        <p class="inputBitCol1Cont">130</p>
+                                        <p class="inputBitCol1Cont">140</p>
+                                        <p class="inputBitCol1Cont">145</p>
+                                        <p class="inputBitCol1Cont">150</p>
+                                    </div>
+                                </div>
+                                <div class="inputBitCol2">
+                                    <div class="inputBitCol2TopCont">
+                                        <p class="inputBitCol2Cont">#</p>
+                                        <p class="inputBitCol2Cont">1</p>
+                                        <p class="inputBitCol2Cont">2</p>
+                                        <p class="inputBitCol2Cont">1</p>
+                                        <p class="inputBitCol2Cont">1</p>
+                                    </div>
+                                    <p class="inputBitCol2Foot">taq</p>
+                                </div>
+                            </div>
+                            <div class="submitBody">
+                                <div class="lastAvgTradedPrice">
+                                    <p class="para">last traded price</p>
+                                    <p class="money">₹ 10526.77</p>
+                                    <p class="para">average traded price</p>
+                                    <p class="money">₹ 9857.22</p>
+                                </div>
+                                <div class="submitGraphSlider"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ///////Sales Popup/////// -->
 
         <div class="youMayLike">
             <h2 class="likeHeading">you may also like</h2>
@@ -320,9 +398,15 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/v4-shims.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
     <script src="./JS/productDescription.js"></script>
 </body>
 

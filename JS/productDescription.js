@@ -34,11 +34,9 @@ searchModal.addEventListener("click", (e) => {
 let toTopBtn = document.querySelector(".yoUpBtn");
 
 toTopBtn.addEventListener("click", () => {
-    var body = $("html, body");
-    body.stop().animate({
-        scrollTop: 0
-    }, 500, 'swing', function () {});
-})
+    document.documentElement.style.transition = "all 1s ease";
+    document.documentElement.scrollTop = 0;
+});
 
 
 
@@ -73,3 +71,20 @@ if (window.innerWidth > 700) {
         }
     })
 }
+
+
+//////sales popUp/////////
+let viewAllSalesLink = document.querySelector(".popUpOpenLink");
+let popUpOpenContainer = document.querySelector(".allSalesPopUp");
+let popUpCloseBtn = document.querySelector(".popUpCloseBtn");
+
+viewAllSalesLink.addEventListener("click", () => {
+    popUpOpenContainer.classList.remove("popUpSalesClose");
+    popUpCloseBtn.addEventListener("click", () => {
+        popUpOpenContainer.classList.add("popUpSalesClose");
+
+    })
+
+})
+
+//////sales popUp/////////

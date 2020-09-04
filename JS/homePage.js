@@ -122,11 +122,9 @@ new Glider(document.querySelector('.glider3'), {
 let toTopBtn = document.querySelector(".yoUpBtn");
 
 toTopBtn.addEventListener("click", () => {
-    var body = $("html, body");
-    body.stop().animate({
-        scrollTop: 0
-    }, 500, 'swing', function () {});
-})
+    document.documentElement.style.transition = "all 1s ease";
+    document.documentElement.scrollTop = 0;
+});
 
 let mobileHeader = document.querySelector(".moblileHeader");
 let desktopHeader = document.querySelector(".desktopHeader");
