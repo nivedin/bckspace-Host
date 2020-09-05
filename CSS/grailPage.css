@@ -968,6 +968,12 @@ main .chooseSneaker .sneakerTable table tbody .tableSneaker .categoryItp {
   background: transparent;
   color: whitesmoke;
   font-size: 1.2rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpHead .popUpcloseIcon:hover {
+  color: #747474;
 }
 
 .alertCenterTable .createAlertPopup .popUpContainer .popUpBody {
@@ -1109,6 +1115,15 @@ main .chooseSneaker .sneakerTable table tbody .tableSneaker .categoryItp {
   letter-spacing: 2px;
   font-size: 0.8rem;
   background: #3838ff;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpBody .manageAlertBtn .createAlertBtn:hover,
+.alertCenterTable .createAlertPopup .popUpContainer .popUpBody .manageAlertBtn .createAlertBtn :active {
+  opacity: 0.9;
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
 }
 
 footer {

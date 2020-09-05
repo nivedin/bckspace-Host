@@ -909,6 +909,11 @@ main {
                     background: transparent;
                     color: rgb(245, 245, 245);
                     font-size: 1.2rem;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        color: rgb(116, 116, 116);
+                    }
                 }
             }
 
@@ -1036,6 +1041,13 @@ main {
                         letter-spacing: 2px;
                         font-size: 0.8rem;
                         background: rgb(56, 56, 255);
+                        transition: all 0.3s linear;
+
+                        &:hover,
+                        :active {
+                            opacity: 0.9;
+                            transform: scale(1.04);
+                        }
                     }
                 }
             }
