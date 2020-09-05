@@ -694,14 +694,12 @@ main {
                     }
 
                     .tableSneaker {
+
                         //
-
-
                         .sneakerImgNameSize {
                             border-bottom: none;
                             border-left: none;
                             border-right: none;
-
                             display: flex;
                             align-items: center;
                             padding: 30px;
@@ -738,8 +736,6 @@ main {
                             }
                         }
 
-
-
                         .categoryItp {
                             width: 28%;
                             font-weight: 600;
@@ -763,15 +759,24 @@ main {
         padding: 10px;
     }
 
+    thead {
+        .tableHeader {
+            th {
+                padding: 14px 30px;
+                font-size: 0.9rem;
+            }
+        }
+    }
+
     .conditionDelStatsActions {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         font-weight: 600;
     }
 
     .deliveryMethodIcons {
         svg {
-            height: 20px;
-            width: 20px;
+            height: 18px;
+            width: 18px;
             margin-right: 5px;
             color: rgb(110, 110, 110);
 
@@ -848,8 +853,8 @@ main {
         svg {
             color: rgb(138, 138, 138);
             margin-right: 5px;
-            height: 20px;
-            width: 20px;
+            height: 18px;
+            width: 18px;
 
             &:hover {
                 cursor: pointer;
@@ -1312,11 +1317,20 @@ footer {
 
             .alertCenterTable {
                 td {
-                    padding: 10px;
+                    padding: 10px !important;
+                }
+
+                thead {
+                    .tableHeader {
+                        th {
+                            padding: 14px 20px !important;
+                            font-size: 0.8rem;
+                        }
+                    }
                 }
 
                 .conditionDelStatsActions {
-                    font-size: 0.72rem;
+                    font-size: 0.68rem;
                     font-weight: 600;
                 }
 

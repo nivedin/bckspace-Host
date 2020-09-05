@@ -810,14 +810,19 @@ main .chooseSneaker .sneakerTable table tbody .tableSneaker .categoryItp {
   padding: 10px;
 }
 
-.alertCenterTable .conditionDelStatsActions {
+.alertCenterTable thead .tableHeader th {
+  padding: 14px 30px;
   font-size: 0.9rem;
+}
+
+.alertCenterTable .conditionDelStatsActions {
+  font-size: 0.8rem;
   font-weight: 600;
 }
 
 .alertCenterTable .deliveryMethodIcons svg {
-  height: 20px;
-  width: 20px;
+  height: 18px;
+  width: 18px;
   margin-right: 5px;
   color: #6e6e6e;
 }
@@ -900,8 +905,8 @@ main .chooseSneaker .sneakerTable table tbody .tableSneaker .categoryItp {
 .alertCenterTable .actionIcons svg {
   color: #8a8a8a;
   margin-right: 5px;
-  height: 20px;
-  width: 20px;
+  height: 18px;
+  width: 18px;
 }
 
 .alertCenterTable .actionIcons svg:hover {
@@ -1326,10 +1331,14 @@ footer .footerContainer .footRights {
     color: #525252;
   }
   main .chooseSneaker .alertCenterTable td {
-    padding: 10px;
+    padding: 10px !important;
+  }
+  main .chooseSneaker .alertCenterTable thead .tableHeader th {
+    padding: 14px 20px !important;
+    font-size: 0.8rem;
   }
   main .chooseSneaker .alertCenterTable .conditionDelStatsActions {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     font-weight: 600;
   }
   main .chooseSneaker .alertCenterTable .deliveryMethodIcons svg {
