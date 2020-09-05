@@ -1,0 +1,1440 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --shadow: #e6e6e6;
+    --scrollbarBG: #5e5e5e;
+    --thumbBG: #000000;
+}
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
+    box-shadow: 0 -100vh 0 100vh var(--shadow), 0 0 15px 5px black;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background: rgb(171, 171, 171);
+    background: linear-gradient(180deg, rgba(171, 171, 171, 1) 0%, rgba(207, 207, 207, 1) 16%, rgba(241, 241, 241, 1) 28%, rgba(255, 255, 255, 1) 73%);
+
+
+}
+
+
+.moblileHeader {
+    min-height: 20vh;
+    padding: 3% 4%;
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    transition: all 0.5s ease;
+    animation: headerAnim 0.5s ease forwards;
+
+    .mobileBrandName {
+        display: none;
+    }
+
+    .bckspaceLogUser {
+        .logUser {
+            text-align: right;
+            font-size: 0.8rem;
+        }
+
+        .headImgContainer {
+            margin: 0 auto;
+            height: 38px;
+            width: 230px;
+
+            text-align: center;
+
+            img {
+                height: 100%;
+                width: 100%;
+
+            }
+        }
+    }
+
+    nav {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+
+
+        .navBurger {
+            position: relative;
+            cursor: pointer;
+            height: 30px;
+            width: 30px;
+
+            span:nth-child(1) {
+                user-select: none;
+                content: "";
+                position: absolute;
+                top: 0;
+                height: 3px;
+                width: 32px;
+                background: white;
+                border-radius: 8px;
+                transition: all 0.4s ease-in-out;
+            }
+
+            span:nth-child(2) {
+                content: "";
+                position: absolute;
+                top: 8px;
+                height: 3px;
+                width: 32px;
+                background: white;
+                border-radius: 8px;
+                transition: all 0.4s ease-in-out;
+            }
+
+            span:nth-child(3) {
+                content: "";
+                position: absolute;
+                top: 16px;
+                height: 3px;
+                width: 32px;
+                background: white;
+                border-radius: 8px;
+                transition: all 0.4s ease-in-out;
+            }
+        }
+
+        .navBurger:hover,
+        .navBurger:active {
+            span:nth-child(1) {
+                background: #0202f3;
+            }
+
+            span:nth-child(2) {
+                width: 22px;
+            }
+
+        }
+
+        .searchIcon {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transform: translateY(-15%);
+            border-radius: 6px;
+
+            input {
+                width: 0;
+                border: none;
+                background: transparent;
+                color: white;
+                transition: all 0.3s ease;
+                height: 100%;
+                padding: 2%;
+
+            }
+
+            input::placeholder {
+                outline: none;
+                border: none;
+            }
+
+            input:focus {
+                outline: none;
+                border: none;
+            }
+
+            button {
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                border: none;
+                outline: none;
+                background: rgba(0, 0, 0, 0);
+
+                svg {
+                    user-select: none;
+                    margin-top: 2px;
+                    font-size: 1.33rem;
+                    cursor: pointer;
+                    color: white;
+
+                }
+            }
+
+        }
+
+
+        .searchIcon:hover {
+            svg {
+                color: #0202f3;
+            }
+        }
+    }
+
+    .sidenav {
+        height: 100vh;
+        /* 100% Full-height */
+        width: 0;
+        /* 0 width - change this with JavaScript */
+        position: fixed;
+        /* Stay in place */
+        z-index: 9;
+        /* Stay on top */
+        top: 0;
+        /* Stay at the top */
+        left: 0;
+        background-color: #111;
+        /* Black*/
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        padding-top: 60px;
+        /* Place content 60px from the top */
+        transition: 0.5s;
+        /* 0.5 second transition effect to slide in the sidenav */
+        scrollbar-width: none;
+
+    }
+
+    .sidenav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .sideNavContainer {
+        padding: 0 8%;
+
+        .userProfile {
+            .userIcon {
+                font-size: 8rem;
+            }
+
+            .userName {
+                margin: 15px 0 0 30px;
+
+                p {
+                    margin: 0;
+                }
+
+                .loggedIn {
+                    font-size: 0.86rem;
+                    margin-bottom: 10px;
+                }
+
+                .loggedName {
+
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        hr {
+            background: rgb(56, 56, 56);
+            border-radius: 8px;
+            height: 1px;
+        }
+    }
+
+    /* The navigation menu links */
+    .sidenav a {
+        padding: 4px 0 0 0;
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: #e9e9e9;
+        display: block;
+        transition: 0.3s;
+    }
+
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover {
+        color: blue;
+    }
+
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+}
+
+@keyframes headerAnim {
+    from {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.desktopHeader {
+    min-height: 15vh;
+    background: rgba(0, 0, 0, 0.774);
+    display: none;
+    position: fixed;
+    z-index: 6;
+    width: 100%;
+    transition: all 0.5s ease;
+    animation: headerAnim 0.5s ease forwards;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2% 4%;
+
+        .leftLogo {
+            a {
+                text-decoration: none;
+            }
+
+            svg {
+                font-size: 2rem;
+                color: white;
+
+            }
+        }
+
+        .navLinks {
+
+            margin: 10px 0 0 100px;
+
+            ul {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                list-style: none;
+
+                li {
+                    position: relative;
+                    z-index: 1;
+                    margin-right: 30px;
+                    transition: all 0.3s ease;
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        font-size: 0.95rem;
+                    }
+
+                }
+
+                .navHoverAnimation {
+                    position: absolute;
+                    height: 100%;
+                    width: 8%;
+                    top: 0;
+                    left: -1.3%;
+                    border-radius: 10px;
+                    transition: all 0.6s ease;
+                    border: none;
+                    outline: none;
+                    background: blue;
+                    z-index: 0;
+                }
+
+                li:active {
+                    transform: scale(1.1);
+                }
+
+                li:nth-child(1):hover~.navHoverAnimation {
+                    left: -1.3%;
+                }
+
+                li:nth-child(2):hover~.navHoverAnimation {
+                    left: 8%;
+                    width: 12%;
+
+                }
+
+                li:nth-child(3):hover~.navHoverAnimation {
+                    left: 22%;
+                    width: 7%;
+                }
+
+                li:nth-child(4):hover~.navHoverAnimation {
+                    left: 30.3%;
+                }
+
+                li:nth-child(5):hover~.navHoverAnimation {
+                    left: 40%;
+                    width: 17%;
+                }
+
+                li:nth-child(6):hover~.navHoverAnimation {
+                    left: 58%;
+                    width: 13%;
+                }
+
+                li:nth-child(7):hover~.navHoverAnimation {
+                    left: 72%;
+                    width: 10%;
+                }
+
+                li:nth-child(8):hover~.navHoverAnimation {
+                    left: 84%;
+                    width: 13%;
+                }
+            }
+        }
+
+        .rightIcons {
+            display: flex;
+            justify-content: space-between;
+            width: 10%;
+
+            .heartIcon {
+                a {
+                    text-decoration: none;
+                    color: white;
+
+                    svg {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+            .profileIcon {
+                a {
+                    text-decoration: none;
+                    color: white;
+
+                    svg {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+            .searchIcon {
+                button {
+                    background: rgba(0, 0, 0, 0.144);
+                    border: none;
+                    outline: none;
+
+                    svg {
+                        font-size: 1.2rem;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+////////////////////
+.searchModal.openModal {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.searchModal {
+    position: fixed;
+    z-index: 7;
+    min-height: 120vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+
+
+    .searchMainContainer {
+        position: relative;
+        top: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        width: 100%;
+
+    }
+
+    .searchHeading {
+        color: white;
+        font-size: 3rem;
+        font-weight: 600;
+        text-align: center;
+
+    }
+
+    .searchContainer {
+        margin-top: 5%;
+        box-shadow: 6px 6px 16px #00000034,
+            6px 6px 16px inset #00000034,
+            -6px -6px 16px #70707034,
+            -6px -6px 16px inset #77777734;
+
+        input {
+            background: transparent;
+            color: white;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 2%;
+            height: 50px;
+            width: 30rem;
+            border: none;
+            outline: none;
+
+            &:focus-within {
+                border: none;
+
+            }
+        }
+
+        button {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin: 0 10px 0 20px;
+            border: none;
+            outline: none;
+            background: transparent;
+
+            path {
+                fill: white;
+            }
+        }
+
+        button:hover {
+            background: rgb(37, 36, 36);
+
+        }
+
+    }
+}
+
+main {
+    margin-top: 30vh;
+    min-height: 120vh;
+    padding: 5% 8%;
+    text-align: center;
+
+    .mainContent {
+        .grailHeading {
+            h4 {
+                font-size: 1.8rem;
+                color: rgb(68, 68, 68);
+            }
+        }
+
+        .grailPara {
+            margin-top: 40px;
+
+            p {
+                font-size: 0.95rem;
+                font-weight: 500;
+                color: rgb(100, 100, 100);
+                line-height: 200%;
+            }
+        }
+    }
+
+    .chooseSneaker {
+        margin-top: 60px;
+
+        .searchAlertContainer {
+            margin-top: 40px;
+            // padding: 0 15%;
+            display: flex;
+            justify-content: space-between;
+
+            .searchBar {
+                height: 38px;
+                width: 48%;
+                border: 2px solid rgb(177, 177, 177);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-radius: 3px;
+
+                input {
+                    height: 100%;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    padding: 2% 2% 2% 6%;
+                    font-weight: 500;
+                }
+
+                .searchButton {
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    height: 100%;
+                    width: 50px;
+
+                    svg {
+                        transform: translateY(1px);
+                        font-size: 1.2rem;
+                        color: rgb(177, 177, 177);
+                    }
+                }
+            }
+
+            .alertButtons {
+                display: flex;
+
+                a {
+                    height: 35px;
+                    border-radius: 6px;
+                    color: white;
+                    font-weight: 500;
+                    border: none;
+                    outline: none;
+                    margin-left: 20px;
+                    font-size: 0.85rem;
+                    text-decoration: none;
+                }
+
+                .addItem {
+                    background: rgb(53, 182, 53);
+                    padding: 2% 1%;
+                    width: 6.2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .alertCenter {
+                    padding: 0 3%;
+                    background: rgb(218, 53, 53);
+                    width: 7.2rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            }
+        }
+
+        .sneakerTable {
+            margin-top: 38px;
+            overflow-x: auto;
+
+            table,
+            th,
+            td {
+                border: 1px solid rgb(180, 180, 180);
+                border-collapse: collapse;
+            }
+
+            table {
+                width: 100%;
+
+
+
+                thead {
+                    .tableHeader {
+
+
+                        th {
+                            padding: 14px 30px;
+                            color: rgb(77, 77, 77);
+
+                        }
+
+                        .nameHead {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            border: none;
+
+                            button {
+                                background: transparent;
+                                border: none;
+                                outline: none;
+                            }
+
+                            .sortIcon {
+                                color: rgb(114, 114, 114);
+
+                                &:hover {
+                                    cursor: pointer;
+                                    color: black;
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        transition: all 0.5s ease;
+
+                        &:hover {
+                            background: rgb(230, 230, 230);
+                        }
+                    }
+
+                    .tableSneaker {
+                        //
+
+
+                        .sneakerImgNameSize {
+                            border-bottom: none;
+                            border-left: none;
+                            border-right: none;
+
+                            display: flex;
+                            align-items: center;
+                            padding: 30px;
+
+                            .sneakerImg {
+                                height: 80px;
+                                width: 120px;
+
+
+                                img {
+                                    height: 100%;
+                                    width: 100%;
+                                }
+                            }
+
+                            .sneakerNameSize {
+                                margin-left: 40px;
+                                text-align: left;
+
+                                p {
+                                    margin: 15px 0;
+                                }
+
+                                .sneakerName {
+                                    color: rgb(56, 56, 56);
+                                    font-size: 0.95rem;
+                                }
+
+                                .sneakerSize {
+                                    font-size: 0.88rem;
+                                    font-weight: 600;
+                                    color: rgb(105, 105, 105);
+                                }
+                            }
+                        }
+
+
+
+                        .categoryItp {
+                            width: 28%;
+                            font-weight: 600;
+                            font-size: 0.9rem;
+                            color: rgb(82, 82, 82);
+                        }
+                    }
+
+                    //
+                }
+            }
+        }
+    }
+}
+
+/////////alert-center///////////
+
+
+.alertCenterTable {
+    td {
+        padding: 10px;
+    }
+
+    .conditionDelStatsActions {
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .deliveryMethodIcons {
+        svg {
+            height: 20px;
+            width: 20px;
+            margin-right: 5px;
+            color: rgb(110, 110, 110);
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:active {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .stausSlider {
+        .toggle {
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 4px 4px 4px;
+            width: 50px;
+            height: 22px;
+            background-color: rgb(65, 137, 204);
+            border-radius: 30px;
+            border: 2px solid gray;
+        }
+
+        /* After slide changes */
+        .toggle:after {
+            content: '';
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+            top: 0;
+            left: 26px;
+            transition: all 0.5s;
+        }
+
+        /* Toggle text */
+        p {
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 0.9rem;
+
+            svg {
+                color: white;
+            }
+        }
+
+        .crossMark {
+            transform: translate(-2px, -2px);
+            font-size: 1rem;
+        }
+
+        /* Checkbox cheked effect */
+        .checkbox:checked+.toggle::after {
+            left: 1px;
+        }
+
+        /* Checkbox cheked toggle label bg color */
+        .checkbox:checked+.toggle {
+            background-color: rgb(160, 160, 160);
+        }
+
+        /* Checkbox vanished */
+        .checkbox {
+            display: none;
+        }
+    }
+
+    .actionIcons {
+        svg {
+            color: rgb(138, 138, 138);
+            margin-right: 5px;
+            height: 20px;
+            width: 20px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+/////////alert-center///////////
+
+//////////////////////
+footer {
+    position: relative;
+    background: #1b1b1b;
+    min-height: 25vh;
+
+    .yoUpBtn {
+        cursor: pointer;
+        position: absolute;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        background: rgb(19, 17, 17);
+        z-index: 3;
+        right: 70px;
+        top: -12%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: blue;
+        font-size: 2rem;
+        transition: all 0.5s ease;
+        -webkit-box-shadow: 78px 96px 39px -72px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 78px 96px 39px -72px rgba(0, 0, 0, 0.75);
+        box-shadow: 78px 96px 39px -72px rgba(0, 0, 0, 0.75);
+    }
+
+    .yoUpBtn:hover {
+        transform: scale(1.1);
+    }
+
+
+    .footerContainer {
+        text-align: center;
+        padding: 1% 3% 1% 3%;
+
+        .footLinks {
+            padding: 2% 5% 0 5%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .mobileWrap {
+                margin-bottom: 35px;
+            }
+
+            a {
+                text-decoration: none;
+                color: rgb(184, 184, 184);
+                font-size: 0.9rem;
+
+                span {
+                    margin: 0 10px;
+                }
+            }
+        }
+
+        .footSocial {
+            padding: 10px 0 0 0;
+
+            a {
+                color: rgb(231, 231, 231);
+                margin-right: 10px;
+
+                svg {
+                    font-size: 1.9rem;
+                }
+            }
+
+        }
+
+        .footRights {
+            padding: 20px 0 0 0;
+            font-weight: 500;
+            color: rgb(77, 77, 77);
+        }
+    }
+}
+
+
+
+
+@media screen and (max-height: 750px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .moblileHeader {
+        display: block;
+
+
+        .logUser {
+            display: none;
+        }
+
+        .mobileBrandName {
+            display: block;
+        }
+    }
+
+    header {
+
+        .desktopBrandName {
+            display: none;
+        }
+
+        .bckspaceLogUser {
+            .logUser {
+                text-align: right;
+                font-size: 0.8rem;
+            }
+
+
+        }
+
+        nav {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+            .mobileBrandName {
+                .headImgContainer {
+                    height: 38px;
+                    width: 160px;
+                    text-align: center;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+
+                    }
+                }
+            }
+
+            .navBurger {
+                position: relative;
+                cursor: pointer;
+                height: 30px;
+                width: 30px;
+
+                span:nth-child(1) {
+                    user-select: none;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    height: 3px;
+                    width: 32px;
+                    background: white;
+                    border-radius: 8px;
+                    transition: all 0.4s ease-in-out;
+                }
+
+                span:nth-child(2) {
+                    content: "";
+                    position: absolute;
+                    top: 8px;
+                    height: 3px;
+                    width: 32px;
+                    background: white;
+                    border-radius: 8px;
+                    transition: all 0.4s ease-in-out;
+                }
+
+                span:nth-child(3) {
+                    content: "";
+                    position: absolute;
+                    top: 16px;
+                    height: 3px;
+                    width: 32px;
+                    background: white;
+                    border-radius: 8px;
+                    transition: all 0.4s ease-in-out;
+                }
+            }
+
+            .navBurger:hover,
+            .navBurger:active {
+                span:nth-child(1) {
+                    background: #0202f3;
+                }
+
+                span:nth-child(2) {
+                    width: 22px;
+                }
+
+            }
+
+            .searchIcon {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                transform: translateY(0);
+                border-radius: 6px;
+
+                button {
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                    border: none;
+                    outline: none;
+                    background: rgba(0, 0, 0, 0);
+
+                    svg {
+                        user-select: none;
+                        margin-top: 2px;
+                        font-size: 1.33rem;
+                        cursor: pointer;
+                        color: white;
+
+                    }
+                }
+            }
+
+        }
+
+        .sidenav {
+            height: 100%;
+            /* 100% Full-height */
+            width: 0;
+            /* 0 width - change this with JavaScript */
+            position: fixed;
+            /* Stay in place */
+            z-index: 3;
+            /* Stay on top */
+            top: 0;
+            /* Stay at the top */
+            left: 0;
+            background-color: #111;
+            /* Black*/
+            overflow-x: hidden;
+            /* Disable horizontal scroll */
+            padding-top: 60px;
+            /* Place content 60px from the top */
+            transition: 0.5s;
+            /* 0.5 second transition effect to slide in the sidenav */
+            scrollbar-width: none;
+
+        }
+
+        .sidenav::-webkit-scrollbar {
+            display: none;
+        }
+
+        .sideNavContainer {
+            padding: 0 8%;
+
+            .userProfile {
+                .userIcon {
+                    font-size: 8rem;
+                }
+
+                .userName {
+                    margin: 15px 0 0 30px;
+
+                    p {
+                        margin: 0;
+                    }
+
+                    .loggedIn {
+                        font-size: 0.86rem;
+                        margin-bottom: 10px;
+                    }
+
+                    .loggedName {
+
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            hr {
+                background: rgb(56, 56, 56);
+                border-radius: 8px;
+                height: 1px;
+            }
+        }
+
+        /* The navigation menu links */
+        .sidenav a {
+            padding: 4px 0 0 0;
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #e9e9e9;
+            display: block;
+            transition: 0.3s;
+        }
+
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:hover {
+            color: blue;
+        }
+
+        /* Position and style the close button (top right corner) */
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+    }
+
+    .searchModal {
+        position: fixed;
+        z-index: 5;
+        min-height: 120vh;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgb(0, 0, 0);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.5s ease;
+
+
+        .searchContainer {
+            display: flex;
+            width: 80%;
+        }
+    }
+
+
+    main {
+        margin-top: 20vh;
+        min-height: 120vh;
+        padding: 5% 8%;
+        text-align: center;
+
+        .chooseSneaker {
+            margin-top: 60px;
+
+            .searchAlertContainer {
+                margin-top: 40px;
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: space-between;
+
+                .searchBar {
+                    margin: 45px 0 10px 0;
+                    height: 38px;
+                    width: 100%;
+                    justify-content: center;
+
+                    input {
+
+                        width: 100%;
+
+                    }
+
+
+                }
+
+                .alertButtons {
+                    display: flex;
+                    justify-content: center;
+
+                    a {
+                        height: 35px;
+                        border-radius: 6px;
+                        color: white;
+                        font-weight: 500;
+                        border: none;
+                        outline: none;
+                        font-size: 0.85rem;
+                        text-decoration: none;
+                    }
+
+                    .addItem {
+                        background: rgb(53, 182, 53);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 6.2rem;
+                    }
+
+                    .alertCenter {
+                        padding: 0 3%;
+                        background: rgb(218, 53, 53);
+                        width: 7.8rem;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                }
+            }
+
+            .sneakerTable {
+                margin-top: 38px;
+
+                table {
+
+                    tbody {
+
+                        .tableSneaker {
+
+
+                            .sneakerImgNameSize {
+
+                                .sneakerImg {
+                                    height: 80px;
+                                    width: 160px;
+                                }
+
+                                .sneakerNameSize {
+                                    margin-left: 40px;
+                                    text-align: left;
+
+                                    .sneakerName {
+                                        color: rgb(56, 56, 56);
+                                        font-size: 0.85rem;
+                                    }
+
+                                    .sneakerSize {
+                                        font-size: 0.8rem;
+                                        font-weight: 600;
+                                        color: rgb(105, 105, 105);
+                                    }
+                                }
+                            }
+
+                            td {
+
+                                padding: 30px;
+                            }
+
+                            .categoryItp {
+                                width: 28%;
+                                font-weight: 600;
+                                font-size: 0.82rem;
+                                color: rgb(82, 82, 82);
+                            }
+                        }
+                    }
+                }
+            }
+
+            /////////alert-center///////////
+
+
+            .alertCenterTable {
+                td {
+                    padding: 10px;
+                }
+
+                .conditionDelStatsActions {
+                    font-size: 0.72rem;
+                    font-weight: 600;
+                }
+
+                .deliveryMethodIcons {
+                    svg {
+                        height: 16px;
+                        width: 16px;
+                        margin-right: 5px;
+                        color: rgb(110, 110, 110);
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+
+                        &:active {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+
+                .stausSlider {
+                    .toggle {
+                        width: 45px;
+                        height: 20px;
+                    }
+
+                    .toggle:after {
+                        width: 15px;
+                        height: 15px;
+                        top: 1px;
+                    }
+
+                    p {
+                        font-size: 0.7rem;
+
+                        svg {
+                            transform: translate(1px, 1px);
+                            color: white;
+                        }
+                    }
+
+                    .crossMark {
+                        transform: translate(-2px, -2px);
+                        font-size: 0.9rem;
+                    }
+                }
+
+                .actionIcons {
+                    svg {
+                        margin-right: 8px;
+                        height: 16px;
+                        width: 16px;
+                    }
+                }
+            }
+
+            /////////alert-center///////////
+        }
+    }
+
+    footer {
+        position: relative;
+        background: #1b1b1b;
+        min-height: 35vh;
+
+        .yoUpBtn {
+            display: none;
+        }
+
+
+        .footerContainer {
+            text-align: center;
+            padding: 3% 2%;
+
+            .footLinks {
+                padding: 2% 1% 0 1%;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                .noMobile {
+                    display: none;
+                }
+
+                .mobileWrap {
+                    margin-bottom: 35px;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: rgb(184, 184, 184);
+                    font-size: 0.9rem;
+
+                    span {
+                        margin: 0 10px;
+                    }
+                }
+            }
+
+            .footSocial {
+                padding: 10px 0 0 0;
+
+                a {
+                    color: rgb(231, 231, 231);
+                    margin-right: 10px;
+
+                    svg {
+                        font-size: 1.9rem;
+                    }
+                }
+
+            }
+
+            .footRights {
+                padding: 20px 0 0 0;
+                font-weight: 500;
+                color: rgb(77, 77, 77);
+            }
+        }
+    }
+}

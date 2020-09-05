@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grail</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/grailPage.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div class="desktopHeader">
+            <nav>
+                <div class="leftLogo">
+                    <a href="#"><i class="fa fa-chevron-left"></i> <i class="fa fa-chevron-right"></i></a>
+                </div>
+                <div class="navLinks">
+                    <ul>
+                        <li>
+                            <a href="#">drop</a>
+                        </li>
+                        <li>
+                            <a href="#">catalouge</a>
+                        </li>
+                        <li>
+                            <a href="#">grail</a>
+                        </li>
+                        <li>
+                            <a href="#">stash</a>
+                        </li>
+                        <li>
+                            <a href="#">customization</a>
+                        </li>
+                        <li>
+                            <a href="#">calendar</a>
+                        </li>
+                        <li>
+                            <a href="#">feature</a>
+                        </li>
+                        <li>
+                            <a href="#">legit check</a>
+                        </li>
+                        <div class="navHoverAnimation"></div>
+                    </ul>
+                </div>
+                <div class="rightIcons">
+                    <div class="heartIcon">
+                        <a href="#">
+                            <i class="far fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="profileIcon">
+                        <a href="#">
+                            <i class="fas fa-user-circle"></i>
+                        </a>
+                    </div>
+                    <div class="searchIcon">
+
+                        <button class="search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+
+        <div class="moblileHeader">
+            <div class="bckspaceLogUser">
+                <div class="logUser">
+                    <p>logged in as <b>ansh bhandari</b></p>
+                </div>
+                <div class="thebckName desktopBrandName">
+                    <div class="headImgContainer">
+                        <img src="./ASSETS/Layer 3.png" alt="brandImg">
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <div class="navBurger" onclick="openNav()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="thebckName mobileBrandName">
+                    <div class="headImgContainer">
+                        <img src="./ASSETS/Layer 3.png" alt="brandImg">
+                    </div>
+                </div>
+                <div class="searchIcon">
+                    <button class="search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="sideNavContainer">
+                    <div class="userProfile">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="userIcon">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-8  align-self-center">
+                                <div class="userName">
+                                    <p class="loggedIn">logged in as</p>
+                                    <p class="loggedName">ansh bhandari</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <a href="#">drop
+                        <hr></a>
+                    <a href="#">catalouge
+                        <hr></a>
+                    <a href="#">grail
+                        <hr></a>
+                    <a href="#">stash
+                        <hr></a>
+                    <a href="#">customization
+                        <hr></a>
+                    <a href="#">calendar
+                        <hr></a>
+                    <a href="#">feature
+                        <hr></a>
+                    <a href="#">legit check
+                        <hr></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="searchModal">
+        <div class="searchMainContainer">
+            <h2 class="searchHeading">
+                Search....
+            </h2>
+            <div class="searchContainer">
+                <input type="search">
+                <button class="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <main>
+        <div class="mainContent">
+            <div class="grailHeading">
+                <h4><strong>grail</strong></h4>
+            </div>
+            <div class="grailPara">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique perferendis illum placeat,
+                    veritatis alias totam consequuntur eveniet quod rerum optio?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quo commodi omnis magni fugit
+                    aliquam similique consectetur rerum at amet. Lorem ipsum dolor sit amet consectetur, adipisicing
+                    elit. Debitis, mollitia.</p>
+            </div>
+        </div>
+        <div class="chooseSneaker">
+            <div class="searchAlertContainer">
+                <div class="searchBar">
+                    <input type="search" id="searchInput" placeholder="search">
+                    <button class="searchButton">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="alertButtons">
+                    <a type="button" href="#" class="addItem">+ add items</a>
+                    <a type="button" href="./alertCenter.html" class="alertCenter"><i class="far fa-bell"></i> alert
+                        center</a>
+                </div>
+            </div>
+
+            <div class="sneakerTable">
+                <table>
+                    <thead>
+                        <tr class="tableHeader">
+                            <th class="nameHead"><span>name</span><button class="sortBtn"><i
+                                        class="sortIcon fas fa-sort"></i></button>
+                            </th>
+                            <th class="categoryHead">category</th>
+                            <th class="ItpHead">Itp</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tableSneaker" data-sort="8">
+                            <td class="sneakerImgNameSize">
+                                <div class="sneakerImg">
+                                    <img src="./ASSETS/Off-White-Odsy-1000-Green-FW19-Product.png" alt="sneakerImg">
+                                </div>
+                                <div class="sneakerNameSize">
+                                    <p class="sneakerName"><b>off white odsy 1000 green fw 19</b></p>
+                                    <p class="sneakerSize">Size: 42</p>
+                                </div>
+                            </td>
+                            <td class="categoryItp">ds</td>
+                            <td class="categoryItp">₹ 11,500</td>
+                        </tr>
+                        <tr class="tableSneaker" data-sort="1">
+                            <td class="sneakerImgNameSize">
+                                <div class="sneakerImg">
+                                    <img src="./ASSETS/adidas-Yeezy-Boost-350-V2-Yeezreel-Product.png" alt="sneakerImg">
+                                </div>
+                                <div class="sneakerNameSize">
+                                    <p class="sneakerName"><b>adidas yeezy boost 350 v2 yeezreel</b></p>
+                                    <p class="sneakerSize">Size: 39</p>
+                                </div>
+                            </td>
+                            <td class="categoryItp">used</td>
+                            <td class="categoryItp">₹ 16,000</td>
+                        </tr>
+                        <tr class="tableSneaker" data-sort="4">
+                            <td class="sneakerImgNameSize">
+                                <div class="sneakerImg">
+                                    <img src="./ASSETS/Balenciaga-Triple-S-Green-Black-Product.png" alt="sneakerImg">
+                                </div>
+                                <div class="sneakerNameSize">
+                                    <p class="sneakerName"><b>balenciaga triple s green-black</b></p>
+                                    <p class="sneakerSize">Size: 42</p>
+                                </div>
+                            </td>
+                            <td class="categoryItp">ds</td>
+                            <td class="categoryItp">₹ 28,000</td>
+                        </tr>
+                        <tr class="tableSneaker" data-sort="2">
+                            <td class="sneakerImgNameSize">
+                                <div class="sneakerImg">
+                                    <img src="./ASSETS/adidas-Yeezy-700-V3-Azael-Product.png" alt="sneakerImg">
+                                </div>
+                                <div class="sneakerNameSize">
+                                    <p class="sneakerName"><b>adidas yeezy 700 v3 aael</b></p>
+                                    <p class="sneakerSize">Size: 40</p>
+                                </div>
+                            </td>
+                            <td class="categoryItp">ds</td>
+                            <td class="categoryItp">₹ 17,500</td>
+                        </tr>
+                        <tr class="tableSneaker" data-sort="7">
+                            <td class="sneakerImgNameSize">
+                                <div class="sneakerImg">
+                                    <img src="./ASSETS/nikeJordan.png" alt="sneakerImg">
+                                </div>
+                                <div class="sneakerNameSize">
+                                    <p class="sneakerName"><b>nike jordan 11 retro playoffs bred (2019)</b></p>
+                                    <p class="sneakerSize">Size: 40</p>
+                                </div>
+                            </td>
+                            <td class="categoryItp">ds</td>
+                            <td class="categoryItp">₹ 13,000</td>
+                        </tr>
+                        <tr class="tableSneaker" data-sort="3">
+                            <td class="sneakerImgNameSize">
+                                <div class="sneakerImg">
+                                    <img src="./ASSETS/Nike-Air-Max-90-Viotech-OG-Product.png" alt="sneakerImg">
+                                </div>
+                                <div class="sneakerNameSize">
+                                    <p class="sneakerName"><b>air max 90 'viotech'</b></p>
+                                    <p class="sneakerSize">Size: 38</p>
+                                </div>
+                            </td>
+                            <td class="categoryItp">used</td>
+                            <td class="categoryItp">₹ 18,000</td>
+                        </tr>
+                        <tr class="tableSneaker" data-sort="5">
+                            <td class="sneakerImgNameSize">
+                                <div class="sneakerImg">
+                                    <img src="./ASSETS/450305_00.png.png" alt="sneakerImg">
+                                </div>
+                                <div class="sneakerNameSize">
+                                    <p class="sneakerName"><b>balenciaga track trainer white orange</b></p>
+                                    <p class="sneakerSize">Size: 41</p>
+                                </div>
+                            </td>
+                            <td class="categoryItp">ds</td>
+                            <td class="categoryItp">₹ 30,000</td>
+                        </tr>
+                        <tr class="tableSneaker" data-sort="6">
+                            <td class="sneakerImgNameSize">
+                                <div class="sneakerImg">
+                                    <img src="./ASSETS/182451F128016_1.png" alt="sneakerImg">
+                                </div>
+                                <div class="sneakerNameSize">
+                                    <p class="sneakerName"><b>gucci flashtrek crystal 'grey orange'</b></p>
+                                    <p class="sneakerSize">Size: 39</p>
+                                </div>
+                            </td>
+                            <td class="categoryItp">ds</td>
+                            <td class="categoryItp">₹ 25,000</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <footer>
+        <div class="yoUpBtn">
+            <i class="fa fa-chevron-up"></i>
+        </div>
+        <div class="footerContainer">
+            <div class="footLinks">
+                <div class="mobileWrap">
+                    <a href="#">guide <span>|</span></a>
+                    <a href="#">copyright <span>|</span></a>
+                    <a href="#">terms and condition <span class="noMobile">|</span></a>
+                </div>
+                <div class="mobileWrap">
+                    <a href="#">privacy poilcy <span>|</span></a>
+                    <a href="#">contact us <span>|</span></a>
+                    <a href="#">sneaker request <span class="noMobile">|</span></a>
+                </div>
+                <div class="mobileWrap">
+
+                    <a href="#">press <span>|</span></a>
+                    <a href="#">help <span>|</span></a>
+                    <a href="#">product request </a>
+                </div>
+            </div>
+            <div class="footSocial">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+            </div>
+            <div class="footRights">
+                <p>&copy; 2020 thebckspace, inc. all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/v4-shims.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="./JS/grailPage.js"></script>
+</body>
+
+</html>
