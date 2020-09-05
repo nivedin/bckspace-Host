@@ -697,6 +697,7 @@ main {
 
                         //
                         .sneakerImgNameSize {
+                            pointer-events: none;
                             border-bottom: none;
                             border-left: none;
                             border-right: none;
@@ -862,6 +863,186 @@ main {
         }
 
     }
+
+    ///////alert-popup////////
+    .alertPopUpClose {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .createAlertPopup {
+        min-height: 100vh;
+        width: 100%;
+        position: fixed;
+        z-index: 9;
+        top: 0;
+        left: 0;
+        background: #000000ad;
+        transition: all 0.5s ease;
+
+        .popUpContainer {
+            min-height: 75vh;
+            width: 35vw;
+            background: white;
+            transform: translate(90%, 18%);
+            border-radius: 2px;
+
+            .popUpHead {
+                min-height: 8vh;
+                padding: 0 4% 0 6%;
+                background: black;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: rgb(245, 245, 245);
+                border-radius: 2px;
+
+
+                .createPara {
+                    font-size: 0.9rem;
+                    margin: 0;
+                }
+
+                .popUpcloseIcon {
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    color: rgb(245, 245, 245);
+                    font-size: 1.2rem;
+                }
+            }
+
+            .popUpBody {
+                padding: 6%;
+
+                .popUpSneakerName {
+                    padding: 0 0 1% 0;
+                    text-align: left;
+                    font-size: 0.95rem;
+                    border-bottom: 2px ridge rgb(245, 245, 245);
+                }
+
+                .sneakerCondition {
+                    padding-top: 35px;
+
+                    .conditionPara {
+                        text-align: left;
+                        font-size: 0.86rem;
+                    }
+
+                    .selectInput {
+                        display: flex;
+
+                        .custom-select {
+                            border: 1px solid rgb(177, 177, 177);
+
+                            border-radius: 8px;
+                            font-size: 0.8rem;
+                            width: 45%;
+                            font-weight: 500;
+                            background: url("../ASSETS/angle-down-solid.svg") no-repeat right 1rem center/8px 25px;
+
+                            option {
+                                font-size: 0.8rem;
+                                font-weight: 500;
+                                border-radius: 8px;
+                                background: rgb(223, 223, 223);
+                            }
+
+                            &:active,
+                            &:focus {
+                                background: url("../ASSETS/angle-up-solid.svg") no-repeat right 1rem center/8px 25px;
+                            }
+                        }
+
+                        input {
+                            margin-left: 15px;
+                            margin-top: 3px;
+                            width: 21%;
+                            height: 30px;
+                            font-weight: 500;
+                            font-size: 0.8rem;
+                            text-align: center;
+                            border-radius: 8px;
+                            border: 1px solid rgb(177, 177, 177);
+                        }
+                    }
+                }
+
+                .sneakerDelivery {
+                    margin-top: 60px;
+
+                    .deliveryHead {
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 0.86rem;
+                    }
+
+                    .deliveryBody {
+                        .delMethodContainer {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-bottom: 12px;
+
+                            .deliverySocial {
+                                display: flex;
+                                align-items: center;
+
+                                svg {
+                                    text-align: center;
+                                    color: rgb(87, 87, 87);
+
+                                }
+
+                                p {
+                                    margin: 0 0 0 20px;
+                                    font-size: 0.86rem;
+                                    font-weight: 500;
+                                    color: rgb(116, 116, 116);
+
+
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                p {
+                                    margin: 0 0 0 24px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .manageAlertBtn {
+                    margin-top: 40px;
+                    text-align: left;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    a {
+                        text-decoration: none;
+                        font-size: 0.86rem;
+                        font-weight: 500;
+                    }
+
+                    .createAlertBtn {
+                        height: 35px;
+                        width: 135px;
+                        border: none;
+                        outline: none;
+                        color: white;
+                        letter-spacing: 2px;
+                        font-size: 0.8rem;
+                        background: rgb(56, 56, 255);
+                    }
+                }
+            }
+        }
+    }
+
+    ///////alert-popup////////
 }
 
 /////////alert-center///////////
@@ -1388,6 +1569,185 @@ footer {
             }
 
             /////////alert-center///////////
+            ///////alert-popup////////
+            .alertPopUpClose {
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .createAlertPopup {
+                min-height: 100vh;
+                width: 100%;
+                position: fixed;
+                z-index: 9;
+                top: 0;
+                left: 0;
+                background: #000000ad;
+                transition: all 0.5s ease;
+
+                .popUpContainer {
+                    height: 90%;
+                    width: 90%;
+                    background: white;
+                    transform: translate(5%, 14%);
+                    border-radius: 2px;
+
+                    .popUpHead {
+                        min-height: 8vh;
+                        padding: 0 4% 0 6%;
+                        background: black;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        color: rgb(245, 245, 245);
+                        border-radius: 2px;
+
+
+                        .createPara {
+                            font-size: 0.9rem;
+                            margin: 0;
+                        }
+
+                        .popUpcloseIcon {
+                            border: none;
+                            outline: none;
+                            background: transparent;
+                            color: rgb(245, 245, 245);
+                            font-size: 1.2rem;
+                        }
+                    }
+
+                    .popUpBody {
+                        padding: 6%;
+
+                        .popUpSneakerName {
+                            padding: 0 0 1% 0;
+                            text-align: left;
+                            font-size: 0.95rem;
+                            border-bottom: 2px ridge rgb(245, 245, 245);
+                        }
+
+                        .sneakerCondition {
+                            padding-top: 35px;
+
+                            .conditionPara {
+                                text-align: left;
+                                font-size: 0.86rem;
+                            }
+
+                            .selectInput {
+                                display: flex;
+
+                                .custom-select {
+                                    border: 1px solid rgb(177, 177, 177);
+
+                                    border-radius: 8px;
+                                    font-size: 0.8rem;
+                                    width: 45%;
+                                    font-weight: 500;
+                                    background: url("../ASSETS/angle-down-solid.svg") no-repeat right 1rem center/8px 25px;
+
+                                    option {
+                                        font-size: 0.8rem;
+                                        font-weight: 500;
+                                        border-radius: 8px;
+                                        background: rgb(223, 223, 223);
+                                    }
+
+                                    &:active,
+                                    &:focus {
+                                        background: url("../ASSETS/angle-up-solid.svg") no-repeat right 1rem center/8px 25px;
+                                    }
+                                }
+
+                                input {
+                                    margin-left: 15px;
+                                    margin-top: 3px;
+                                    width: 21%;
+                                    height: 30px;
+                                    font-weight: 500;
+                                    font-size: 0.8rem;
+                                    text-align: center;
+                                    border-radius: 8px;
+                                    border: 1px solid rgb(177, 177, 177);
+                                }
+                            }
+                        }
+
+                        .sneakerDelivery {
+                            margin-top: 60px;
+
+                            .deliveryHead {
+                                display: flex;
+                                justify-content: space-between;
+                                font-size: 0.86rem;
+                            }
+
+                            .deliveryBody {
+                                .delMethodContainer {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    margin-bottom: 12px;
+
+                                    .deliverySocial {
+                                        display: flex;
+                                        align-items: center;
+
+                                        svg {
+                                            text-align: center;
+                                            color: rgb(87, 87, 87);
+
+                                        }
+
+                                        p {
+                                            margin: 0 0 0 20px;
+                                            font-size: 0.86rem;
+                                            font-weight: 500;
+                                            color: rgb(116, 116, 116);
+
+
+                                        }
+                                    }
+
+                                    &:nth-child(2) {
+                                        p {
+                                            margin: 0 0 0 24px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .manageAlertBtn {
+                            margin-top: 40px;
+                            text-align: left;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            a {
+                                text-decoration: none;
+                                font-size: 0.86rem;
+                                font-weight: 500;
+                            }
+
+                            .createAlertBtn {
+                                height: 35px;
+                                width: 135px;
+                                border: none;
+                                outline: none;
+                                color: white;
+                                letter-spacing: 2px;
+                                font-size: 0.8rem;
+                                background: rgb(56, 56, 255);
+                            }
+                        }
+                    }
+                }
+            }
+
+            ///////alert-popup////////
         }
     }
 

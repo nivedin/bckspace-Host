@@ -127,3 +127,32 @@ sortBtn.addEventListener("click", () => {
 
 });
 ///////table sorting//////
+
+
+
+//////////alert popUp//////////
+let itemRows = document.querySelectorAll(".itemRow");
+let popUpContainer = document.querySelector(".createAlertPopup");
+let popUpContainerClose = document.querySelector(".popUpcloseIcon");
+
+itemRows.forEach(itemRow => {
+    itemRow.addEventListener("click", (e) => {
+        let clickedItem = e.target;
+        if (clickedItem.classList.contains("itemRow")) {
+            let clickedSneakerName = clickedItem.querySelector(".sneakerName").innerText;
+            // console.log(clickedSneakerName);
+            popUpContainer.classList.remove("alertPopUpClose");
+            let popUpSneakerName = popUpContainer.querySelector(".sneakerNamePopUp");
+            popUpSneakerName.innerHTML = `<b>${clickedSneakerName}</b>`;
+            console.log(popUpSneakerName.innerText);
+            popUpContainerClose.addEventListener("click", () => {
+                popUpContainer.classList.add("alertPopUpClose");
+
+            })
+        } else {
+            ""
+        }
+
+    })
+})
+//////////alert popUp//////////

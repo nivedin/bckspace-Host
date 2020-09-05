@@ -757,6 +757,7 @@ main .chooseSneaker .sneakerTable table tbody tr:hover {
 }
 
 main .chooseSneaker .sneakerTable table tbody .tableSneaker .sneakerImgNameSize {
+  pointer-events: none;
   border-bottom: none;
   border-left: none;
   border-right: none;
@@ -911,6 +912,203 @@ main .chooseSneaker .sneakerTable table tbody .tableSneaker .categoryItp {
 
 .alertCenterTable .actionIcons svg:hover {
   cursor: pointer;
+}
+
+.alertCenterTable .alertPopUpClose {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.alertCenterTable .createAlertPopup {
+  min-height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  background: #000000ad;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer {
+  min-height: 75vh;
+  width: 35vw;
+  background: white;
+  -webkit-transform: translate(90%, 18%);
+          transform: translate(90%, 18%);
+  border-radius: 2px;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpHead {
+  min-height: 8vh;
+  padding: 0 4% 0 6%;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: whitesmoke;
+  border-radius: 2px;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpHead .createPara {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpHead .popUpcloseIcon {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: whitesmoke;
+  font-size: 1.2rem;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpBody {
+  padding: 6%;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpBody .popUpSneakerName {
+  padding: 0 0 1% 0;
+  text-align: left;
+  font-size: 0.95rem;
+  border-bottom: 2px ridge whitesmoke;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpBody .sneakerCondition {
+  padding-top: 35px;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpBody .sneakerCondition .conditionPara {
+  text-align: left;
+  font-size: 0.86rem;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpBody .sneakerCondition .selectInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpBody .sneakerCondition .selectInput .custom-select {
+  border: 1px solid #b1b1b1;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  width: 45%;
+  font-weight: 500;
+  background: url("../ASSETS/angle-down-solid.svg") no-repeat right 1rem center/8px 25px;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpBody .sneakerCondition .selectInput .custom-select option {
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 8px;
+  background: #dfdfdf;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpBody .sneakerCondition .selectInput .custom-select:active, .alertCenterTable .createAlertPopup .popUpContainer .popUpBody .sneakerCondition .selectInput .custom-select:focus {
+  background: url("../ASSETS/angle-up-solid.svg") no-repeat right 1rem center/8px 25px;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpBody .sneakerCondition .selectInput input {
+  margin-left: 15px;
+  margin-top: 3px;
+  width: 21%;
+  height: 30px;
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #b1b1b1;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpBody .sneakerDelivery {
+  margin-top: 60px;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpBody .sneakerDelivery .deliveryHead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 0.86rem;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpBody .sneakerDelivery .deliveryBody .delMethodContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 12px;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpBody .sneakerDelivery .deliveryBody .delMethodContainer .deliverySocial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpBody .sneakerDelivery .deliveryBody .delMethodContainer .deliverySocial svg {
+  text-align: center;
+  color: #575757;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpBody .sneakerDelivery .deliveryBody .delMethodContainer .deliverySocial p {
+  margin: 0 0 0 20px;
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: #747474;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpBody .sneakerDelivery .deliveryBody .delMethodContainer:nth-child(2) p {
+  margin: 0 0 0 24px;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpBody .manageAlertBtn {
+  margin-top: 40px;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpBody .manageAlertBtn a {
+  text-decoration: none;
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+
+.alertCenterTable .createAlertPopup .popUpContainer .popUpBody .manageAlertBtn .createAlertBtn {
+  height: 35px;
+  width: 135px;
+  border: none;
+  outline: none;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  background: #3838ff;
 }
 
 footer {
@@ -1380,6 +1578,178 @@ footer .footerContainer .footRights {
     margin-right: 8px;
     height: 16px;
     width: 16px;
+  }
+  main .chooseSneaker .alertPopUpClose {
+    opacity: 0;
+    pointer-events: none;
+  }
+  main .chooseSneaker .createAlertPopup {
+    min-height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    background: #000000ad;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer {
+    height: 90%;
+    width: 90%;
+    background: white;
+    -webkit-transform: translate(5%, 14%);
+            transform: translate(5%, 14%);
+    border-radius: 2px;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer .popUpHead {
+    min-height: 8vh;
+    padding: 0 4% 0 6%;
+    background: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: whitesmoke;
+    border-radius: 2px;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer .popUpHead .createPara {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer .popUpHead .popUpcloseIcon {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: whitesmoke;
+    font-size: 1.2rem;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer .popUpBody {
+    padding: 6%;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer .popUpBody .popUpSneakerName {
+    padding: 0 0 1% 0;
+    text-align: left;
+    font-size: 0.95rem;
+    border-bottom: 2px ridge whitesmoke;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer .popUpBody .sneakerCondition {
+    padding-top: 35px;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer .popUpBody .sneakerCondition .conditionPara {
+    text-align: left;
+    font-size: 0.86rem;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer .popUpBody .sneakerCondition .selectInput {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer .popUpBody .sneakerCondition .selectInput .custom-select {
+    border: 1px solid #b1b1b1;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    width: 45%;
+    font-weight: 500;
+    background: url("../ASSETS/angle-down-solid.svg") no-repeat right 1rem center/8px 25px;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer .popUpBody .sneakerCondition .selectInput .custom-select option {
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 8px;
+    background: #dfdfdf;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer .popUpBody .sneakerCondition .selectInput .custom-select:active, main .chooseSneaker .createAlertPopup .popUpContainer .popUpBody .sneakerCondition .selectInput .custom-select:focus {
+    background: url("../ASSETS/angle-up-solid.svg") no-repeat right 1rem center/8px 25px;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer .popUpBody .sneakerCondition .selectInput input {
+    margin-left: 15px;
+    margin-top: 3px;
+    width: 21%;
+    height: 30px;
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #b1b1b1;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer .popUpBody .sneakerDelivery {
+    margin-top: 60px;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer .popUpBody .sneakerDelivery .deliveryHead {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 0.86rem;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer .popUpBody .sneakerDelivery .deliveryBody .delMethodContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 12px;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer .popUpBody .sneakerDelivery .deliveryBody .delMethodContainer .deliverySocial {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer .popUpBody .sneakerDelivery .deliveryBody .delMethodContainer .deliverySocial svg {
+    text-align: center;
+    color: #575757;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer .popUpBody .sneakerDelivery .deliveryBody .delMethodContainer .deliverySocial p {
+    margin: 0 0 0 20px;
+    font-size: 0.86rem;
+    font-weight: 500;
+    color: #747474;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer .popUpBody .sneakerDelivery .deliveryBody .delMethodContainer:nth-child(2) p {
+    margin: 0 0 0 24px;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer .popUpBody .manageAlertBtn {
+    margin-top: 40px;
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer .popUpBody .manageAlertBtn a {
+    text-decoration: none;
+    font-size: 0.86rem;
+    font-weight: 500;
+  }
+  main .chooseSneaker .createAlertPopup .popUpContainer .popUpBody .manageAlertBtn .createAlertBtn {
+    height: 35px;
+    width: 135px;
+    border: none;
+    outline: none;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    background: #3838ff;
   }
   footer {
     position: relative;
