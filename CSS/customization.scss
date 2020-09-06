@@ -573,6 +573,11 @@ main {
                 .designerPhotoContainer {
                     height: auto;
                     width: 18rem;
+                    transition: all 0.8s ease;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
 
                     img {
                         height: 100%;
@@ -706,7 +711,7 @@ main {
                     .sneakerMainImg {
                         height: 13rem;
                         width: 18rem;
-                        transition: all 0.3s ease;
+                        transition: all 0.8s ease;
 
                         &:hover {
                             transform: scale(1.05);
@@ -719,7 +724,7 @@ main {
                     }
 
                     .imgRow {
-                        transition: all 0.3s ease;
+                        transition: all 0.8s ease;
 
                         &:hover {
                             transform: scale(1.05);

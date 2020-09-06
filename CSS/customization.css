@@ -622,6 +622,13 @@ main .designerPhotosContent .designerPhotoNameContainer {
 main .designerPhotosContent .designerPhotoNameContainer .designerPhoto .designerPhotoContainer {
   height: auto;
   width: 18rem;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+main .designerPhotosContent .designerPhotoNameContainer .designerPhoto .designerPhotoContainer:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 main .designerPhotosContent .designerPhotoNameContainer .designerPhoto .designerPhotoContainer img {
@@ -775,8 +782,8 @@ main .designerMain .designOfMonth .designBox .leftSneakerImg {
 main .designerMain .designOfMonth .designBox .leftSneakerImg .sneakerMainImg {
   height: 13rem;
   width: 18rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 main .designerMain .designOfMonth .designBox .leftSneakerImg .sneakerMainImg:hover {
@@ -790,8 +797,8 @@ main .designerMain .designOfMonth .designBox .leftSneakerImg .sneakerMainImg img
 }
 
 main .designerMain .designOfMonth .designBox .leftSneakerImg .imgRow {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 main .designerMain .designOfMonth .designBox .leftSneakerImg .imgRow:hover {
