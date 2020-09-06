@@ -654,11 +654,18 @@ main .designerMain .designerPhotoDetails {
 main .designerMain .designerPhotoDetails .imgContainer {
   height: auto;
   width: 30%;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 main .designerMain .designerPhotoDetails .imgContainer img {
   height: 100%;
   width: 100%;
+}
+
+main .designerMain .designerPhotoDetails .imgContainer:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 main .designerMain .designerPhotoDetails .designerDetails {
@@ -682,9 +689,25 @@ main .designerMain .designerPhotoDetails .designerDetails .detailHead p {
   font-size: 1.5rem;
 }
 
+main .designerMain .designerPhotoDetails .designerDetails .detailHead p::after {
+  content: ">";
+  font-weight: 600;
+}
+
+main .designerMain .designerPhotoDetails .designerDetails .detailHead p::before {
+  content: "<";
+  font-weight: 600;
+}
+
 main .designerMain .designerPhotoDetails .designerDetails .detailHead .instaIcon {
   font-size: 2.4rem;
   color: #747474;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+main .designerMain .designerPhotoDetails .designerDetails .detailHead .instaIcon:hover {
+  color: #d64fc4;
 }
 
 main .designerMain .designerPhotoDetails .designerDetails .detailBody {
@@ -698,11 +721,19 @@ main .designerMain .designerPhotoDetails .designerDetails .detailBody {
 
 main .designerMain .designerPhotoDetails .designerDetails .instaIconMob {
   display: none;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+main .designerMain .designerPhotoDetails .designerDetails .instaIconMob:hover {
+  color: #d64fc4;
 }
 
 main .designerMain .designerBanner {
   margin-top: 110px;
   height: 15rem;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 main .designerMain .designerBanner img {
@@ -744,11 +775,28 @@ main .designerMain .designOfMonth .designBox .leftSneakerImg {
 main .designerMain .designOfMonth .designBox .leftSneakerImg .sneakerMainImg {
   height: 13rem;
   width: 18rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+main .designerMain .designOfMonth .designBox .leftSneakerImg .sneakerMainImg:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 main .designerMain .designOfMonth .designBox .leftSneakerImg .sneakerMainImg img {
   height: 100%;
   width: 100%;
+}
+
+main .designerMain .designOfMonth .designBox .leftSneakerImg .imgRow {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+main .designerMain .designOfMonth .designBox .leftSneakerImg .imgRow:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 main .designerMain .designOfMonth .designBox .rightSneakerDetails {
@@ -901,6 +949,14 @@ main .designerMain .designOfMonth .designBox .rightSneakerDetails .bidNowBtn .su
   border: none;
   outline: none;
   letter-spacing: 1.3px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+main .designerMain .designOfMonth .designBox .rightSneakerDetails .bidNowBtn .sumbitBtn:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  opacity: 0.9;
 }
 
 main .designerMain .designOfMonth .designBox .rightSneakerDetails .boxFoot {
@@ -1334,8 +1390,6 @@ footer .footerContainer .footRights {
   }
   main .designerMain .designerPhotoDetails .designerDetails .detailHead .instaIcon {
     display: none;
-    font-size: 2.4rem;
-    color: #747474;
   }
   main .designerMain .designerPhotoDetails .designerDetails .detailBody {
     margin-top: 10px;
@@ -1346,7 +1400,8 @@ footer .footerContainer .footRights {
     color: #777777;
   }
   main .designerMain .designerPhotoDetails .designerDetails .instaIconMob {
-    margin: 40px 0;
+    display: block;
+    margin: 40px auto;
     font-size: 2.4rem;
     color: #747474;
   }
