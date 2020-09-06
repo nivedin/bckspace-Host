@@ -1336,9 +1336,9 @@ footer .footerContainer .footRights {
     margin: 25vh 0 60px 0;
   }
   main .designerPhotoNameContainer {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
