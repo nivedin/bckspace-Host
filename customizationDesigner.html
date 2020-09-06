@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/customization.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div class="desktopHeader">
+            <nav>
+                <div class="leftLogo">
+                    <a href="#"><i class="fa fa-chevron-left"></i> <i class="fa fa-chevron-right"></i></a>
+                </div>
+                <div class="navLinks">
+                    <ul>
+                        <li>
+                            <a href="#">drop</a>
+                        </li>
+                        <li>
+                            <a href="#">catalouge</a>
+                        </li>
+                        <li>
+                            <a href="#">grail</a>
+                        </li>
+                        <li>
+                            <a href="#">stash</a>
+                        </li>
+                        <li>
+                            <a href="#">customization</a>
+                        </li>
+                        <li>
+                            <a href="#">calendar</a>
+                        </li>
+                        <li>
+                            <a href="#">feature</a>
+                        </li>
+                        <li>
+                            <a href="#">legit check</a>
+                        </li>
+                        <div class="navHoverAnimation"></div>
+                    </ul>
+                </div>
+                <div class="rightIcons">
+                    <div class="heartIcon">
+                        <a href="#">
+                            <i class="far fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="profileIcon">
+                        <a href="#">
+                            <i class="fas fa-user-circle"></i>
+                        </a>
+                    </div>
+                    <div class="searchIcon">
+
+                        <button class="search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+
+        <div class="moblileHeader">
+            <div class="bckspaceLogUser">
+                <div class="logUser">
+                    <p>logged in as <b>ansh bhandari</b></p>
+                </div>
+                <div class="thebckName desktopBrandName">
+                    <div class="headImgContainer">
+                        <img src="./ASSETS/Layer 3.png" alt="brandImg">
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <div class="navBurger" onclick="openNav()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="thebckName mobileBrandName">
+                    <div class="headImgContainer">
+                        <img src="./ASSETS/Layer 3.png" alt="brandImg">
+                    </div>
+                </div>
+                <div class="searchIcon">
+                    <button class="search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="sideNavContainer">
+                    <div class="userProfile">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="userIcon">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-8  align-self-center">
+                                <div class="userName">
+                                    <p class="loggedIn">logged in as</p>
+                                    <p class="loggedName">ansh bhandari</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <a href="#">drop
+                        <hr></a>
+                    <a href="#">catalouge
+                        <hr></a>
+                    <a href="#">grail
+                        <hr></a>
+                    <a href="#">stash
+                        <hr></a>
+                    <a href="#">customization
+                        <hr></a>
+                    <a href="#">calendar
+                        <hr></a>
+                    <a href="#">feature
+                        <hr></a>
+                    <a href="#">legit check
+                        <hr></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="searchModal">
+        <div class="searchMainContainer">
+            <h2 class="searchHeading">
+                Search....
+            </h2>
+            <div class="searchContainer">
+                <input type="search">
+                <button class="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <main>
+        <div class="designerMain">
+            <div class="designerPhotoDetails">
+                <div class="imgContainer">
+                    <img src="./ASSETS/Ellipse 2.png" alt="designerPhoto">
+                </div>
+                <div class="designerDetails">
+                    <div class="detailHead">
+                        <p>
+                            <b>
+                                < name of the designer>
+                            </b>
+                        </p>
+                        <i class="instaIcon fab fa-instagram"></i>
+                    </div>
+                    <div class="detailBody">
+                        Lorem ipsum dolor sit loy uio amet consectetur adipisicing elit. Atque, minus, expedita
+                        reiciendis
+                        aliquam laborum perspiciatis cupiditate velit nam numquam necessitatibus excepturi explicabo?
+                        Natus, aut vitae nostrum non rerum suscipit ut qui nisi odit reprehenderit inventore blanditiis
+                        quod repellat, quibusdam tenetur?Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+
+                    </div>
+                    <i class="instaIconMob fab fa-instagram"></i>
+                </div>
+            </div>
+            <div class="designerBanner">
+                <img src="./ASSETS/Layer 15.png" alt="designBanner">
+            </div>
+            <div class="designOfMonth">
+                <h5><b>design of the month</b></h5>
+                <div class="designBox">
+                    <div class="leftSneakerImg">
+                        <div class="sneakerMainImg">
+                            <img src="./ASSETS/Gucci-Ace-Embroidered-Snake-Product.png" alt="sneakerMain">
+                        </div>
+                        <div class="imgRow">
+                            <img src="./ASSETS/img32.png" alt="rowImg">
+                            <img src="./ASSETS/img19.png" alt="rowImg">
+                        </div>
+                    </div>
+                    <div class="rightSneakerDetails">
+                        <div class="nameDesignHead">
+                            <p class="designName"><b>name of the design</b></p>
+                            <div class="timeContent">
+                                <div class="daysCon">
+                                    <p>09 :</p>
+                                    <p class="smallTime">days</p>
+                                </div>
+                                <div class="daysCon">
+                                    <p>20 :</p>
+                                    <p class="smallTime">hours</p>
+                                </div>
+                                <div class="daysCon">
+                                    <p>15</p>
+                                    <p class="smallTime">min</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shoeNameDate">
+                            <p>gucci ace</p>
+                            <p>|</p>
+                            <p>march 18</p>
+                        </div>
+                        <div class="sizeSelect">
+                            <select class="custom-select">
+                                <option selected>size</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                        <div class="bidNowBtn">
+                            <div class="bidInput">
+                                <p><b>bid now:</b></p>
+                                <input type="text" placeholder="min bid amount 10000">
+                            </div>
+                            <button class="sumbitBtn">submit</button>
+                        </div>
+                        <div class="boxFoot">
+                            <p class="boldPara">bid denomination: <span> ₹500 only</span></p>
+                            <p class="boldPara">estimated delivery time: <span> 14 days from the close of the bid</span>
+                            </p>
+                            <p class="smallPara">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, incidunt ad dolorem
+                                aliquam ipsam aspernatur minima quo adipisci maxime tempora nostrum quod iure illo totam
+                                animi hic? Temporibus, rerum? Nostrum.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, numquam quas. Optio eaque
+                                error nobis dolorum nulla tempora dolore quibusdam?
+                            </p>
+                            <a href="#" class="termsCondi">terms & condition</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <div class="yoUpBtn">
+            <i class="fa fa-chevron-up"></i>
+        </div>
+        <div class="footerContainer">
+            <div class="footLinks">
+                <div class="mobileWrap">
+                    <a href="#">guide <span>|</span></a>
+                    <a href="#">copyright <span>|</span></a>
+                    <a href="#">terms and condition <span class="noMobile">|</span></a>
+                </div>
+                <div class="mobileWrap">
+                    <a href="#">privacy poilcy <span>|</span></a>
+                    <a href="#">contact us <span>|</span></a>
+                    <a href="#">sneaker request <span class="noMobile">|</span></a>
+                </div>
+                <div class="mobileWrap">
+
+                    <a href="#">press <span>|</span></a>
+                    <a href="#">help <span>|</span></a>
+                    <a href="#">product request </a>
+                </div>
+            </div>
+            <div class="footSocial">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+            </div>
+            <div class="footRights">
+                <p>&copy; 2020 thebckspace, inc. all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/v4-shims.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="./JS/customization.js"></script>
+</body>
+
+</html>
