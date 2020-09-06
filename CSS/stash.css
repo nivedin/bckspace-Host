@@ -1159,8 +1159,11 @@ footer .footerContainer .footRights {
   main {
     margin-top: 20vh;
     min-height: 120vh;
-    padding: 5% 8%;
+    padding: 5% 7%;
     text-align: center;
+  }
+  main .mainContent {
+    padding: 0 2%;
   }
   main .chooseSneaker {
     margin-top: 60px;

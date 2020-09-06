@@ -629,6 +629,7 @@ main .designerPhotosContent .designerPhotoNameContainer .designerPhoto .designer
 main .designerPhotosContent .designerPhotoNameContainer .designerPhoto .designerPhotoContainer:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  cursor: pointer;
 }
 
 main .designerPhotosContent .designerPhotoNameContainer .designerPhoto .designerPhotoContainer img {

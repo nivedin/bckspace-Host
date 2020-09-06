@@ -1125,8 +1125,12 @@ footer {
     main {
         margin-top: 20vh;
         min-height: 120vh;
-        padding: 5% 8%;
+        padding: 5% 7%;
         text-align: center;
+
+        .mainContent {
+            padding: 0 2%;
+        }
 
         .chooseSneaker {
             margin-top: 60px;
@@ -1144,9 +1148,7 @@ footer {
                     justify-content: center;
 
                     input {
-
                         width: 100%;
-
                     }
 
 
