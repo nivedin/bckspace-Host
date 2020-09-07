@@ -935,6 +935,10 @@ main .featureMainContent .fetureRow .editorial .editorialDetails .byPara span {
   padding: 30px 50px 30px 0;
 }
 
+.editorialMainContent .mostPrizedSneakerRow .leftDetails h5 {
+  line-height: 1.8;
+}
+
 .editorialMainContent .mostPrizedSneakerRow .leftDetails .leftDetail1 {
   margin-bottom: 60px;
 }
