@@ -830,11 +830,39 @@ main .featureMainContent .fetureRow .editorial .editorialDetails .byPara span {
   margin-top: 40px;
   height: auto;
   width: 100%;
+  -webkit-animation: imageLoad 1.5s ease forwards;
+          animation: imageLoad 1.5s ease forwards;
 }
 
 .editorialMainContent .mainPhotoContainer img {
   height: 100%;
   width: 100%;
+}
+
+@-webkit-keyframes imageLoad {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes imageLoad {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
 }
 
 .editorialMainContent h5 {
