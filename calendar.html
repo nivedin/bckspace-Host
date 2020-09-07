@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calendar</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/calendar.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div class="desktopHeader">
+            <nav>
+                <div class="leftLogo">
+                    <a href="#"><i class="fa fa-chevron-left"></i> <i class="fa fa-chevron-right"></i></a>
+                </div>
+                <div class="navLinks">
+                    <ul>
+                        <li>
+                            <a href="#">drop</a>
+                        </li>
+                        <li>
+                            <a href="#">catalouge</a>
+                        </li>
+                        <li>
+                            <a href="#">grail</a>
+                        </li>
+                        <li>
+                            <a href="#">stash</a>
+                        </li>
+                        <li>
+                            <a href="#">customization</a>
+                        </li>
+                        <li>
+                            <a href="#">calendar</a>
+                        </li>
+                        <li>
+                            <a href="#">feature</a>
+                        </li>
+                        <li>
+                            <a href="#">legit check</a>
+                        </li>
+                        <div class="navHoverAnimation"></div>
+                    </ul>
+                </div>
+                <div class="rightIcons">
+                    <div class="heartIcon">
+                        <a href="#">
+                            <i class="far fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="profileIcon">
+                        <a href="#">
+                            <i class="fas fa-user-circle"></i>
+                        </a>
+                    </div>
+                    <div class="searchIcon">
+
+                        <button class="search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+
+        <div class="moblileHeader">
+            <div class="bckspaceLogUser">
+                <div class="logUser">
+                    <p>logged in as <b>ansh bhandari</b></p>
+                </div>
+                <div class="thebckName desktopBrandName">
+                    <div class="headImgContainer">
+                        <img src="./ASSETS/Layer 3.png" alt="brandImg">
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <div class="navBurger" onclick="openNav()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="thebckName mobileBrandName">
+                    <div class="headImgContainer">
+                        <img src="./ASSETS/Layer 3.png" alt="brandImg">
+                    </div>
+                </div>
+                <div class="searchIcon">
+                    <button class="search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="sideNavContainer">
+                    <div class="userProfile">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="userIcon">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-8  align-self-center">
+                                <div class="userName">
+                                    <p class="loggedIn">logged in as</p>
+                                    <p class="loggedName">ansh bhandari</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <a href="#">drop
+                        <hr></a>
+                    <a href="#">catalouge
+                        <hr></a>
+                    <a href="#">grail
+                        <hr></a>
+                    <a href="#">stash
+                        <hr></a>
+                    <a href="#">customization
+                        <hr></a>
+                    <a href="#">calendar
+                        <hr></a>
+                    <a href="#">feature
+                        <hr></a>
+                    <a href="#">legit check
+                        <hr></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="searchModal">
+        <div class="searchMainContainer">
+            <h2 class="searchHeading">
+                Search....
+            </h2>
+            <div class="searchContainer">
+                <input type="search">
+                <button class="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <main>
+        <div class="mainContent">
+            <div class="grailHeading">
+                <h4><strong>calendar</strong></h4>
+            </div>
+            <div class="grailPara">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique perferendis illum placeat,
+                    veritatis alias totam consequuntur eveniet quod rerum optio?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quo commodi omnis magni fugit
+                    aliquam similique consectetur rerum at amet. Lorem ipsum dolor sit amet consectetur, adipisicing
+                    elit. Debitis, mollitia.</p>
+            </div>
+        </div>
+        <div class="chooseSneaker">
+            <div class="brandDateSelect">
+                <div class="brandSelect">
+                    <select class="custom-select">
+                        <option selected>brand</option>
+                        <option value="nike">nike</option>
+                        <option value="adidas">adidas</option>
+                        <option value="gucci">gucci</option>
+                        <option value="balenciaga">balenciaga</option>
+                    </select>
+                </div>
+                <div class="dateSelect">
+                    <select class="custom-select">
+                        <option selected>date</option>
+                        <option value="25/06/2020">25/06/2020</option>
+                        <option value="26/06/2020">26/06/2020</option>
+                        <option value="27/06/2020">27/06/2020</option>
+                        <option value="28/06/2020">28/06/2020</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="sneakerTable">
+                <table>
+                    <thead>
+                        <tr class="tableHeader">
+                            <th class="tableHead"></th>
+                            <th class="tableHead">date date</th>
+                            <th class="tableHead">product name</th>
+                            <th class="tableHead">style</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tableSneaker" data-sort="8">
+                            <td class="sneakerImgNameSize">
+                                <div class="sneakerImg">
+                                    <img src="./ASSETS/Gucci-Ace-Embroidered-Snake-Product.png" alt="sneakerImg">
+                                </div>
+                                <button class="bellIcon"><i class="far fa-bell"></i></button>
+                            </td>
+                            <td class="categoryItp">18/07/2019</td>
+                            <td class="categoryItp">gucci ace embroided snake</td>
+                            <td class="categoryItp styleCode">456330 A38G0 9064</td>
+                        </tr>
+
+                        <tr class="tableSneaker" data-sort="1">
+                            <td class="sneakerImgNameSize">
+                                <div class="sneakerImg">
+                                    <img src="./ASSETS/Nike-Air-Max-90-Viotech-OG-Product.png" alt="sneakerImg">
+                                </div>
+                                <button class="bellIcon"><i class="far fa-bell"></i></button>
+
+                            </td>
+                            <td class="categoryItp">22/08/2020</td>
+                            <td class="categoryItp">nike air max 90 viotech og</td>
+                            <td class="categoryItp styleCode">CD0917-600</td>
+                        </tr>
+
+                        <tr class="tableSneaker" data-sort="4">
+                            <td class="sneakerImgNameSize">
+                                <div class="sneakerImg">
+                                    <img src="./ASSETS/nikeJordan.png" alt="sneakerImg">
+                                </div>
+                                <button class="bellIcon"><i class="far fa-bell"></i></button>
+
+                            </td>
+                            <td class="categoryItp">03/09/2020</td>
+                            <td class="categoryItp">nike jordan 11 retro playoffs bred (2019)</td>
+                            <td class="categoryItp styleCode">378037-061</td>
+                        </tr>
+
+                        <tr class="tableSneaker" data-sort="4">
+                            <td class="sneakerImgNameSize">
+                                <div class="sneakerImg">
+                                    <img src="./ASSETS/450305_00.png.png" alt="sneakerImg">
+                                </div>
+                                <button class="bellIcon"><i class="far fa-bell"></i></button>
+
+                            </td>
+                            <td class="categoryItp">18/09/2020</td>
+                            <td class="categoryItp">balenciaga track trainer white orange</td>
+                            <td class="categoryItp styleCode">542436W1G19000</td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <footer>
+        <div class="yoUpBtn">
+            <i class="fa fa-chevron-up"></i>
+        </div>
+        <div class="footerContainer">
+            <div class="footLinks">
+                <div class="mobileWrap">
+                    <a href="#">guide <span>|</span></a>
+                    <a href="#">copyright <span>|</span></a>
+                    <a href="#">terms and condition <span class="noMobile">|</span></a>
+                </div>
+                <div class="mobileWrap">
+                    <a href="#">privacy poilcy <span>|</span></a>
+                    <a href="#">contact us <span>|</span></a>
+                    <a href="#">sneaker request <span class="noMobile">|</span></a>
+                </div>
+                <div class="mobileWrap">
+
+                    <a href="#">press <span>|</span></a>
+                    <a href="#">help <span>|</span></a>
+                    <a href="#">product request </a>
+                </div>
+            </div>
+            <div class="footSocial">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+            </div>
+            <div class="footRights">
+                <p>&copy; 2020 thebckspace, inc. all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/v4-shims.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="./JS/calendar.js"></script>
+</body>
+
+</html>
