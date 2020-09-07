@@ -73,6 +73,8 @@ if (window.innerWidth > 700) {
     })
 }
 
+AOS.init();
+
 
 ////pagination/////
 let paginationTabs = document.querySelectorAll(".mainPagination ul li");
