@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>editorial</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/feature.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div class="desktopHeader">
+            <nav>
+                <div class="leftLogo">
+                    <a href="#"><i class="fa fa-chevron-left"></i> <i class="fa fa-chevron-right"></i></a>
+                </div>
+                <div class="navLinks">
+                    <ul>
+                        <li>
+                            <a href="#">drop</a>
+                        </li>
+                        <li>
+                            <a href="#">catalouge</a>
+                        </li>
+                        <li>
+                            <a href="#">grail</a>
+                        </li>
+                        <li>
+                            <a href="#">stash</a>
+                        </li>
+                        <li>
+                            <a href="#">customization</a>
+                        </li>
+                        <li>
+                            <a href="#">calendar</a>
+                        </li>
+                        <li>
+                            <a href="#">feature</a>
+                        </li>
+                        <li>
+                            <a href="#">legit check</a>
+                        </li>
+                        <div class="navHoverAnimation"></div>
+                    </ul>
+                </div>
+                <div class="rightIcons">
+                    <div class="heartIcon">
+                        <a href="#">
+                            <i class="far fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="profileIcon">
+                        <a href="#">
+                            <i class="fas fa-user-circle"></i>
+                        </a>
+                    </div>
+                    <div class="searchIcon">
+
+                        <button class="search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+
+        <div class="moblileHeader">
+            <div class="bckspaceLogUser">
+                <div class="logUser">
+                    <p>logged in as <b>ansh bhandari</b></p>
+                </div>
+                <div class="thebckName desktopBrandName">
+                    <div class="headImgContainer">
+                        <img src="./ASSETS/Layer 3.png" alt="brandImg">
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <div class="navBurger" onclick="openNav()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="thebckName mobileBrandName">
+                    <div class="headImgContainer">
+                        <img src="./ASSETS/Layer 3.png" alt="brandImg">
+                    </div>
+                </div>
+                <div class="searchIcon">
+                    <button class="search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="sideNavContainer">
+                    <div class="userProfile">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="userIcon">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-8  align-self-center">
+                                <div class="userName">
+                                    <p class="loggedIn">logged in as</p>
+                                    <p class="loggedName">ansh bhandari</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <a href="#">drop
+                        <hr></a>
+                    <a href="#">catalouge
+                        <hr></a>
+                    <a href="#">grail
+                        <hr></a>
+                    <a href="#">stash
+                        <hr></a>
+                    <a href="#">customization
+                        <hr></a>
+                    <a href="#">calendar
+                        <hr></a>
+                    <a href="#">feature
+                        <hr></a>
+                    <a href="#">legit check
+                        <hr></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="searchModal">
+        <div class="searchMainContainer">
+            <h2 class="searchHeading">
+                Search....
+            </h2>
+            <div class="searchContainer">
+                <input type="search">
+                <button class="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <main>
+        <div class="editorialMainContent">
+            <div class="editorialHead">
+                <p class="samllHead">editorial</p>
+                <p class="MainHead">exclusive interview with ansh bhandari</p>
+            </div>
+            <div class="byShareContainer">
+                <p class="byDate">by <span>kevin kosanovich</span>, may 8, 2020 | mumbai</p>
+                <div class="socialIcons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fas fa-envelope"></i>
+                </div>
+            </div>
+            <div class="mainPhotoContainer">
+                <img src="./ASSETS/ranveer1.png" alt="mainImg">
+            </div>
+            <div class="tellUsAboutRow">
+                <div class="leftImg">
+                    <img src="./ASSETS/ranveer2.png" alt="leftImg">
+                </div>
+                <div class="rightDetails">
+                    <div class="rightDetail1">
+                        <h5><b>tell us about yourself</b></h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias similique cum architecto
+                            culpa molestiae sit aliquam maxime exercitationem ab fuga harum quisquam dolorum, animi
+                            iusto possimus mollitia dignissimos beatae laudantium.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa expedita fuga sequi
+                            voluptatibus labore facere nam fugit, quae sit, quaerat adipisci hic in, aliquam magni
+                            beatae facilis sint aut natus!. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Vitae, autem!
+                        </p>
+                    </div>
+                    <div class="rightDetail1">
+                        <h5><b>when did your sneaker addiction begin and which was your first sneaker ?</b></h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores veniam ab, minus quidem
+                            ipsum dolor. Ipsam, assumenda a beatae numquam quo vitae facilis obcaecati quis vero!
+                            Nesciunt cupiditate impedit repellat! Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Perspiciatis aspernatur repellat id doloribus, temporibus fugit rerum quod laudantium
+                            architecto consectetur labore nihil aliquid corrupti ut officia repellendus dolores neque
+                            est!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="currentlyManyPairs">
+                <h5><b>currently how many pairs of sneaker ?</b></h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consequuntur eligendi, suscipit,
+                    rem ipsa nesciunt veniam quo repellendus vero quis atque qui sunt distinctio officiis fugiat alias,
+                    veritatis perferendis modi.</p>
+            </div>
+            <div class="mostPrizedSneakerRow">
+                <div class="leftDetails">
+                    <div class="leftDetail1">
+                        <h5><b>most prized sneaker out of your collection and how much have you ever paid for one ?</b>
+                        </h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, aut. Veritatis dolor iste
+                            sed,
+                            doloribus maiores pariatur eum nobis aliquid temporibus obcaecati, quisquam exercitationem,
+                            quidem iure veniam placeat? Velit sint neque incidunt iste ratione quod animi possimus
+                            reiciendis earum magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                            quaerat provident sit aspernatur dicta dolorem, aperiam hic deleniti! Iure, optio!
+                        </p>
+                    </div>
+                    <div class="leftDetail1">
+                        <h5><b>current grail ?</b></h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eveniet, assumenda dolor
+                            dignissimos quo saepe temporibus sunt iusto debitis omnis enim expedita ut illo ipsa
+                            obcaecati sequi neque suscipit magnam. Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Modi at dolorum veniam perspiciatis nam ut maxime neque quaerat soluta, nisi.
+                        </p>
+                    </div>
+                </div>
+                <div class="rightDetailImage">
+                    <img src="./ASSETS/ranveer3.png" alt="rightDetailImage">
+                </div>
+            </div>
+            <div class="whatsYouTake">
+                <h5><b>What's your take on the hype culture in India and where do you think the future lies ?</b></h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cupiditate voluptatem labore quos
+                    autem eveniet asperiores ducimus? Est, quibusdam! Corrupti impedit velit placeat, voluptatem modi
+                    laboriosam quos, alias itaque architecto praesentium error nemo! Odio tenetur deleniti voluptates
+                    sed reiciendis velit!</p>
+            </div>
+            <div class="relatedStories">
+                <div class="relatedHead">
+                    <p>related articles</p>
+                </div>
+                <div class="relatedEditorials">
+                    <!-- //row 2// -->
+                    <div class="fetureRow">
+                        <div class="editorial">
+                            <div class="imgContainer">
+                                <img src="./ASSETS/feature4.png" alt="editorialImg">
+                            </div>
+                            <div class="editorialDetails">
+                                <p class="boldPara">editorial3</p>
+                                <p class="namePara">on the line with.. liz beecroft</p>
+                                <p class="byPara">by <span>kevin kosanovich </span>, 1 week ago</p>
+                            </div>
+                        </div>
+                        <div class="editorial">
+                            <div class="imgContainer">
+                                <img src="./ASSETS/feature5.png" alt="editorialImg">
+                            </div>
+                            <div class="editorialDetails">
+                                <p class="boldPara">editorial3</p>
+                                <p class="namePara">that's 5 | cam wild</p>
+                                <p class="byPara">by <span>dave chaplin </span>, june 16, 2020</p>
+                            </div>
+                        </div>
+                        <div class="editorial">
+                            <div class="imgContainer">
+                                <img src="./ASSETS/feature6.png" alt="editorialImg">
+                            </div>
+                            <div class="editorialDetails">
+                                <p class="boldPara">editorial3</p>
+                                <p class="namePara">on the line with.. jamie foy</p>
+                                <p class="byPara">by <span>ari nonahal </span>, may 27, 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //row2/// -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="yoUpBtn">
+            <i class="fa fa-chevron-up"></i>
+        </div>
+        <div class="footerContainer">
+            <div class="footLinks">
+                <div class="mobileWrap">
+                    <a href="#">guide <span>|</span></a>
+                    <a href="#">copyright <span>|</span></a>
+                    <a href="#">terms and condition <span class="noMobile">|</span></a>
+                </div>
+                <div class="mobileWrap">
+                    <a href="#">privacy poilcy <span>|</span></a>
+                    <a href="#">contact us <span>|</span></a>
+                    <a href="#">sneaker request <span class="noMobile">|</span></a>
+                </div>
+                <div class="mobileWrap">
+
+                    <a href="#">press <span>|</span></a>
+                    <a href="#">help <span>|</span></a>
+                    <a href="#">product request </a>
+                </div>
+            </div>
+            <div class="footSocial">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+            </div>
+            <div class="footRights">
+                <p>&copy; 2020 thebckspace, inc. all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/v4-shims.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="./JS/feature.js"></script>
+</body>
+
+</html>
