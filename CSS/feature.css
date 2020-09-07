@@ -915,6 +915,10 @@ main .featureMainContent .fetureRow .editorial .editorialDetails .byPara span {
           align-items: center;
 }
 
+.editorialMainContent .tellUsAboutRow .rightDetails h5 {
+  line-height: 1.8;
+}
+
 .editorialMainContent .tellUsAboutRow .rightDetails .rightDetail1 {
   margin-bottom: 55px;
 }
