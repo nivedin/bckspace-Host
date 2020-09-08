@@ -1,14 +1,17 @@
 function openNav() {
-    document.getElementById("mySidenav").style.width = "400px";
-}
+    if (window.innerWidth < 700) {
+        document.getElementById("mySidenav").style.width = "80%";
+    } else {
+        document.getElementById("mySidenav").style.width = "400px";
+    }
 
+}
 /* Set the width of the side navigation to 0 */
 
 
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
-
 let searchBtns = document.querySelectorAll(".search");
 let searchModal = document.querySelector(".searchModal");
 

@@ -75,12 +75,18 @@ if (window.innerWidth > 700) {
     })
 }
 
+AOS.init();
 
-let designerImgs = document.querySelectorAll(".designerPhotoContainer");
 
 
-designerImgs.forEach(designerImg => {
-    designerImg.addEventListener("click", () => {
-        window.location = "customizationDesigner.html";
-    })
-});
+//////load-more Button//////
+let showMoreBtn = document.querySelector(".loadMore");
+
+let showMoreContent = document.querySelector(".showMoreContent");
+
+showMoreBtn.addEventListener("click", () => {
+    showMoreContent.style.animation = "showMoreAnim 0.6s ease forwards";
+    showMoreContent.classList.remove("noDisplay");
+    showMoreBtn.style.display = "none";
+})
+//////load-more Button//////
