@@ -35,6 +35,7 @@ body {
 }
 
 .moblileHeader {
+    display: none;
     min-height: 20vh;
     padding: 3% 4%;
     background: #000000;
@@ -135,27 +136,6 @@ body {
             align-items: center;
             transform: translateY(-15%);
             border-radius: 6px;
-
-            input {
-                width: 0;
-                border: none;
-                background: transparent;
-                color: white;
-                transition: all 0.3s ease;
-                height: 100%;
-                padding: 2%;
-
-            }
-
-            input::placeholder {
-                outline: none;
-                border: none;
-            }
-
-            input:focus {
-                outline: none;
-                border: none;
-            }
 
             button {
                 height: 40px;
@@ -296,21 +276,233 @@ body {
     }
 }
 
+.noDisplay {
+    display: none !important;
+
+}
+
 .desktopHeader {
-    min-height: 15vh;
+    min-height: 20vh;
     background: black;
-    display: none;
     position: fixed;
     z-index: 6;
     width: 100%;
+    padding: 2% 4%;
     transition: all 0.5s ease;
     animation: headerAnim 0.5s ease forwards;
+
+    .bckspaceLogUser {
+        .logUser {
+            text-align: right;
+            font-size: 0.8rem;
+            color: white;
+        }
+
+        .headImgContainer {
+            margin: 0 auto;
+            height: 38px;
+            width: 230px;
+            text-align: center;
+
+            img {
+                height: 100%;
+                width: 100%;
+
+            }
+        }
+    }
 
     nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 2% 4%;
+        padding: 2% 0;
+
+        .navContainer3 {
+
+            .rightIcons {
+                margin: 10px 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 10%;
+
+                .heartIcon {
+                    a {
+                        text-decoration: none;
+                        color: white;
+
+                        svg {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+
+                .profileIcon {
+                    a {
+                        text-decoration: none;
+                        color: white;
+
+                        svg {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+
+                .searchIcon {
+                    button {
+                        background: rgba(0, 0, 0, 0.144);
+                        border: none;
+                        outline: none;
+
+                        svg {
+                            font-size: 1.2rem;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        @keyframes navDeskAnim {
+            from {
+                transform: translateX(-30%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+
+        }
+
+        @keyframes bckspaceLogUserAnimCome {
+            from {
+                transform: translateY(-10%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+
+        }
+
+        @keyframes bckspaceLogUserAnimGo {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-10%);
+            }
+
+        }
+
+        .navContainer2,
+        .navContainer3 {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .headImgContainer {
+                margin: 0 auto;
+                height: 38px;
+                width: 230px;
+                text-align: center;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+
+                }
+            }
+
+            .deskNavBurger {
+                position: relative;
+                cursor: pointer;
+                height: 30px;
+                width: 30px;
+
+                span:nth-child(1) {
+                    user-select: none;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    height: 3px;
+                    width: 32px;
+                    background: white;
+                    border-radius: 8px;
+                    transition: all 0.4s ease-in-out;
+                }
+
+                span:nth-child(2) {
+                    content: "";
+                    position: absolute;
+                    top: 8px;
+                    height: 3px;
+                    width: 32px;
+                    background: white;
+                    border-radius: 8px;
+                    transition: all 0.4s ease-in-out;
+                }
+
+                span:nth-child(3) {
+                    content: "";
+                    position: absolute;
+                    top: 16px;
+                    height: 3px;
+                    width: 32px;
+                    background: white;
+                    border-radius: 8px;
+                    transition: all 0.4s ease-in-out;
+                }
+            }
+
+            .deskNavBurger:hover,
+            .deskNavBurger:active {
+                span:nth-child(1) {
+                    background: #0202f3;
+                }
+
+                span:nth-child(2) {
+                    width: 22px;
+                }
+
+            }
+
+            .searchIcon {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                transform: translateY(0);
+                border-radius: 6px;
+
+                button {
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                    border: none;
+                    outline: none;
+                    background: rgba(0, 0, 0, 0);
+
+                    svg {
+                        user-select: none;
+                        margin-top: 2px;
+                        font-size: 1.33rem;
+                        cursor: pointer;
+                        color: white;
+
+                    }
+
+                    &:hover svg {
+                        color: blue;
+                    }
+                }
+            }
+
+        }
 
         .leftLogo {
             a {
@@ -1301,7 +1493,13 @@ footer {
 }
 
 @media screen and (max-width: 750px) {
+
+    .desktopHeader {
+        display: none;
+    }
+
     .moblileHeader {
+        display: block;
         height: 15vh;
 
         .logUser {

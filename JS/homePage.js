@@ -24,6 +24,45 @@ searchBtns.forEach(searchBtn => {
 })
 
 
+////////navHamclicked//////////
+let deskHam = document.querySelector(".deskNavBurger");
+let noClickNav = document.querySelector(".noClick");
+let clickNav = document.querySelector(".hamClicked");
+let bckspaceLogUser = document.querySelector(".bckspaceLogUser");
+let thebckName = document.querySelector(".navContainer2 .thebckName");
+
+window.addEventListener("scroll", (e) => {
+    let windowTop = window.scrollY;
+
+    if (windowTop >= 350) {
+        bckspaceLogUser.style.animation = "bckspaceLogUserAnimCome 0.4s ease forwards";
+        thebckName.style.animation = "bckspaceLogUserAnimCome 0.4s ease forwards";
+        bckspaceLogUser.style.display = "none";
+        thebckName.style.display = "block";
+    } else {
+        bckspaceLogUser.style.animation = "bckspaceLogUserAnimGo 0.4s ease forwards";
+        thebckName.style.animation = "bckspaceLogUserAnimGo 0.4s ease forwards";
+        bckspaceLogUser.style.display = "block";
+        thebckName.style.display = "none";
+    }
+});
+
+deskHam.addEventListener("click", () => {
+    noClickNav.classList.add("noDisplay");
+    noClickNav.style.animation = "navDeskAnim 0.6s ease forwards";
+    clickNav.style.animation = "navDeskAnim 0.6s ease forwards";
+    clickNav.classList.remove("noDisplay");
+    window.addEventListener("scroll", () => {
+        noClickNav.classList.remove("noDisplay");
+        noClickNav.style.animation = "navDeskAnim 0.6s ease forwards";
+        clickNav.style.animation = "navDeskAnim 0.6s ease forwards";
+        clickNav.classList.add("noDisplay");
+    })
+
+})
+////////navHamclicked//////////
+
+
 searchModal.addEventListener("click", (e) => {
     if (e.target.classList.contains("searchModal")) {
         searchModal.classList.remove("openModal");
@@ -126,24 +165,24 @@ toTopBtn.addEventListener("click", () => {
     document.documentElement.scrollTop = 0;
 });
 
-let mobileHeader = document.querySelector(".moblileHeader");
-let desktopHeader = document.querySelector(".desktopHeader");
+// let mobileHeader = document.querySelector(".moblileHeader");
+// let desktopHeader = document.querySelector(".desktopHeader");
 
-if (window.innerWidth > 700) {
-    window.addEventListener("scroll", (e) => {
-        let windowTop = window.scrollY;
+// if (window.innerWidth > 700) {
+//     window.addEventListener("scroll", (e) => {
+//         let windowTop = window.scrollY;
 
-        if (windowTop >= 350) {
+//         if (windowTop >= 350) {
 
-            mobileHeader.style.display = "none";
-            desktopHeader.style.display = "block";
+//             mobileHeader.style.display = "none";
+//             desktopHeader.style.display = "block";
 
-        } else {
-            mobileHeader.style.display = "block";
-            desktopHeader.style.display = "none";
-        }
-    })
-} else {
-    mobileHeader.style.display = "block";
-    desktopHeader.style.display = "none";
-}
+//         } else {
+//             mobileHeader.style.display = "block";
+//             desktopHeader.style.display = "none";
+//         }
+//     })
+// } else {
+//     mobileHeader.style.display = "block";
+//     desktopHeader.style.display = "none";
+// }
