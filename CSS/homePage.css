@@ -469,6 +469,11 @@ body {
           align-items: center;
 }
 
+.desktopHeader nav .navContainer2 .thebckName,
+.desktopHeader nav .navContainer3 .thebckName {
+  display: none;
+}
+
 .desktopHeader nav .navContainer2 .headImgContainer,
 .desktopHeader nav .navContainer3 .headImgContainer {
   margin: 0 auto;

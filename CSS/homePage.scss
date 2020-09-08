@@ -406,6 +406,10 @@ body {
             justify-content: space-between;
             align-items: center;
 
+            .thebckName {
+                display: none;
+            }
+
             .headImgContainer {
                 margin: 0 auto;
                 height: 38px;
