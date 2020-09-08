@@ -13,17 +13,6 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 
-let searchBtns = document.querySelectorAll(".search");
-let searchModal = document.querySelector(".searchModal");
-
-searchBtns.forEach(searchBtn => {
-    searchBtn.addEventListener("click", () => {
-        searchModal.classList.add("openModal");
-
-    })
-})
-
-
 ////////navHamclicked//////////
 let deskHam = document.querySelector(".deskNavBurger");
 let noClickNav = document.querySelector(".noClick");
@@ -63,15 +52,20 @@ deskHam.addEventListener("click", () => {
 ////////navHamclicked//////////
 
 
-searchModal.addEventListener("click", (e) => {
-    if (e.target.classList.contains("searchModal")) {
-        searchModal.classList.remove("openModal");
-    }
-    if (e.target.classList.contains("searchMainContainer")) {
-        searchModal.classList.remove("openModal");
-    }
+let searchBtns = document.querySelectorAll(".search");
+let searchModal = document.querySelector(".searchModal");
+let scearchCloseIcon = document.querySelector(".scearchCloseIcon");
 
+searchBtns.forEach(searchBtn => {
+    searchBtn.addEventListener("click", () => {
+        searchModal.classList.add("openModal");
+
+    })
 })
+
+scearchCloseIcon.addEventListener("click", () => {
+    searchModal.classList.remove("openModal");
+});
 
 
 AOS.init();

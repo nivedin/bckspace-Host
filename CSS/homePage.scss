@@ -660,7 +660,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.521);
     opacity: 0;
     pointer-events: none;
     transition: all 0.5s ease;
@@ -678,32 +678,65 @@ body {
 
     }
 
-    .searchHeading {
-        color: white;
-        font-size: 3rem;
-        font-weight: 600;
-        text-align: center;
+    .scearchCloseIcon {
+        position: absolute;
+        top: 12%;
+        right: 3.5%;
+        transition: all 0.3s ease;
+        height: 50px;
+        width: 50px;
 
+        span:nth-child(1) {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 40px;
+            background: white;
+            transform: rotate(45deg);
+            transition: all 0.3s ease;
+        }
+
+        span:nth-child(2) {
+            content: "";
+            position: absolute;
+            top: 0px;
+            height: 2px;
+            width: 40px;
+            background: white;
+            transform: rotate(130deg);
+            transition: all 0.3s ease;
+        }
+
+        &:hover span {
+            cursor: pointer;
+            background: blue;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     .searchContainer {
         margin-top: 5%;
-        box-shadow: 6px 6px 16px #00000034,
-            6px 6px 16px inset #00000034,
-            -6px -6px 16px #70707034,
-            -6px -6px 16px inset #77777734;
+        border: 2px solid rgb(206, 206, 206);
+        // background: rgba(0, 0, 0, 0.637);
 
         input {
             background: transparent;
             color: white;
             border-radius: 8px;
-            font-size: 1.2rem;
+            font-size: 0.95rem;
             font-weight: 500;
             padding: 2%;
-            height: 50px;
-            width: 30rem;
+            height: 38px;
+            width: 40rem;
             border: none;
             outline: none;
+
+            &::placeholder {
+                color: white;
+            }
 
             &:focus-within {
                 border: none;
@@ -712,16 +745,17 @@ body {
         }
 
         button {
-            height: 50px;
-            width: 50px;
+            height: 38px;
+            width: 38px;
             border-radius: 50%;
             margin: 0 10px 0 20px;
             border: none;
             outline: none;
             background: transparent;
+            transition: all 0.3s ease;
 
             path {
-                fill: white;
+                fill: rgb(224, 224, 224);
             }
         }
 
@@ -1741,9 +1775,42 @@ footer {
 
         .searchContainer {
             display: flex;
+            justify-content: center;
+            align-items: center;
             width: 80%;
+
+            input {
+                font-size: 0.75rem;
+            }
+
+            button {
+                height: 25px;
+                width: 25px;
+                border-radius: 50%;
+                margin: 0 10px 0 20px;
+                border: none;
+                outline: none;
+                background: transparent;
+                transition: all 0.3s ease;
+
+                path {
+                    fill: rgb(224, 224, 224);
+                }
+
+                &:hover {
+                    background: none;
+                }
+
+                &:hover path {
+                    background: none;
+                    fill: rgb(10, 6, 252);
+                }
+            }
+
         }
     }
+
+
 
     main {
         margin-top: 15vh;

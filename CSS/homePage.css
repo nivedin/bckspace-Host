@@ -744,7 +744,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: black;
+  background: rgba(0, 0, 0, 0.521);
   opacity: 0;
   pointer-events: none;
   -webkit-transition: all 0.5s ease;
@@ -771,30 +771,82 @@ body {
   width: 100%;
 }
 
-.searchModal .searchHeading {
-  color: white;
-  font-size: 3rem;
-  font-weight: 600;
-  text-align: center;
+.searchModal .scearchCloseIcon {
+  position: absolute;
+  top: 12%;
+  right: 3.5%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  height: 50px;
+  width: 50px;
+}
+
+.searchModal .scearchCloseIcon span:nth-child(1) {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 40px;
+  background: white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.searchModal .scearchCloseIcon span:nth-child(2) {
+  content: "";
+  position: absolute;
+  top: 0px;
+  height: 2px;
+  width: 40px;
+  background: white;
+  -webkit-transform: rotate(130deg);
+          transform: rotate(130deg);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.searchModal .scearchCloseIcon:hover span {
+  cursor: pointer;
+  background: blue;
+}
+
+.searchModal .scearchCloseIcon:hover {
+  cursor: pointer;
 }
 
 .searchModal .searchContainer {
   margin-top: 5%;
-  -webkit-box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #70707034, -6px -6px 16px inset #77777734;
-          box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034, -6px -6px 16px #70707034, -6px -6px 16px inset #77777734;
+  border: 2px solid #cecece;
 }
 
 .searchModal .searchContainer input {
   background: transparent;
   color: white;
   border-radius: 8px;
-  font-size: 1.2rem;
+  font-size: 0.95rem;
   font-weight: 500;
   padding: 2%;
-  height: 50px;
-  width: 30rem;
+  height: 38px;
+  width: 40rem;
   border: none;
   outline: none;
+}
+
+.searchModal .searchContainer input::-webkit-input-placeholder {
+  color: white;
+}
+
+.searchModal .searchContainer input:-ms-input-placeholder {
+  color: white;
+}
+
+.searchModal .searchContainer input::-ms-input-placeholder {
+  color: white;
+}
+
+.searchModal .searchContainer input::placeholder {
+  color: white;
 }
 
 .searchModal .searchContainer input:focus-within {
@@ -802,17 +854,19 @@ body {
 }
 
 .searchModal .searchContainer button {
-  height: 50px;
-  width: 50px;
+  height: 38px;
+  width: 38px;
   border-radius: 50%;
   margin: 0 10px 0 20px;
   border: none;
   outline: none;
   background: transparent;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .searchModal .searchContainer button path {
-  fill: white;
+  fill: #e0e0e0;
 }
 
 .searchModal .searchContainer button:hover {
@@ -1853,7 +1907,37 @@ footer .footerContainer .footRights {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 80%;
+  }
+  .searchModal .searchContainer input {
+    font-size: 0.75rem;
+  }
+  .searchModal .searchContainer button {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin: 0 10px 0 20px;
+    border: none;
+    outline: none;
+    background: transparent;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .searchModal .searchContainer button path {
+    fill: #e0e0e0;
+  }
+  .searchModal .searchContainer button:hover {
+    background: none;
+  }
+  .searchModal .searchContainer button:hover path {
+    background: none;
+    fill: #0a06fc;
   }
   main {
     margin-top: 15vh;
