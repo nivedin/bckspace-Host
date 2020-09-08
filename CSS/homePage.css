@@ -744,7 +744,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.521);
+  background: rgba(0, 0, 0, 0.877);
   opacity: 0;
   pointer-events: none;
   -webkit-transition: all 0.5s ease;
@@ -1897,7 +1897,7 @@ footer .footerContainer .footRights {
     top: 0;
     left: 0;
     width: 100%;
-    background: black;
+    background: rgba(0, 0, 0, 0.959);
     opacity: 0;
     pointer-events: none;
     -webkit-transition: all 0.5s ease;
@@ -2049,6 +2049,7 @@ footer .footerContainer .footRights {
     width: 100%;
     top: 0;
     left: 0;
+    right: 0;
     background: black;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
