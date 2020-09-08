@@ -52,12 +52,12 @@ deskHam.addEventListener("click", () => {
     noClickNav.style.animation = "navDeskAnim 0.6s ease forwards";
     clickNav.style.animation = "navDeskAnim 0.6s ease forwards";
     clickNav.classList.remove("noDisplay");
-    window.addEventListener("scroll", () => {
-        noClickNav.classList.remove("noDisplay");
-        noClickNav.style.animation = "navDeskAnim 0.6s ease forwards";
-        clickNav.style.animation = "navDeskAnim 0.6s ease forwards";
-        clickNav.classList.add("noDisplay");
-    })
+    // window.addEventListener("scroll", () => {
+    //     noClickNav.classList.remove("noDisplay");
+    //     noClickNav.style.animation = "navDeskAnim 0.6s ease forwards";
+    //     clickNav.style.animation = "navDeskAnim 0.6s ease forwards";
+    //     clickNav.classList.add("noDisplay");
+    // })
 
 })
 ////////navHamclicked//////////
