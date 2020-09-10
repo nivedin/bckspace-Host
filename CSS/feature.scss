@@ -1387,8 +1387,16 @@ footer {
         .mainPhotoContainer {
             margin: 40px auto;
             height: auto;
-            width: 150%;
-            transform: translateX(-9%);
+            overflow-x: visible;
+            width: 100% !important;
+            transform: translateX(-5%);
+
+            img {
+                height: 100%;
+                width: 140%;
+                transform: translateX(-9%);
+            }
+
         }
 
         h5 {

@@ -1458,7 +1458,14 @@ footer .footerContainer .footRights {
   .editorialMainContent .mainPhotoContainer {
     margin: 40px auto;
     height: auto;
-    width: 150%;
+    overflow-x: visible;
+    width: 100% !important;
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+  }
+  .editorialMainContent .mainPhotoContainer img {
+    height: 100%;
+    width: 140%;
     -webkit-transform: translateX(-9%);
             transform: translateX(-9%);
   }

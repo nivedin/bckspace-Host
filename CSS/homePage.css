@@ -35,8 +35,8 @@ body {
 
 .moblileHeader {
   display: none;
-  min-height: 20vh;
-  padding: 3% 4%;
+  min-height: 15vh;
+  padding: 1% 4%;
   background: #000000;
   color: white;
   position: fixed;
@@ -62,8 +62,8 @@ body {
 
 .moblileHeader .bckspaceLogUser .headImgContainer {
   margin: 0 auto;
-  height: 38px;
-  width: 230px;
+  height: 30px;
+  width: 180px;
   text-align: center;
 }
 
@@ -73,7 +73,7 @@ body {
 }
 
 .moblileHeader nav {
-  margin-top: 30px;
+  margin: 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,8 +97,8 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  height: 3px;
-  width: 32px;
+  height: 2px;
+  width: 30px;
   background: white;
   border-radius: 8px;
   -webkit-transition: all 0.4s ease-in-out;
@@ -109,8 +109,8 @@ body {
   content: "";
   position: absolute;
   top: 8px;
-  height: 3px;
-  width: 32px;
+  height: 2px;
+  width: 30px;
   background: white;
   border-radius: 8px;
   -webkit-transition: all 0.4s ease-in-out;
@@ -121,8 +121,8 @@ body {
   content: "";
   position: absolute;
   top: 16px;
-  height: 3px;
-  width: 32px;
+  height: 2px;
+  width: 30px;
   background: white;
   border-radius: 8px;
   -webkit-transition: all 0.4s ease-in-out;
@@ -147,8 +147,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transform: translateY(-15%);
-          transform: translateY(-15%);
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
   border-radius: 6px;
 }
 
@@ -162,12 +162,14 @@ body {
 }
 
 .moblileHeader nav .searchIcon button svg {
+  -webkit-transform: translateY(15%);
+          transform: translateY(15%);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  margin-top: 2px;
-  font-size: 1.33rem;
+  margin-top: 6px;
+  font-size: 1rem;
   cursor: pointer;
   color: white;
 }
@@ -302,7 +304,7 @@ body {
 }
 
 .desktopHeader {
-  min-height: 20vh;
+  min-height: 14vh;
   background: black;
   position: fixed;
   z-index: 6;
@@ -342,7 +344,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2% 0;
+  padding: 0;
 }
 
 .desktopHeader nav .navContainer3 .rightIcons {
@@ -1730,10 +1732,10 @@ footer .footerContainer .footRights {
     display: block !important;
   }
   header nav .headImgContainer {
-    margin: 0 auto;
-    height: 38px;
-    width: 150px;
-    text-align: center;
+    margin: 0 auto 0 25px;
+    height: 25px;
+    width: 130px;
+    text-align: none;
   }
   header nav .headImgContainer img {
     height: 100%;
@@ -1744,6 +1746,7 @@ footer .footerContainer .footRights {
     cursor: pointer;
     height: 30px;
     width: 30px;
+    margin-top: 8px;
   }
   header nav .navBurger span:nth-child(1) {
     -webkit-user-select: none;
@@ -1754,7 +1757,7 @@ footer .footerContainer .footRights {
     position: absolute;
     top: 0;
     height: 3px;
-    width: 32px;
+    width: 30px;
     background: white;
     border-radius: 8px;
     -webkit-transition: all 0.4s ease-in-out;
@@ -1765,7 +1768,7 @@ footer .footerContainer .footRights {
     position: absolute;
     top: 8px;
     height: 3px;
-    width: 32px;
+    width: 30px;
     background: white;
     border-radius: 8px;
     -webkit-transition: all 0.4s ease-in-out;
@@ -1776,7 +1779,7 @@ footer .footerContainer .footRights {
     position: absolute;
     top: 16px;
     height: 3px;
-    width: 32px;
+    width: 30px;
     background: white;
     border-radius: 8px;
     -webkit-transition: all 0.4s ease-in-out;
@@ -1798,8 +1801,8 @@ footer .footerContainer .footRights {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(6%);
+            transform: translateY(6%);
     border-radius: 6px;
   }
   header nav .searchIcon button {
@@ -1815,8 +1818,8 @@ footer .footerContainer .footRights {
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
-    margin-top: 2px;
-    font-size: 1.33rem;
+    margin-top: 8px;
+    font-size: 1.25rem;
     cursor: pointer;
     color: white;
   }
