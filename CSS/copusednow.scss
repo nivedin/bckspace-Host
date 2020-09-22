@@ -1,0 +1,1659 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --shadow: #e6e6e6;
+  --scrollbarBG: #5e5e5e;
+  --thumbBG: #000000;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  box-shadow: 0 -100vh 0 100vh var(--shadow), 0 0 15px 5px black;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.moblileHeader {
+  display: none;
+  min-height: 15vh;
+  padding: 1% 4%;
+  background: #000000;
+  color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  transition: all 0.5s ease;
+  animation: headerAnim 0.5s ease forwards;
+
+  .mobileBrandName {
+    display: none;
+  }
+
+  .bckspaceLogUser {
+    .logUser {
+      text-align: right;
+      font-size: 0.8rem;
+    }
+
+    .headImgContainer {
+      margin: 0 auto;
+      height: 30px;
+      width: 180px;
+      text-align: center;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  nav {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+
+    .navBurger {
+      position: relative;
+      cursor: pointer;
+      height: 30px;
+      width: 30px;
+
+      span:nth-child(1) {
+        user-select: none;
+        content: "";
+        position: absolute;
+        top: 0;
+        height: 2px;
+        width: 30px;
+        background: white;
+        border-radius: 8px;
+        transition: all 0.4s ease-in-out;
+      }
+
+      span:nth-child(2) {
+        content: "";
+        position: absolute;
+        top: 8px;
+        height: 2px;
+        width: 30px;
+        background: white;
+        border-radius: 8px;
+        transition: all 0.4s ease-in-out;
+      }
+
+      span:nth-child(3) {
+        content: "";
+        position: absolute;
+        top: 16px;
+        height: 2px;
+        width: 30px;
+        background: white;
+        border-radius: 8px;
+        transition: all 0.4s ease-in-out;
+      }
+    }
+
+    .navBurger:hover,
+    .navBurger:active {
+      span:nth-child(1) {
+        background: #0202f3;
+      }
+
+      span:nth-child(2) {
+        width: 22px;
+      }
+    }
+
+    .searchIcon {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      transform: translateY(-10%);
+      border-radius: 6px;
+
+      button {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        background: rgba(0, 0, 0, 0);
+
+        svg {
+          transform: translateY(15%);
+          user-select: none;
+          margin-top: 6px;
+          font-size: 1rem;
+          cursor: pointer;
+          color: white;
+        }
+      }
+    }
+
+    .searchIcon:hover input,
+    .searchIcon:focus-within input {
+      width: 250px;
+      margin-left: 10px;
+    }
+
+    .searchIcon:hover,
+    input:focus {
+      box-shadow: 6px 6px 16px #00000034, 6px 6px 16px inset #00000034,
+        -6px -6px 16px #36363634, -6px -6px 16px inset #3d3d3d34;
+
+      svg {
+        color: #0202f3;
+      }
+    }
+  }
+
+  .sidenav {
+    height: 100vh;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 9;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+    scrollbar-width: none;
+  }
+
+  .sidenav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sideNavContainer {
+    padding: 0 8%;
+
+    .userProfile {
+      .userIcon {
+        font-size: 8rem;
+      }
+
+      .userName {
+        margin: 15px 0 0 30px;
+
+        p {
+          margin: 0;
+        }
+
+        .loggedIn {
+          font-size: 0.86rem;
+          margin-bottom: 10px;
+        }
+
+        .loggedName {
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+      }
+    }
+
+    hr {
+      background: rgb(56, 56, 56);
+      border-radius: 8px;
+      height: 1px;
+    }
+  }
+
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 4px 0 0 0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #e9e9e9;
+    display: block;
+    transition: 0.3s;
+  }
+
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: blue;
+  }
+
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+}
+
+@keyframes headerAnim {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.noDisplay {
+  display: none !important;
+}
+
+.desktopHeader {
+  min-height: 14vh;
+  background: black;
+  position: fixed;
+  z-index: 6;
+  width: 100%;
+  padding: 2% 4%;
+  transition: all 0.5s ease;
+  animation: headerAnim 0.5s ease forwards;
+
+  .bckspaceLogUser {
+    .logUser {
+      text-align: right;
+      font-size: 0.8rem;
+      color: white;
+    }
+
+    .headImgContainer {
+      margin: 0 auto;
+      height: 38px;
+      width: 230px;
+      text-align: center;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+
+    .navContainer3 {
+      .rightIcons {
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 10%;
+
+        .heartIcon {
+          a {
+            text-decoration: none;
+            color: white;
+
+            svg {
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+        .profileIcon {
+          a {
+            text-decoration: none;
+            color: white;
+
+            svg {
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+        .searchIcon {
+          button {
+            background: rgba(0, 0, 0, 0.144);
+            border: none;
+            outline: none;
+
+            svg {
+              font-size: 1.2rem;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+
+    @keyframes navDeskAnim {
+      from {
+        transform: translateX(-30%);
+      }
+
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes bckspaceLogUserAnimCome {
+      from {
+        transform: translateY(-10%);
+      }
+
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bckspaceLogUserAnimGo {
+      from {
+        transform: translateY(0);
+      }
+
+      to {
+        transform: translateY(-10%);
+      }
+    }
+
+    .navContainer2,
+    .navContainer3 {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .thebckName {
+        display: none;
+      }
+
+      .headImgContainer {
+        margin: 0 auto;
+        height: 38px;
+        width: 230px;
+        text-align: center;
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      .deskNavBurger {
+        position: relative;
+        cursor: pointer;
+        height: 30px;
+        width: 30px;
+
+        span:nth-child(1) {
+          user-select: none;
+          content: "";
+          position: absolute;
+          top: 0;
+          height: 3px;
+          width: 32px;
+          background: white;
+          border-radius: 8px;
+          transition: all 0.4s ease-in-out;
+        }
+
+        span:nth-child(2) {
+          content: "";
+          position: absolute;
+          top: 8px;
+          height: 3px;
+          width: 32px;
+          background: white;
+          border-radius: 8px;
+          transition: all 0.4s ease-in-out;
+        }
+
+        span:nth-child(3) {
+          content: "";
+          position: absolute;
+          top: 16px;
+          height: 3px;
+          width: 32px;
+          background: white;
+          border-radius: 8px;
+          transition: all 0.4s ease-in-out;
+        }
+      }
+
+      .deskNavBurger:hover,
+      .deskNavBurger:active {
+        span:nth-child(1) {
+          background: #0202f3;
+        }
+
+        span:nth-child(2) {
+          width: 22px;
+        }
+      }
+
+      .searchIcon {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transform: translateY(0);
+        border-radius: 6px;
+
+        button {
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          border: none;
+          outline: none;
+          background: rgba(0, 0, 0, 0);
+
+          svg {
+            user-select: none;
+            margin-top: 2px;
+            font-size: 1.33rem;
+            cursor: pointer;
+            color: white;
+          }
+
+          &:hover svg {
+            color: blue;
+          }
+        }
+      }
+    }
+
+    .leftLogo {
+      a {
+        text-decoration: none;
+      }
+
+      svg {
+        font-size: 2rem;
+        color: white;
+      }
+    }
+
+    .navLinks {
+      margin: 10px 0 0 100px;
+
+      ul {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+
+        li {
+          position: relative;
+          z-index: 1;
+          margin-right: 30px;
+          transition: all 0.3s ease;
+
+          a {
+            text-decoration: none;
+            color: white;
+            font-size: 0.95rem;
+          }
+        }
+
+        .navHoverAnimation {
+          position: absolute;
+          height: 100%;
+          width: 8%;
+          top: 0;
+          left: -1.3%;
+          border-radius: 10px;
+          transition: all 0.6s ease;
+          border: none;
+          outline: none;
+          background: blue;
+          z-index: 0;
+        }
+
+        li:active {
+          transform: scale(1.1);
+        }
+
+        li:nth-child(1):hover ~ .navHoverAnimation {
+          left: -1.3%;
+        }
+
+        li:nth-child(2):hover ~ .navHoverAnimation {
+          left: 8%;
+          width: 12%;
+        }
+
+        li:nth-child(3):hover ~ .navHoverAnimation {
+          left: 22%;
+          width: 7%;
+        }
+
+        li:nth-child(4):hover ~ .navHoverAnimation {
+          left: 30.3%;
+        }
+
+        li:nth-child(5):hover ~ .navHoverAnimation {
+          left: 40%;
+          width: 17%;
+        }
+
+        li:nth-child(6):hover ~ .navHoverAnimation {
+          left: 58%;
+          width: 13%;
+        }
+
+        li:nth-child(7):hover ~ .navHoverAnimation {
+          left: 72%;
+          width: 10%;
+        }
+
+        li:nth-child(8):hover ~ .navHoverAnimation {
+          left: 84%;
+          width: 13%;
+        }
+      }
+    }
+
+    .rightIcons {
+      display: flex;
+      justify-content: space-between;
+      width: 10%;
+
+      .heartIcon {
+        a {
+          text-decoration: none;
+          color: white;
+
+          svg {
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      .profileIcon {
+        a {
+          text-decoration: none;
+          color: white;
+
+          svg {
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      .searchIcon {
+        button {
+          background: rgba(0, 0, 0, 0.144);
+          border: none;
+          outline: none;
+
+          svg {
+            font-size: 1.2rem;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+////////////////////
+.searchModal.openModal {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.searchModal {
+  position: fixed;
+  z-index: 7;
+  min-height: 120vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.877);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+
+  .searchMainContainer {
+    position: relative;
+    top: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    width: 100%;
+  }
+
+  .scearchCloseIcon {
+    position: absolute;
+    top: 12%;
+    right: 3.5%;
+    transition: all 0.3s ease;
+    height: 50px;
+    width: 50px;
+
+    span:nth-child(1) {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 40px;
+      background: white;
+      transform: rotate(45deg);
+      transition: all 0.3s ease;
+    }
+
+    span:nth-child(2) {
+      content: "";
+      position: absolute;
+      top: 0px;
+      height: 2px;
+      width: 40px;
+      background: white;
+      transform: rotate(130deg);
+      transition: all 0.3s ease;
+    }
+
+    &:hover span {
+      cursor: pointer;
+      background: blue;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .searchContainer {
+    margin-top: 5%;
+    border: 2px solid rgb(206, 206, 206);
+    // background: rgba(0, 0, 0, 0.637);
+
+    input {
+      background: transparent;
+      color: white;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 2%;
+      height: 38px;
+      width: 40rem;
+      border: none;
+      outline: none;
+
+      &::placeholder {
+        color: white;
+      }
+
+      &:focus-within {
+        border: none;
+      }
+    }
+
+    button {
+      height: 38px;
+      width: 38px;
+      border-radius: 50%;
+      margin: 0 10px 0 20px;
+      border: none;
+      outline: none;
+      background: transparent;
+      transition: all 0.3s ease;
+
+      path {
+        fill: rgb(224, 224, 224);
+      }
+    }
+
+    button:hover {
+      background: rgb(37, 36, 36);
+    }
+  }
+}
+
+///////////////////
+main {
+  min-height: 80vh;
+
+  .mainContainer {
+    margin-top: 30vh;
+    padding: 4%;
+
+    .shoeImgContainer {
+      margin: 4% 0 0 26%;
+      height: 16rem;
+      width: 17rem;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .moreImg {
+      margin-top: 12%;
+      margin-left: 10%;
+      p {
+        font-size: 0.88rem;
+        font-weight: 500;
+      }
+      .moreImgContainer {
+        height: 10rem;
+        width: 12rem;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    .shoeDetails {
+      .shoeBrandName {
+        p {
+          margin: 0;
+        }
+
+        .shoeName {
+          font-size: 1.25rem;
+        }
+
+        .shoeModel {
+          margin-top: 15px;
+          font-size: 1.1rem;
+          font-weight: 500;
+          color: rgb(87, 87, 87);
+        }
+      }
+
+      .noDisplay {
+        display: none;
+      }
+
+      .shoeSizeClickedBuy {
+        margin-top: 25px;
+
+        .conditionSizeContain {
+          margin-top: 25px;
+          display: flex;
+          font-size: 0.85rem;
+          font-weight: 600;
+          color: rgb(158, 158, 158);
+          .conditionBoxTag {
+            p {
+              width: 8rem;
+              display: flex;
+              justify-content: space-between;
+            }
+          }
+
+          .boldPara {
+            color: black;
+          }
+
+          .styleSize {
+            margin-left: 68px;
+
+            input {
+              height: 30px;
+              width: 8rem;
+              border: 2px solid rgb(197, 189, 189);
+              outline: none;
+              color: rgb(143, 143, 143);
+              padding: 1% 8%;
+              border-radius: 3px;
+              font-size: 0.85rem;
+              font-weight: 500;
+              background: url("./theme_thebckspace/static/src/img/pencil-alt-solid.svg")
+                no-repeat right 0.8rem center/13px 23px;
+            }
+          }
+        }
+
+        .anyBtnClickedContainer {
+          height: 42vh;
+        }
+
+        .sellNowBtnClicked {
+          transition: all 0.3s ease;
+        }
+
+        .placeAskClicked {
+          transition: all 0.3s ease;
+        }
+
+        .placeSellNow {
+          margin-top: 15px;
+          width: 100%;
+
+          button {
+            margin: 0 !important;
+            height: 50px;
+            width: 13.6rem;
+            font-weight: 500;
+            transition: all 0.3s linear;
+            border: none;
+            outline: none;
+          }
+
+          .placeAsk {
+            border: 1px solid rgb(212, 212, 212);
+            background: rgb(248, 248, 248);
+            border-radius: 5px 0 0 5px;
+
+            &:hover {
+              transform: scale(1.05);
+              opacity: 0.9;
+            }
+          }
+
+          .sellNow {
+            border-radius: 0 5px 5px 0;
+            border: 1px solid rgb(212, 212, 212);
+            background: rgb(248, 248, 248);
+
+            &:hover {
+              transform: scale(1.05);
+              opacity: 0.9;
+            }
+          }
+
+          .activeBtnClicked {
+            background: rgb(46, 79, 224);
+            color: white;
+          }
+        }
+
+        .amtPara {
+          margin-top: 30px;
+          display: flex;
+
+          input {
+            height: 46px;
+            border: 1px solid rgb(212, 212, 212);
+            border-radius: 5px;
+            width: 9rem;
+            padding: 1% 2% 1% 4%;
+            font-size: 1.5rem;
+            font-weight: 500;
+            background: rgb(248, 248, 248);
+          }
+
+          .bidPara {
+            margin: 22px 0 0 10px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: rgb(133, 133, 133);
+          }
+        }
+
+        .totalAmtTax {
+          padding-right: 14%;
+          padding-top: 5%;
+
+          .transactionFee {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: rgb(70, 70, 70);
+          }
+        }
+
+        .enterAsk {
+          margin-top: 30px;
+
+          .askAmtPara {
+            display: flex;
+
+            input {
+              height: 46px;
+              border: 1px solid rgb(212, 212, 212);
+              border-radius: 5px;
+              width: 9rem;
+              padding: 1% 2% 1% 7%;
+              font-size: 1.2rem;
+              font-weight: 500;
+              background: url("./theme_thebckspace/static/src/img/rupee-sign-solid.svg")
+                no-repeat left 0.8rem center/13px 23px;
+            }
+
+            .askPara {
+              margin: 22px 0 0 15px;
+              font-size: 0.8rem;
+              font-weight: 500;
+              color: rgb(133, 133, 133);
+            }
+          }
+        }
+
+        .transBtns {
+          padding: 10% 12% 5% 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          button {
+            height: 35px;
+            width: 8rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            outline: none;
+            transition: all 0.3s linear;
+          }
+
+          .cancelTrans {
+            color: rgb(85, 85, 85);
+            border: 2px solid rgb(151, 151, 151);
+            background: rgb(248, 248, 248);
+
+            &:hover {
+              transform: translateY(-2px);
+              opacity: 0.9;
+            }
+          }
+
+          .proceedTrans {
+            border: none;
+            color: rgb(245, 245, 245);
+            background: rgb(19, 17, 17);
+
+            &:hover {
+              transform: translateY(-2px);
+              opacity: 0.9;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//////////////////////
+
+footer {
+  position: relative;
+  background: #1b1b1b;
+  min-height: 25vh;
+
+  .yoUpBtn {
+    cursor: pointer;
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: rgb(19, 17, 17);
+    z-index: 3;
+    right: 70px;
+    top: -12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+    font-size: 2rem;
+    transition: all 0.5s ease;
+    -webkit-box-shadow: 78px 96px 39px -72px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 78px 96px 39px -72px rgba(0, 0, 0, 0.75);
+    box-shadow: 78px 96px 39px -72px rgba(0, 0, 0, 0.75);
+  }
+
+  .yoUpBtn:hover {
+    transform: scale(1.1);
+  }
+
+  .footerContainer {
+    text-align: center;
+    padding: 1% 3% 1% 3%;
+
+    .footLinks {
+      padding: 2% 5% 0 5%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .mobileWrap {
+        margin-bottom: 35px;
+      }
+
+      a {
+        text-decoration: none;
+        color: rgb(184, 184, 184);
+        font-size: 0.9rem;
+
+        span {
+          margin: 0 10px;
+        }
+      }
+    }
+
+    .footSocial {
+      padding: 10px 0 0 0;
+
+      a {
+        color: rgb(231, 231, 231);
+        margin-right: 10px;
+
+        svg {
+          font-size: 1.9rem;
+        }
+      }
+    }
+
+    .footRights {
+      padding: 20px 0 0 0;
+      font-weight: 500;
+      color: rgb(77, 77, 77);
+    }
+  }
+}
+
+@media screen and (max-height: 750px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .desktopHeader {
+    display: none;
+  }
+
+  .moblileHeader {
+    display: block;
+    height: 15vh;
+
+    .logUser {
+      display: none;
+    }
+
+    .mobileBrandName {
+      display: block;
+    }
+  }
+
+  header {
+    .desktopBrandName {
+      display: none;
+    }
+
+    .bckspaceLogUser {
+      .logUser {
+        text-align: right;
+        font-size: 0.8rem;
+      }
+    }
+
+    nav {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .mobileBrandName {
+        display: block !important;
+      }
+
+      .headImgContainer {
+        margin: 0 auto 0 25px;
+        height: 25px;
+        width: 130px;
+        text-align: none;
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      .navBurger {
+        position: relative;
+        cursor: pointer;
+        height: 30px;
+        width: 30px;
+        margin-top: 8px;
+
+        span:nth-child(1) {
+          user-select: none;
+          content: "";
+          position: absolute;
+          top: 0;
+          height: 3px;
+          width: 30px;
+          background: white;
+          border-radius: 8px;
+          transition: all 0.4s ease-in-out;
+        }
+
+        span:nth-child(2) {
+          content: "";
+          position: absolute;
+          top: 8px;
+          height: 3px;
+          width: 30px;
+          background: white;
+          border-radius: 8px;
+          transition: all 0.4s ease-in-out;
+        }
+
+        span:nth-child(3) {
+          content: "";
+          position: absolute;
+          top: 16px;
+          height: 3px;
+          width: 30px;
+          background: white;
+          border-radius: 8px;
+          transition: all 0.4s ease-in-out;
+        }
+      }
+
+      .navBurger:hover,
+      .navBurger:active {
+        span:nth-child(1) {
+          background: #0202f3;
+        }
+
+        span:nth-child(2) {
+          width: 22px;
+        }
+      }
+
+      .searchIcon {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transform: translateY(6%);
+        border-radius: 6px;
+
+        button {
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          border: none;
+          outline: none;
+          background: rgba(0, 0, 0, 0);
+
+          svg {
+            user-select: none;
+            margin-top: 8px;
+            font-size: 1.25rem;
+            cursor: pointer;
+            color: white;
+          }
+        }
+      }
+    }
+
+    .sidenav {
+      height: 100%;
+      /* 100% Full-height */
+      width: 0;
+      /* 0 width - change this with JavaScript */
+      position: fixed;
+      /* Stay in place */
+      z-index: 3;
+      /* Stay on top */
+      top: 0;
+      /* Stay at the top */
+      left: 0;
+      background-color: #111;
+      /* Black*/
+      overflow-x: hidden;
+      /* Disable horizontal scroll */
+      padding-top: 60px;
+      /* Place content 60px from the top */
+      transition: 0.5s;
+      /* 0.5 second transition effect to slide in the sidenav */
+      scrollbar-width: none;
+    }
+
+    .sidenav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .sideNavContainer {
+      padding: 0 8%;
+
+      .userProfile {
+        .userIcon {
+          font-size: 8rem;
+        }
+
+        .userName {
+          margin: 15px 0 0 30px;
+
+          p {
+            margin: 0;
+          }
+
+          .loggedIn {
+            font-size: 0.86rem;
+            margin-bottom: 10px;
+          }
+
+          .loggedName {
+            font-size: 1.2rem;
+            font-weight: 600;
+          }
+        }
+      }
+
+      hr {
+        background: rgb(56, 56, 56);
+        border-radius: 8px;
+        height: 1px;
+      }
+    }
+
+    /* The navigation menu links */
+    .sidenav a {
+      padding: 4px 0 0 0;
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: #e9e9e9;
+      display: block;
+      transition: 0.3s;
+    }
+
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover {
+      color: blue;
+    }
+
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+  }
+
+  .searchModal {
+    position: fixed;
+    z-index: 5;
+    min-height: 120vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.959);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+
+    .searchContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+
+      input {
+        font-size: 0.75rem;
+      }
+
+      button {
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        margin: 0 10px 0 20px;
+        border: none;
+        outline: none;
+        background: transparent;
+        transition: all 0.3s ease;
+
+        path {
+          fill: rgb(224, 224, 224);
+        }
+
+        &:hover {
+          background: none;
+        }
+
+        &:hover path {
+          background: none;
+          fill: rgb(10, 6, 252);
+        }
+      }
+    }
+  }
+
+  main {
+    min-height: 100vh;
+
+    .mainContainer {
+      padding: 6% 4%;
+
+      .shoeImgContainer {
+        margin: 0 auto;
+        height: 15rem;
+        width: 16rem;
+      }
+      .moreImg {
+        margin-left: 11%;
+        p {
+          font-size: 0.82rem;
+        }
+        .moreImgContainer {
+          height: 6rem;
+          width: 8rem;
+        }
+      }
+
+      .shoeDetails {
+        padding-top: 30px;
+        text-align: center;
+
+        .shoeBrandName {
+          margin-bottom: 10px;
+
+          p {
+            margin: 0;
+          }
+
+          .shoeName {
+            font-size: 1.25rem;
+          }
+
+          .shoeModel {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: rgb(87, 87, 87);
+          }
+        }
+
+        .shoeSizeClickedBuy {
+          margin-top: 20px;
+          padding: 0 4% 0 9%;
+          text-align: center;
+
+          .conditionSizeContain {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: rgb(158, 158, 158);
+            .conditionBoxTag {
+              p {
+                width: 8rem;
+                display: flex;
+                justify-content: space-between;
+              }
+            }
+
+            .boldPara {
+              color: black;
+            }
+
+            .styleSize {
+              margin-left: 0;
+              width: 14.3rem;
+              p {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+              }
+
+              input {
+                height: 30px;
+                width: 8rem;
+                border: 2px solid rgb(197, 189, 189);
+                outline: none;
+                color: rgb(143, 143, 143);
+                padding: 1% 8%;
+                border-radius: 3px;
+                font-size: 0.85rem;
+                font-weight: 500;
+                background: url("./theme_thebckspace/static/src/img/pencil-alt-solid.svg")
+                  no-repeat right 0.8rem center/13px 23px;
+              }
+            }
+          }
+
+          .anyBtnClickedContainer {
+            height: 42vh;
+          }
+
+          .placeSellNow {
+            margin-top: 15px;
+            width: 100%;
+
+            button {
+              margin: 0 !important;
+              height: 50px;
+              width: 13.6rem;
+              font-weight: 500;
+              transition: all 0.3s linear;
+              border: none;
+              outline: none;
+            }
+
+            .placeAsk {
+              border: 1px solid rgb(212, 212, 212);
+              background: rgb(248, 248, 248);
+              border-radius: 5px 0 0 5px;
+
+              &:hover {
+                transform: scale(1.05);
+                opacity: 0.9;
+              }
+            }
+
+            .sellNow {
+              border-radius: 0 5px 5px 0;
+              border: 1px solid rgb(212, 212, 212);
+              background: rgb(248, 248, 248);
+
+              &:hover {
+                transform: scale(1.05);
+                opacity: 0.9;
+              }
+            }
+
+            .activeBtnClicked {
+              background: rgb(46, 79, 224);
+              color: white;
+            }
+          }
+
+          .amtPara {
+            margin-top: 30px;
+            display: flex;
+
+            input {
+              height: 36px;
+              border: 1px solid rgb(212, 212, 212);
+              border-radius: 5px;
+              width: 8rem;
+              padding: 1% 2% 1% 4%;
+              font-size: 1.4rem;
+              font-weight: 500;
+              background: rgb(248, 248, 248);
+            }
+
+            .bidPara {
+              margin: 10px 0 0 4%;
+              font-size: 0.7rem;
+              font-weight: 500;
+              color: rgb(133, 133, 133);
+            }
+          }
+
+          .totalAmtTax {
+            padding-right: 0;
+            padding-top: 5%;
+
+            .transactionFee {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-top: 15px;
+              font-size: 0.9rem;
+              font-weight: 600;
+              color: rgb(70, 70, 70);
+            }
+          }
+
+          .enterAsk {
+            margin-top: 30px;
+
+            .askAmtPara {
+              display: flex;
+
+              input {
+                height: 46px;
+                border: 1px solid rgb(212, 212, 212);
+                border-radius: 5px;
+                width: 9rem;
+                padding: 1% 1% 1% 10%;
+                font-size: 1.2rem;
+                font-weight: 500;
+                background: url("./theme_thebckspace/static/src/img/rupee-sign-solid.svg")
+                  no-repeat left 0.8rem center/13px 23px;
+              }
+
+              .askPara {
+                margin: 12px 0 0 15px;
+                font-size: 0.7rem;
+                font-weight: 500;
+                color: rgb(133, 133, 133);
+              }
+            }
+          }
+
+          .transBtns {
+            padding: 50px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            button {
+              height: 35px;
+              width: 8rem;
+              font-size: 0.8rem;
+              font-weight: 500;
+              letter-spacing: 2px;
+              outline: none;
+              transition: all 0.3s linear;
+            }
+
+            .cancelTrans {
+              color: rgb(85, 85, 85);
+              border: 2px solid rgb(151, 151, 151);
+              background: rgb(248, 248, 248);
+
+              &:hover {
+                transform: translateY(-2px);
+                opacity: 0.9;
+              }
+            }
+
+            .proceedTrans {
+              border: none;
+              color: rgb(245, 245, 245);
+              background: rgb(19, 17, 17);
+
+              &:hover {
+                transform: translateY(-2px);
+                opacity: 0.9;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    position: relative;
+    background: #1b1b1b;
+    min-height: 35vh;
+
+    .yoUpBtn:hover {
+      transform: scale(1.1);
+    }
+
+    .footerContainer {
+      text-align: center;
+      padding: 3% 2%;
+
+      .footLinks {
+        padding: 2% 1% 0 1%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .noMobile {
+          display: none;
+        }
+
+        .mobileWrap {
+          margin-bottom: 35px;
+        }
+
+        a {
+          text-decoration: none;
+          color: rgb(184, 184, 184);
+          font-size: 0.9rem;
+
+          span {
+            margin: 0 10px;
+          }
+        }
+      }
+
+      .footSocial {
+        padding: 10px 0 0 0;
+
+        a {
+          color: rgb(231, 231, 231);
+          margin-right: 10px;
+
+          svg {
+            font-size: 1.9rem;
+          }
+        }
+      }
+
+      .footRights {
+        padding: 20px 0 0 0;
+        font-weight: 500;
+        color: rgb(77, 77, 77);
+      }
+    }
+  }
+}

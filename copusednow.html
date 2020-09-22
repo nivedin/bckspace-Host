@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>thebckspace</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./copusednow.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header>
+        <div class="desktopHeader">
+            <div class="bckspaceLogUser">
+                <div class="logUser">
+                    <p>logged in as <b>ansh bhandari</b></p>
+                </div>
+                <div class="thebckName desktopBrandName">
+                    <div class="headImgContainer">
+                        <a href="homePage.html">
+                            <img src="./theme_thebckspace/static/src/img/shoes/Layer 11.png" alt="brandImg" /></a>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <div class="navContainer2 noClick">
+                    <div class="deskNavBurger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="thebckName">
+                        <div class="headImgContainer">
+                            <a href="homePage.html">
+                                <img src="./ASSETS/Layer 8.png" alt="brandImg" /></a>
+                        </div>
+                    </div>
+                    <div class="searchIcon">
+                        <button class="search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="navContainer3 noDisplay hamClicked">
+                    <div class="leftLogo">
+                        <a href="#"><i class="fa fa-chevron-left"></i>
+                            <i class="fa fa-chevron-right"></i></a>
+                    </div>
+                    <div class="navLinks">
+                        <ul>
+                            <li>
+                                <a href="#">drop</a>
+                            </li>
+                            <li>
+                                <a href="#">catalouge</a>
+                            </li>
+                            <li>
+                                <a href="#">grail</a>
+                            </li>
+                            <li>
+                                <a href="#">stash</a>
+                            </li>
+                            <li>
+                                <a href="#">customization</a>
+                            </li>
+                            <li>
+                                <a href="#">calendar</a>
+                            </li>
+                            <li>
+                                <a href="#">feature</a>
+                            </li>
+                            <li>
+                                <a href="#">legit check</a>
+                            </li>
+                            <div class="navHoverAnimation"></div>
+                        </ul>
+                    </div>
+                    <div class="rightIcons">
+                        <div class="heartIcon">
+                            <a href="#">
+                                <i class="far fa-heart"></i>
+                            </a>
+                        </div>
+                        <div class="profileIcon">
+                            <a href="#">
+                                <i class="fas fa-user-circle"></i>
+                            </a>
+                        </div>
+                        <div class="searchIcon">
+                            <button class="search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="moblileHeader">
+            <div class="bckspaceLogUser">
+                <div class="logUser">
+                    <p>logged in as <b>ansh bhandari</b></p>
+                </div>
+                <div class="thebckName desktopBrandName">
+                    <div class="headImgContainer">
+                        <img src="./ASSETS/Layer 8.png" alt="brandImg" />
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <div class="navBurger" onclick="openNav()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="thebckName mobileBrandName">
+                    <div class="headImgContainer">
+                        <img src="./ASSETS/Layer 8.png" alt="brandImg" />
+                    </div>
+                </div>
+                <div class="searchIcon">
+                    <button class="search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="sideNavContainer">
+                    <div class="userProfile">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="userIcon">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-8 align-self-center">
+                                <div class="userName">
+                                    <p class="loggedIn">logged in as</p>
+                                    <p class="loggedName">ansh bhandari</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                    </div>
+                    <a href="#">drop
+                        <hr /></a>
+                    <a href="#">catalouge
+                        <hr /></a>
+                    <a href="#">grail
+                        <hr /></a>
+                    <a href="#">stash
+                        <hr /></a>
+                    <a href="#">customization
+                        <hr /></a>
+                    <a href="#">calendar
+                        <hr /></a>
+                    <a href="#">feature
+                        <hr /></a>
+                    <a href="#">legit check
+                        <hr /></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="searchModal">
+        <div class="searchMainContainer">
+            <div class="scearchCloseIcon">
+                <span></span>
+                <span></span>
+            </div>
+            <div class="searchContainer">
+                <input type="search" placeholder="search for sneaker or accessories" />
+                <button class="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="mainContainer">
+            <div class="row">
+                <div class="col-12 col-md-7">
+                    <div class="shoeImgContainer align-self-center justify-content-center">
+                        <img src="./theme_thebckspace/static/src/img/shoes/df651a22dd87448100210bfa1d0ae882_listingImg_ok6kOe8sZW.png"
+                            alt="shoeImg" />
+                    </div>
+                    <div class="moreImg">
+                        <p>more image</p>
+                        <div class="moreImgContainer">
+                            <img src="./theme_thebckspace/static/src/img/shoes/e4a65f83a9676bba671b17ee749c790b_listingImg_lXDGBtOKZn.png"
+                                alt="moreImg">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 pl-0">
+                    <div class="shoeDetails">
+                        <div class="shoeBrandName">
+                            <p class="shoeName"><strong>nike air jordan</strong></p>
+                            <p class="shoeModel">jordan 11 retro playoffs</p>
+                        </div>
+                        <!-- /// -->
+                        <!-- //for-ds/// -->
+                        <div class="shoeSizeClickedBuy ">
+                            <div class="conditionSizeContain">
+                                <div class="conditionBoxTag">
+                                    <p><span class="boldPara">condition </span> <span>:</span> <span>used</span></p>
+                                    <p><span class="boldPara">box</span> </span> <span
+                                            style="margin-left: 29px;">:</span> <span>yes</span></p>
+                                    <p><span class="boldPara">tag </span> </span> <span
+                                            style="margin-left: 29px;">:</span> <span> no</span></p>
+                                </div>
+                                <div class="styleSize">
+                                    <p><span class="boldPara">size </span>&nbsp;&nbsp;&nbsp;&nbsp;<span>:</span> <input
+                                            type="text" value="us 11.5">
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="placeSellNow btn-group" role="group">
+                                <button class="placeAsk ">place bid</button>
+                                <button class="sellNow activeBtnClicked ">buy now</button>
+                            </div>
+                            <div class="anyBtnClickedContainer">
+                                <div class="sellNowBtnClicked">
+                                    <div class="amtPara">
+                                        <input type="text" class="bitAmt" value="₹ 6,000" readonly>
+                                        <p class="bidPara">you are about to buy at the sellers ask price</p>
+                                    </div>
+                                    <div class="totalAmtTax">
+                                        <div class="transactionFee">
+                                            <p class="transPara">transaction fee (9.5%)</p>
+                                            <p class="transAmt">₹ 150</p>
+                                        </div>
+                                        <div class="transactionFee">
+                                            <p class="transPara">payment proc. (3%)</p>
+                                            <p class="transAmt">₹ 100</p>
+                                        </div>
+                                        <div class="transactionFee">
+                                            <p class="transPara">estimated shipping</p>
+                                            <p class="transAmt">₹ 0</p>
+                                        </div>
+                                        <hr>
+                                        <div class="transactionFee">
+                                            <p class="transPara">total</p>
+                                            <p class="transAmt">₹ 6000</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="enterAsk placeAskClicked noDisplay">
+                                    <div class="askAmtPara">
+                                        <input type="text" class="bitAmt" placeholder="enter ask">
+                                        <p class="askPara">you must meet the minimum ask of ₹ 2000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="transBtns">
+                                <button class="cancelTrans"><span>cancel</span></button>
+                                <button class="proceedTrans"><span>proceed</span></button>
+                            </div>
+                        </div>
+                        <!-- //for-ds/// -->
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="footLinks">
+                <div class="mobileWrap">
+                    <a href="#">guide <span>|</span></a>
+                    <a href="#">copyright <span>|</span></a>
+                    <a href="#">terms and condition <span class="noMobile">|</span></a>
+                </div>
+                <div class="mobileWrap">
+                    <a href="#">privacy poilcy <span>|</span></a>
+                    <a href="#">contact us <span>|</span></a>
+                    <a href="#">sneaker request <span class="noMobile">|</span></a>
+                </div>
+                <div class="mobileWrap">
+                    <a href="#">press <span>|</span></a>
+                    <a href="#">help <span>|</span></a>
+                    <a href="#">product request </a>
+                </div>
+            </div>
+            <div class="footSocial">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+            </div>
+            <div class="footRights">
+                <p>&copy; 2020 thebckspace, inc. all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/v4-shims.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="./copusednow.js"></script>
+</body>
+
+</html>

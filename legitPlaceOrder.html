@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>legit check</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/legitPlaceOrder.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div class="desktopHeader">
+            <nav>
+                <div class="leftLogo">
+                    <a href="#"><i class="fa fa-chevron-left"></i> <i class="fa fa-chevron-right"></i></a>
+                </div>
+                <div class="navLinks">
+                    <ul>
+                        <li>
+                            <a href="#">drop</a>
+                        </li>
+                        <li>
+                            <a href="#">catalouge</a>
+                        </li>
+                        <li>
+                            <a href="#">grail</a>
+                        </li>
+                        <li>
+                            <a href="#">stash</a>
+                        </li>
+                        <li>
+                            <a href="#">customization</a>
+                        </li>
+                        <li>
+                            <a href="#">calendar</a>
+                        </li>
+                        <li>
+                            <a href="#">feature</a>
+                        </li>
+                        <li>
+                            <a href="#">legit check</a>
+                        </li>
+                        <div class="navHoverAnimation"></div>
+                    </ul>
+                </div>
+                <div class="rightIcons">
+                    <div class="heartIcon">
+                        <a href="#">
+                            <i class="far fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="profileIcon">
+                        <a href="#">
+                            <i class="fas fa-user-circle"></i>
+                        </a>
+                    </div>
+                    <div class="searchIcon">
+
+                        <button class="search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+
+        <div class="moblileHeader">
+            <div class="bckspaceLogUser">
+                <div class="logUser">
+                    <p>logged in as <b>ansh bhandari</b></p>
+                </div>
+                <div class="thebckName desktopBrandName">
+                    <div class="headImgContainer">
+                        <img src="./ASSETS/Layer 3.png" alt="brandImg">
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <div class="navBurger" onclick="openNav()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="thebckName mobileBrandName">
+                    <div class="headImgContainer">
+                        <img src="./ASSETS/Layer 3.png" alt="brandImg">
+                    </div>
+                </div>
+                <div class="searchIcon">
+                    <button class="search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="sideNavContainer">
+                    <div class="userProfile">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="userIcon">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-8  align-self-center">
+                                <div class="userName">
+                                    <p class="loggedIn">logged in as</p>
+                                    <p class="loggedName">ansh bhandari</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <a href="#">drop
+                        <hr></a>
+                    <a href="#">catalouge
+                        <hr></a>
+                    <a href="#">grail
+                        <hr></a>
+                    <a href="#">stash
+                        <hr></a>
+                    <a href="#">customization
+                        <hr></a>
+                    <a href="#">calendar
+                        <hr></a>
+                    <a href="#">feature
+                        <hr></a>
+                    <a href="#">legit check
+                        <hr></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="searchModal">
+        <div class="searchMainContainer">
+            <h2 class="searchHeading">
+                Search....
+            </h2>
+            <div class="searchContainer">
+                <input type="search">
+                <button class="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <main>
+        <div class="mainContent">
+            <div class="mainRow">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="leftMainContainer">
+                            <div class="form">
+                                <div class="row firstLastName">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="first name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="last name">
+                                    </div>
+                                </div>
+                                <input type="email" class="form-control" id="inputEmail4" placeholder="email address">
+                                <div class="fullMobNumber">
+                                    <input type="tel" class="countryCode" placeholder="+91">
+                                    <input type="tel" class="mobileNumber" placeholder="mobile no.">
+                                </div>
+                                <div class="addressArea">
+                                    <textarea placeholder="address"></textarea>
+                                </div>
+                                <div class="row pinCityState">
+                                    <div class="col-md-4">
+                                        <input type="text" placeholder="pincode">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="text" placeholder="city / district / town">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="text" placeholder="state">
+                                    </div>
+                                </div>
+                                <div class="addressAddRow">
+                                    <div class="form-group addressType">
+                                        <label for="address" class="addrHead">address type</label><br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio1" value="home">
+                                            <label class="form-check-label" for="inlineRadio1">home</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio2" value="work">
+                                            <label class="form-check-label" for="inlineRadio2">work</label>
+                                        </div>
+                                    </div>
+                                    <button class="addAddress">+ add new address</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="rightMainAuthentication">
+                            <p class="mainHead">your order</p>
+                            <div class="rowFlex prdTotal">
+                                <p>product</p>
+                                <p>total</p>
+                            </div>
+                            <div class="itemSubTotalContainer">
+                                <div class="rowFlex itemPrice">
+                                    <p>balenciaga authentication service x 1</p>
+                                    <p>$ 20.00</p>
+                                </div>
+                                <div class="rowFlex itemPrice">
+                                    <p>adidas authentication service x 1</p>
+                                    <p>$ 20.00</p>
+                                </div>
+                                <div class="rowFlex subPrice">
+                                    <p>subtotal</p>
+                                    <p>$ 40.00</p>
+                                </div>
+                                <div class="rowFlex totalPrice">
+                                    <p>total</p>
+                                    <p>$ 40.00</p>
+                                </div>
+                            </div>
+                            <div class="rightFoot">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                        value="haveRead">
+                                    <label class="form-check-label" for="inlineCheckbox1"><b>I have read and agree to
+                                            the website</b></label>
+                                </div><br>
+                                <button class="placeOrder">place order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+
+
+    <footer>
+        <div class="yoUpBtn">
+            <i class="fa fa-chevron-up"></i>
+        </div>
+        <div class="footerContainer">
+            <div class="footLinks">
+                <div class="mobileWrap">
+                    <a href="#">guide <span>|</span></a>
+                    <a href="#">copyright <span>|</span></a>
+                    <a href="#">terms and condition <span class="noMobile">|</span></a>
+                </div>
+                <div class="mobileWrap">
+                    <a href="#">privacy poilcy <span>|</span></a>
+                    <a href="#">contact us <span>|</span></a>
+                    <a href="#">sneaker request <span class="noMobile">|</span></a>
+                </div>
+                <div class="mobileWrap">
+
+                    <a href="#">press <span>|</span></a>
+                    <a href="#">help <span>|</span></a>
+                    <a href="#">product request </a>
+                </div>
+            </div>
+            <div class="footSocial">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+            </div>
+            <div class="footRights">
+                <p>&copy; 2020 thebckspace, inc. all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="http://api.wipmania.com/jsonp?callback=jsonpCallback"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/v4-shims.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="./JS/legitCheck2.js"></script>
+</body>
+
+</html>

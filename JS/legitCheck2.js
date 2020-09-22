@@ -1,0 +1,103 @@
+function openNav() {
+    if (window.innerWidth < 700) {
+        document.getElementById("mySidenav").style.width = "80%";
+    } else {
+        document.getElementById("mySidenav").style.width = "400px";
+    }
+
+}
+/* Set the width of the side navigation to 0 */
+
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+let searchBtns = document.querySelectorAll(".search");
+let searchModal = document.querySelector(".searchModal");
+
+searchBtns.forEach(searchBtn => {
+    searchBtn.addEventListener("click", () => {
+        searchModal.classList.add("openModal");
+
+    })
+})
+
+
+searchModal.addEventListener("click", (e) => {
+    if (e.target.classList.contains("searchModal")) {
+        searchModal.classList.remove("openModal");
+    }
+    if (e.target.classList.contains("searchMainContainer")) {
+        searchModal.classList.remove("openModal");
+    }
+
+})
+
+
+let toTopBtn = document.querySelector(".yoUpBtn");
+
+toTopBtn.addEventListener("click", () => {
+    document.documentElement.style.transition = "all 1s ease";
+    document.documentElement.scrollTop = 0;
+});
+
+
+let mobileHeader = document.querySelector(".moblileHeader");
+let desktopHeader = document.querySelector(".desktopHeader");
+
+if (window.innerWidth > 700) {
+
+    window.addEventListener("scroll", (e) => {
+        let windowTop = window.scrollY;
+
+        if (windowTop >= 200) {
+            mobileHeader.style.display = "none";
+            desktopHeader.style.display = "block";
+
+        } else {
+            mobileHeader.style.display = "block";
+            desktopHeader.style.display = "none";
+        }
+    })
+} else {
+    mobileHeader.style.display = "block";
+    desktopHeader.style.display = "none";
+    window.addEventListener("scroll", (e) => {
+        let windowTop = window.scrollY;
+
+        if (windowTop >= 150) {
+            mobileHeader.style.background = "rgba(0, 0, 0, 0.301)";
+
+        } else {
+            mobileHeader.style.background = "";
+        }
+    })
+}
+
+// var x = document.getElementById("demo");
+// console.log(position.coords.latitude);
+
+// function getLocation() {
+//     if (navigator.geolocation) {
+//         navigator.geolocation.getCurrentPosition(showPosition);
+//     } else {
+//         x.innerHTML = "Geolocation is not supported by this browser.";
+//     }
+// }
+
+// function showPosition(position) {
+//     x.innerHTML = "Latitude: " + position.coords.latitude +
+//         "<br>Longitude: " + position.coords.longitude;
+// }
+
+// navigator.geolocation.watchPosition(data => {
+//     console.log(data);
+// })
+
+// plain JavaScript example
+function jsonpCallback(data) {
+    alert('Latitude: ' + data.latitude +
+        '\nLongitude: ' + data.longitude +
+        '\nCountry: ' + data.address.country);
+}

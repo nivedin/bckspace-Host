@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>legit check</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/legitCheck2.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div class="desktopHeader">
+            <nav>
+                <div class="leftLogo">
+                    <a href="#"><i class="fa fa-chevron-left"></i> <i class="fa fa-chevron-right"></i></a>
+                </div>
+                <div class="navLinks">
+                    <ul>
+                        <li>
+                            <a href="#">drop</a>
+                        </li>
+                        <li>
+                            <a href="#">catalouge</a>
+                        </li>
+                        <li>
+                            <a href="#">grail</a>
+                        </li>
+                        <li>
+                            <a href="#">stash</a>
+                        </li>
+                        <li>
+                            <a href="#">customization</a>
+                        </li>
+                        <li>
+                            <a href="#">calendar</a>
+                        </li>
+                        <li>
+                            <a href="#">feature</a>
+                        </li>
+                        <li>
+                            <a href="#">legit check</a>
+                        </li>
+                        <div class="navHoverAnimation"></div>
+                    </ul>
+                </div>
+                <div class="rightIcons">
+                    <div class="heartIcon">
+                        <a href="#">
+                            <i class="far fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="profileIcon">
+                        <a href="#">
+                            <i class="fas fa-user-circle"></i>
+                        </a>
+                    </div>
+                    <div class="searchIcon">
+
+                        <button class="search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+
+        <div class="moblileHeader">
+            <div class="bckspaceLogUser">
+                <div class="logUser">
+                    <p>logged in as <b>ansh bhandari</b></p>
+                </div>
+                <div class="thebckName desktopBrandName">
+                    <div class="headImgContainer">
+                        <img src="./ASSETS/Layer 3.png" alt="brandImg">
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <div class="navBurger" onclick="openNav()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="thebckName mobileBrandName">
+                    <div class="headImgContainer">
+                        <img src="./ASSETS/Layer 3.png" alt="brandImg">
+                    </div>
+                </div>
+                <div class="searchIcon">
+                    <button class="search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="sideNavContainer">
+                    <div class="userProfile">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="userIcon">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-8  align-self-center">
+                                <div class="userName">
+                                    <p class="loggedIn">logged in as</p>
+                                    <p class="loggedName">ansh bhandari</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <a href="#">drop
+                        <hr></a>
+                    <a href="#">catalouge
+                        <hr></a>
+                    <a href="#">grail
+                        <hr></a>
+                    <a href="#">stash
+                        <hr></a>
+                    <a href="#">customization
+                        <hr></a>
+                    <a href="#">calendar
+                        <hr></a>
+                    <a href="#">feature
+                        <hr></a>
+                    <a href="#">legit check
+                        <hr></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="searchModal">
+        <div class="searchMainContainer">
+            <h2 class="searchHeading">
+                Search....
+            </h2>
+            <div class="searchContainer">
+                <input type="search">
+                <button class="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <main>
+        <div class="mainContent">
+            <h2>authenticating items for you, so you don't have two.</h2>
+
+
+            <div class="mainRow">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="leftMainContainer">
+                            <div class="productName">
+                                <input type="text" placeholder="product name">
+                            </div>
+                            <div class="imageViewsContainer">
+                                <!-- ///image-row/// -->
+                                <div class="imageViewRow">
+                                    <div class="imageView">
+                                        <p>size tags</p>
+                                    </div>
+                                    <div class="imageView">
+                                        <p>both side views</p>
+                                    </div>
+                                    <div class="imageView">
+                                        <p>both side view reverse</p>
+                                    </div>
+                                    <div class="imageView">
+                                        <p>heel view</p>
+                                    </div>
+                                </div>
+                                <!-- ///image-row/// -->
+                                <!-- ///image-row/// -->
+                                <div class="imageViewRow">
+                                    <div class="imageView">
+                                        <p>top view</p>
+                                    </div>
+                                    <div class="imageView">
+                                        <p>outside view</p>
+                                    </div>
+                                    <div class="imageView">
+                                        <p>midsole view</p>
+                                    </div>
+                                    <div class="imageView">
+                                        <p>instep view</p>
+                                    </div>
+                                </div>
+                                <!-- ///image-row/// -->
+                                <!-- ///image-row/// -->
+                                <div class="imageViewRow">
+                                    <div class="imageView">
+                                        <p>insole view</p>
+                                    </div>
+                                    <div class="imageView">
+                                        <p>insole stiching</p>
+                                    </div>
+                                    <div class="imageView">
+                                        <p>box view</p>
+                                    </div>
+                                    <div class="imageView plusBox">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <!-- ///image-row/// -->
+                            </div>
+                            <div class="informationTxt">
+                                <textarea name="information"
+                                    placeholder="Specify any information that could help expedite the process like any information on seller ? Any specific doubts about the pair like label, tags, box etc."></textarea>
+                            </div>
+                            <button class="submitBtn">submit</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="rightMainAuthentication">
+                            <p class="shoeName"><b>adidas authentication service</b></p>
+                            <p class="shoePrice">₹ 2000.00 <span>( per authentication )</span> </p>
+                            <div class="quantity">
+                                <p><b>quantity</b></p><input type="text" placeholder="01">
+                            </div>
+                            <div class="buttonGrp">
+                                <button class="addBag">add to bag</button>
+                                <button class="checkOut">check out</button>
+                            </div>
+                            <div class="termsAndCondi">
+                                <ul>
+                                    <li>Please provide all photos as per the angles mentioned above.</li>
+                                    <li>If the photos do not match the required criteria, you'll be required to resubmit
+                                        them.</li>
+                                    <li>We will revert back within 36 hours with a response.</li>
+                                    <li>The verdict is based on the knowledge abd experience of the authenticator.</li>
+                                    <li>If we are unable to provide an outcome with certainity for any reason, we will
+                                        issue a full refund.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+
+
+    <footer>
+        <div class="yoUpBtn">
+            <i class="fa fa-chevron-up"></i>
+        </div>
+        <div class="footerContainer">
+            <div class="footLinks">
+                <div class="mobileWrap">
+                    <a href="#">guide <span>|</span></a>
+                    <a href="#">copyright <span>|</span></a>
+                    <a href="#">terms and condition <span class="noMobile">|</span></a>
+                </div>
+                <div class="mobileWrap">
+                    <a href="#">privacy poilcy <span>|</span></a>
+                    <a href="#">contact us <span>|</span></a>
+                    <a href="#">sneaker request <span class="noMobile">|</span></a>
+                </div>
+                <div class="mobileWrap">
+
+                    <a href="#">press <span>|</span></a>
+                    <a href="#">help <span>|</span></a>
+                    <a href="#">product request </a>
+                </div>
+            </div>
+            <div class="footSocial">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+            </div>
+            <div class="footRights">
+                <p>&copy; 2020 thebckspace, inc. all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="http://api.wipmania.com/jsonp?callback=jsonpCallback"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/v4-shims.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="./JS/legitCheck2.js"></script>
+</body>
+
+</html>
