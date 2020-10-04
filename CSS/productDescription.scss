@@ -560,23 +560,33 @@ main {
             .conditionSizeTrade {
                 display: flex;
                 justify-content: space-between;
-                width: 84%;
+                align-items: flex-start;
+                width: 88%;
                 font-size: 0.84rem;
 
                 p {
                     margin: 0;
                 }
 
-                .custom-select {
-                    background: url("../ASSETS/angle-down-solid.svg") no-repeat right 0.8rem center/10px 23px;
-                    border: none;
-                    font-size: 0.84rem;
-                    font-weight: 500;
-                }
+                .styleColorPara {
+                    p {
+                        display: flex;
 
-                .conditionSizeTrade {
-                    .custom-select {
-                        width: 7rem;
+                        span:nth-child(1) {
+                            min-width: 5rem;
+                        }
+
+                        span:nth-child(3) {
+                            margin-left: 12px;
+                        }
+                    }
+
+                    font-size: 0.8rem;
+
+                    p {
+                        margin: 10px 0;
+                        font-weight: 600;
+                        color: rgb(43, 43, 43);
                     }
                 }
 
@@ -585,6 +595,8 @@ main {
                     text-align: right;
 
                     .tradeSize {
+                        margin-top: 12px;
+                        text-align: left;
                         font-size: 0.82rem;
                         font-weight: 500;
 
@@ -614,6 +626,45 @@ main {
                 }
 
             }
+
+            .custom-select {
+                background: url("../ASSETS/angle-down-solid.svg") no-repeat right 0.8rem center/10px 23px;
+                background-color: rgb(228, 228, 228);
+                border: none;
+                font-size: 0.84rem;
+                font-weight: 500;
+                margin-bottom: 30px;
+                border-radius: 5px;
+            }
+
+            .conditionSelect {
+                margin-top: 30px;
+
+                .custom-select {
+                    width: 15rem;
+                }
+            }
+
+            .sizeSelectChart {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                a {
+                    color: rgb(53, 89, 206);
+                    font-size: 0.83rem;
+                    font-weight: 600;
+                    text-decoration: none;
+                }
+            }
+
+            .sizeSelect {
+                .custom-select {
+                    width: 9rem;
+                }
+            }
+
+
 
             .copDropBtns {
                 margin-top: 30px;
@@ -704,16 +755,6 @@ main {
                 }
             }
 
-            .styleColorPara {
-                margin-top: 40px;
-                font-size: 0.8rem;
-
-                p {
-                    margin: 10px 0;
-                    font-weight: 600;
-                    color: rgb(43, 43, 43);
-                }
-            }
         }
     }
 
@@ -753,7 +794,8 @@ main {
                     font-size: 1.05rem;
 
 
-                    .popUpCloseBtn {
+                    .popUpCloseBtn,
+                    .popUpCloseBtn2 {
                         position: absolute;
                         right: 5%;
                         background: transparent;
@@ -831,26 +873,30 @@ main {
                                 justify-content: space-between;
                                 align-items: center;
 
-                                .inputBtn {
+                                .inputBid {
                                     margin: 0 10%;
                                     height: 62%;
                                     width: 7.5rem;
                                     background: transparent;
+                                    text-align: center;
                                     outline: none;
                                     color: rgb(0, 0, 0);
                                     font-size: 0.85rem;
                                     border: 1px solid black;
+                                    border-radius: 5px;
                                 }
 
                                 .submitBtn {
                                     margin: 0 0 0 16%;
                                     height: 62%;
                                     width: 6.2rem;
-                                    font-size: 0.85rem;
-                                    background: transparent;
+                                    font-size: 0.8rem;
+                                    background: black;
+                                    color: white;
                                     outline: none;
                                     font-weight: 500;
                                     border: 1px solid black;
+                                    border-radius: 5px;
                                 }
                             }
                         }
@@ -1057,6 +1103,7 @@ main {
                         width: 120px;
                         font-weight: 500;
                         transition: all 0.3s ease;
+                        border-radius: 5px;
 
                         span {
                             position: absolute;
@@ -1078,11 +1125,12 @@ main {
                         left: 0;
                         background: black;
                         transition: all 0.5s ease-in-out;
+                        border-radius: 5px;
                     }
 
                     button:hover {
                         color: white;
-                        border: none;
+                        border: 1px solid black;
                     }
 
                     button:hover::after {

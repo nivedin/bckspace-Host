@@ -77,18 +77,34 @@ if (window.innerWidth > 700) {
 }
 
 
-//////sales popUp/////////
-let viewAllSalesLink = document.querySelector(".popUpOpenLink");
-let popUpOpenContainer = document.querySelector(".allSalesPopUp");
-let popUpCloseBtn = document.querySelector(".popUpCloseBtn");
+//////bid sales popUp/////////
+let viewAllSalesLinkBid = document.querySelector(".bid");
+let bidpopUpOpenContainer = document.querySelector(".bidSalesPopup");
+let popUpCloseBtn1 = document.querySelector(".popUpCloseBtn");
 
-viewAllSalesLink.addEventListener("click", () => {
-    popUpOpenContainer.classList.remove("popUpSalesClose");
-    popUpCloseBtn.addEventListener("click", () => {
-        popUpOpenContainer.classList.add("popUpSalesClose");
+viewAllSalesLinkBid.addEventListener("click", () => {
+    bidpopUpOpenContainer.classList.remove("popUpSalesClose");
+    popUpCloseBtn1.addEventListener("click", () => {
+        bidpopUpOpenContainer.classList.add("popUpSalesClose");
 
     })
 
 })
 
-//////sales popUp/////////
+//////bid sales popUp/////////
+
+//////ask sales popUp/////////
+let viewAllSalesLinkAsk = document.querySelector(".ask");
+let askpopUpOpenContainer = document.querySelector(".askSalesPopup");
+let popUpCloseBtn2 = document.querySelector(".popUpCloseBtn2");
+
+viewAllSalesLinkAsk.addEventListener("click", () => {
+    askpopUpOpenContainer.classList.remove("popUpSalesClose");
+    popUpCloseBtn2.addEventListener("click", () => {
+        askpopUpOpenContainer.classList.add("popUpSalesClose");
+
+    })
+
+})
+
+//////ask sales popUp/////////

@@ -168,13 +168,24 @@
                             <p class="shoeBrand"><strong>Nike Jordan 11 Retro Playoffs Bred (2019)</strong></p>
                         </div>
                         <div class="conditionSizeTrade">
-                            <div class="conditionSelect">
-                                <select class="custom-select">
-                                    <option selected>condition</option>
-                                    <option value="ds">ds</option>
-                                    <option value="used">used</option>
-                                </select>
+                            <div class="styleColorPara">
+                                <p><span>style</span><span>:</span><span>378037-D61</span></p>
+                                <p><span>colorway</span><span>:</span><span>black/white-versity red</span></p>
                             </div>
+                            <div class="lastTradePrice">
+                                <p class="tradePara"><b>last traded price: ₹ 10526.77</b></p>
+                                <p class="tradeSize">size 14 </p>
+                                <!-- | <a href="#" class="popUpOpenLink">view all sales</a> -->
+                            </div>
+                        </div>
+                        <div class="conditionSelect">
+                            <select class="custom-select">
+                                <option selected>condition</option>
+                                <option value="ds">ds</option>
+                                <option value="used">used</option>
+                            </select>
+                        </div>
+                        <div class="sizeSelectChart">
                             <div class="sizeSelect">
                                 <select class="custom-select">
                                     <option selected>size</option>
@@ -184,10 +195,7 @@
                                     <option value="9">9</option>
                                 </select>
                             </div>
-                            <div class="lastTradePrice">
-                                <p class="tradePara"><b>last traded price: ₹ 10526.77</b></p>
-                                <p class="tradeSize">size 14 | <a href="#" class="popUpOpenLink">view all sales</a></p>
-                            </div>
+                            <a href="#" class="sizeChart">view size chart</a>
                         </div>
                         <div class="copDropBtns">
                             <div class="greenBtns">
@@ -205,18 +213,13 @@
                                 <button class="ask">ask</button>
                             </div>
                         </div>
-                        <div class="styleColorPara">
-                            <p>style 378037-D61</p>
-                            <p>colorway black/white-versity red</p>
-                        </div>
-
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- ///////Sales Popup/////// -->
-        <div class="allSalesPopUp popUpSalesClose">
+        <!-- ///////Bid Sales Popup/////// -->
+        <div class="bidSalesPopup allSalesPopUp popUpSalesClose">
             <div class="popUpContainer">
                 <div class="popUpSalesBox">
                     <div class="nameCloseHeader">
@@ -229,7 +232,84 @@
                             <div class="sizeHead"><b>size (9)</b></div>
                             <div class="inputSubmitBtn">
                                 <div class="headContainerBtn">
-                                    <button class="inputBtn">input bid</button>
+                                    <input class="inputBid" type="text" name="input_id" placeholder="input bid">
+                                    <button class="submitBtn">submit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tableBody">
+                            <div class="conditionBody">
+                                <div class="conditionTopCont">
+                                    <p class="conditionCont">#</p>
+                                    <p class="conditionCont">5</p>
+                                    <p class="conditionCont">1</p>
+                                    <p class="conditionCont">2</p>
+                                    <p class="conditionCont">1</p>
+                                </div>
+                                <p class="conditionFoot">tbq</p>
+                            </div>
+                            <div class="sizeBody">
+                                <div class="sizeTopCont">
+                                    <p class="sizeCont">bids</p>
+                                    <p class="sizeCont">115</p>
+                                    <p class="sizeCont">110</p>
+                                    <p class="sizeCont">100</p>
+                                    <p class="sizeCont">80</p>
+                                </div>
+                                <p class="sizeFoot"></p>
+                            </div>
+                            <div class="inputBidBody">
+                                <div class="inputBitCol1">
+                                    <div class="inputBitCol1TopCont">
+                                        <p class="inputBitCol1Cont">asks</p>
+                                        <p class="inputBitCol1Cont">130</p>
+                                        <p class="inputBitCol1Cont">140</p>
+                                        <p class="inputBitCol1Cont">145</p>
+                                        <p class="inputBitCol1Cont">150</p>
+                                    </div>
+                                </div>
+                                <div class="inputBitCol2">
+                                    <div class="inputBitCol2TopCont">
+                                        <p class="inputBitCol2Cont">#</p>
+                                        <p class="inputBitCol2Cont">1</p>
+                                        <p class="inputBitCol2Cont">2</p>
+                                        <p class="inputBitCol2Cont">1</p>
+                                        <p class="inputBitCol2Cont">1</p>
+                                    </div>
+                                    <p class="inputBitCol2Foot">taq</p>
+                                </div>
+                            </div>
+                            <div class="submitBody">
+                                <div class="lastAvgTradedPrice">
+                                    <p class="para">last traded price</p>
+                                    <p class="money">₹ 10526.77</p>
+                                    <p class="para">average traded price</p>
+                                    <p class="money">₹ 9857.22</p>
+                                </div>
+                                <div class="submitGraphSlider"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ///////Sales Popup/////// -->
+
+        <!-- ///////Ask Sales Popup/////// -->
+        <div class="askSalesPopup allSalesPopUp popUpSalesClose">
+            <div class="popUpContainer">
+                <div class="popUpSalesBox">
+                    <div class="nameCloseHeader">
+                        <p class="shoeName"><b>Nike Jordan 11 Retro Playoffs Bred (2019) - 378037-061</b></p>
+                        <button class="popUpCloseBtn2"><i class="closeIcon fas fa-times"></i></button>
+                    </div>
+                    <div class="popUpTable">
+                        <div class="tableHeader">
+                            <div class="conditionHead"><b>condition (ds)</b></div>
+                            <div class="sizeHead"><b>size (9)</b></div>
+                            <div class="inputSubmitBtn">
+                                <div class="headContainerBtn">
+                                    <input class="inputBid" type="text" name="input_id" placeholder="input ask">
                                     <button class="submitBtn">submit</button>
                                 </div>
                             </div>
